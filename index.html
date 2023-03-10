@@ -1,118 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./stylesheets/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@700&display=swap" rel="stylesheet">
-    <title>Orcfax oracle</title>
-</head>
-<body>
-    <header>
-        <div class="container row">
-            <button class="nav-toggle" aria-label="open navigation">
-                <span class="hamburger"></span>
-            </button>
-            <a href="#home">
-                <img 
-                    src="./assets/orcfax-logo-text.png" alt="Orcfax logo - a stylized orca"
-                    class="logo" 
-                >
-            </a>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#features">Features</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#ispo">ISPO</a></li>
-                    <li class="nav__item"><a class="nav__link" href="https://docs.orcfax.io">Docs</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Home -->
-
-    <section class="hero" id="home">
-        <span id="home" class="anchor"></span>
-        <div class="container">
-            <div class="logo__container">
-                    <img src="./assets/orcfax-logo.png" alt="Orcfax-logo" class="logo--hero">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Orcfax</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Mulish" rel="stylesheet">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">
+                <img src="./assets/orcfax-logo-text.png" width="60" height="60" alt="">
+                </a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#ispo">ISPO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://docs.orcfax.io">Docs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- About -->
-
-    <section class="about" id="about">
-        <span id="about" class="anchor"></span>
-        <div class="container row">
-            <div class="col">
-                <h2 class="heading">Orcfax is a decentralized Cardano oracle</h2>
-                <h3 class="heading-secondary">Orcfax collects, validates, publishes and archives fact statements about the real world.</h3>
-                <p class="about__text">Orcfax implements the open-source Cardano Open Oracle Protocol (COOP). It provides Cardano developers with trustworthy real world data inputs for their on-chain smart contracts.</p>
-                <p class="about__text">Orcfax is a next-generation oracle that provides a more comprehensive solution to "the oracle problem". It provides full audit logs for the flow of data through the platform and provides permanent, standards-compliant archival access to them, all in a fully decentralized architecture.</p>
-                <img src="./assets/orcfax-concept.jpeg" alt="Orcfax-concept">
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0">Orcfax</h1>
+                        <h2 class="mx-auto mt-2 mb-5">The trustworthy link between real-world facts and trustless Cardano smart contracts</h2>
+                        <a class="btn btn-primary" href="#ispo">Join our ISPO!</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </header>
+        <!-- About-->
+        <section class="about-section text-center" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">Orcfax is a decentralized Cardano oracle</h2>
+                        <p class="text-white-50">Oracles publish data about the real world as trusted inputs to blockchain smart contracts.
+                        </p> 
+                        <p><img class="img-fluid" src="./assets/oracle-concept.png"></p>       
+                        <p class="text-white-50">Orcfax implements the open-source Cardano Open Oracle Protocol (<a href="https://github.com/mlabs-haskell/cardano-open-oracle-protocol">COOP</a>) and provides <a href="https://cardano.org">Cardano</a> developers with well-structured tools and schemas to consume trustworthy off-chain data in their smart contracts.
+                        </p>
+                        <p><img class="img-fluid" src="./assets/orcfax-concept.png"></p>
+                        <p class="text-white-50">Orcfax is a next-generation oracle platform that completely decentralizes data collection and validation in a permissionless manner while providing full audit logs for the flow of data through the platform. The resulting "fact statements" and their metadata are stored in a permanent, standards-compliant archival repository built on the <a href="https://arweave.org">Arweave</a> decentralized storage network</p>
 
-    <!-- Features -->
-    <section class="features" id="features">
-        <div class="container">
-            <h2 class="heading">Features</h2>
-            <section class="members__section">
-                <div class="member__item">
-                    <img class="member__img" src="" alt="">
+                        <p class="text-white-50">Check out our <a href="https://docs.orcfax.io">docs</a> for a deeper dive into these topics. Or hop onto our <a href="#contact">socials</a> to follow and join our mission to decentralize trustworthy facts.</p>
+                    </div>
                 </div>
-                <div class="member__item">
-                    <img class="member__img" alt="">
-                </div>
-                <div class="member__item">
-                    <img class="member__img" src="" alt="">
-                </div>
-                <div class="member__item">
-                        <img class="member__img" src="" alt="">
-                </div>
-                <div class="member__item">
-                        <img class="member__img" alt="">
-                </div>
-                <div class="member__item">
-                        <img class="member__img" src="" alt="">
-                </div>
-            </section>
-        </div>
-    </section>
+                <!-- <img class="img-fluid" src="assets/img/ipad.png" alt="..." />-->
+            </div>
+        </section>
 
+        <section class="projects-section bg-light" id="ispo">
 
-    <!-- ISPO -->
-
-    <section id="ispo">
-        <div class="container">
-            <h2 class="heading">ISPO</h2>
-            <p>Stuff about ISPO here...</p>
-        </div>     
-    </section>
-    
-    <!-- Footer -->
-    <footer>
-        <section class="container row">
-            <div class="logo__container--footer">
-
-                <div  >
-                    <a class="hidden logo-footer" href="https://twitter.com/realficardano" target="_blank">
-                        <img src="./assets/2021-Twitter-logo-blue.png" width="50">
-                    </a>
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/thea-y3ZcWAgVphU-unsplash.jpg" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">ISPO</h4>
+                                    <p class="mb-0 text-white-50">The Orcfax platform includes a Cardano-native utility token to facilitate payments for fact statement feeds and to reward data collectors and validators in its decentralized oracle pools.</p>
+                                    <p class="mb-0 text-white-50" style="padding-top: 20px;">
+                                    This token will also be exchangeable on the open market. The first and only way to access these tokens is to participate in the Orcfax Initial Stake Pool Offering (ISPO).</p>
+                                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <a  class="hidden logo-footer" href="https://discord.gg/mzZbwdFgXp" target="_blank">
-                        <img src="./assets/discord-logo-blue.png" width="150">
-                    </a>
+ 
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/laika-notebooks-pONH9yZ-wXg-unsplash.jpg" alt="..." /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">ISPO Prospectus</h4>
+                                    <p class="mb-0 text-white-50">Please check back here on March 15, 2023 for a full prospectus explaining the Orcfax ISPO parameters and tokenomics.</p>
+                                    <hr class="d-none d-lg-block mb-0 me-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-    </footer>
-    <script defer async src="./utils.js"></script>
-</body>
+        
+        <!-- Follow -->
+        <section class="contact-section bg-black" id="contact">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fab fa-twitter text-primary mb-2"></i>
+                                <br>
+                                <a href="https://twitter.com/orcfax">Twitter</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fab fa-discord text-primary mb-2"></i>
+                                <br>
+                                <a href="https://dsc.gg/orcfax">Discord</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fab fa-github text-primary mb-2"></i>
+                                <br>
+                                <a href="https://github.com/orcfax">Github</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Orcfax Ltd. 2023</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
