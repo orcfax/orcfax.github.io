@@ -1,3 +1,118 @@
-<html>
-<h1>Hi hoser!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <title>Orcfax oracle</title>
+</head>
+<body>
+    <header>
+        <div class="container row">
+            <button class="nav-toggle" aria-label="open navigation">
+                <span class="hamburger"></span>
+            </button>
+            <a href="#home">
+                <img 
+                    src="./assets/orcfax-logo-text.png" alt="Orcfax logo - a stylized orca"
+                    class="logo" 
+                >
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#features">Features</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#ispo">ISPO</a></li>
+                    <li class="nav__item"><a class="nav__link" href="docs.orcfax.io">Docs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home -->
+
+    <section class="hero" id="home">
+        <span id="home" class="anchor"></span>
+        <div class="container">
+            <div class="logo__container">
+                    <img src="./assets/orcfax-logo.png" alt="Orcfax-logo" class="logo--hero">
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+
+    <section class="about" id="about">
+        <span id="about" class="anchor"></span>
+        <div class="container row">
+            <div class="col">
+                <h2 class="heading">Orcfax is a decentralized Cardano oracle</h2>
+                <h3 class="heading-secondary">Orcfax collects, validates, publishes and archives fact statements about the real world.</h3>
+                <p class="about__text">Orcfax implements the open-source Cardano Open Oracle Protocol (COOP). It provides Cardano developers with trustworthy real world data inputs for their on-chain smart contracts.</p>
+                <p class="about__text">Orcfax is a next-generation oracle that provides a more comprehensive solution to "the oracle problem". It provides full audit logs for the flow of data through the platform and provides permanent, standards-compliant archival access to them, all in a fully decentralized architecture.</p>
+                <img src="./assets/orcfax-concept.jpeg" alt="Orcfax-concept">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="heading">Features</h2>
+            <section class="members__section">
+                <div class="member__item">
+                    <img class="member__img" src="" alt="">
+                </div>
+                <div class="member__item">
+                    <img class="member__img" alt="">
+                </div>
+                <div class="member__item">
+                    <img class="member__img" src="" alt="">
+                </div>
+                <div class="member__item">
+                        <img class="member__img" src="" alt="">
+                </div>
+                <div class="member__item">
+                        <img class="member__img" alt="">
+                </div>
+                <div class="member__item">
+                        <img class="member__img" src="" alt="">
+                </div>
+            </section>
+        </div>
+    </section>
+
+
+    <!-- ISPO -->
+
+    <section id="ispo">
+        <div class="container">
+            <h2 class="heading">ISPO</h2>
+            <p>Stuff about ISPO here...</p>
+        </div>     
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <section class="container row">
+            <div class="logo__container--footer">
+
+                <div  >
+                    <a class="hidden logo-footer" href="https://twitter.com/realficardano" target="_blank">
+                        <img src="./assets/2021-Twitter-logo-blue.png" width="50">
+                    </a>
+                </div>
+                <div>
+                    <a  class="hidden logo-footer" href="https://discord.gg/mzZbwdFgXp" target="_blank">
+                        <img src="./assets/discord-logo-blue.png" width="150">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script defer async src="./utils.js"></script>
+</body>
 </html>
