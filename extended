@@ -1,0 +1,41 @@
+{
+  "info": {
+        "url_png_icon_64x64": "https://orcfax.io/assets/orcfax-icon-64x64.png",
+        "url_png_logo": "https://orcfax.io/assets/orcfax-logo.png",
+        "location": "British Virgin Islands",
+        "social": {
+            "twitter_handle": "orcfax",
+            "telegram_handle": "orcfax",
+            "facebook_handle": "",
+            "youtube_handle": "orcfax859",
+            "twitch_handle": "",
+            "discord_handle": "UbAeRuNzDu",
+            "github_handle": ""
+        },
+        "company": {
+            "name": "Orcfax Ltd.",
+            "addr": "PO Box 4342. Road Town, Tortola. VG1110. British Virgin Islands",
+            "city": "Roadtown",
+            "country": "British Virgin Islands",
+            "company_id": "",
+            "vat_id": ""
+        },
+        "about": {
+            "me": "Peter Van Garderen, CEO",
+            "server": "",
+            "company": "Orcfax Ltd."
+        },
+        "rss": ""
+    },
+
+  "telegram-admin-handle": [
+        ""
+    ],
+
+  "my-pool-ids": [
+        ""
+    ],
+  "when-satured-then-recommend": [
+        ""
+    ]
+}
