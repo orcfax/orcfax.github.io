@@ -7960,6 +7960,7 @@ textarea.form-control-lg {
 .text-white-50 {
   --bs-text-opacity: 1;
   color: rgba(255, 255, 255, 0.5) !important;
+  font-size: 110% !important;
 }
 
 .text-reset {
@@ -11616,7 +11617,7 @@ body {
 }
 
 .projects-section {
-  padding: 10rem 0;
+  padding: 0 0;
 }
 .projects-section .featured-text {
   padding: 2rem;
