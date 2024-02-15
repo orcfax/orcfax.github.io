@@ -16,7 +16,7 @@
     >
         Decentralized oracle feeds for Cardano smart contracts
     </h2>
-    <div class="flex flex-col items-center pt-12 sm:pt-8 gap-5 sm:gap-8">
+    <div class="flex flex-col items-center pt-8 gap-5 sm:gap-8">
         <Countdown
             headerText="Validator Reservation opens in:"
             targetDate={new Date("2024-02-17T19:00:00Z")}

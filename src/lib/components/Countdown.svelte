@@ -48,40 +48,40 @@
 {#if hasDatePassed}
     <div class="text-2xl text-primary">{endMessage}</div>
 {:else}
-    <div class="flex flex-col gap-4 sm:gap-2 justify-center">
-        <p class="text-lg xs:text-xl sm:text-2xl lg:text-3xl font-black text-center w-full">
+    <div class="flex flex-col gap-4 sm:gap-2 justify-center max-w-[16rem] md:max-w-full">
+        <p class="text-2xl xs:text-2xl sm:text-2xl lg:text-3xl font-black text-center w-full">
             {headerText}
         </p>
         <div class="flex gap-5 font-semibold">
             <div>
-                <span class="countdown text-3xl">
+                <span class="countdown text-2xl md:text-3xl">
                     <span class="text-accent font-extrabold" style={`--value:${days};`} />
                 </span>
-                <span class="text-base-content-100 opacity-60 text-2xl"
+                <span class="text-base-content-100 opacity-60 text-xl md:text-2xl"
                     >{pluralize("day", days)}</span
                 >
             </div>
             <div>
-                <span class="countdown text-3xl">
+                <span class="countdown text-2xl md:text-3xl">
                     <span class="text-accent font-extrabold" style={`--value:${hours};`} />
                 </span>
-                <span class="text-base-content-100 opacity-60 text-2xl"
+                <span class="text-base-content-100 opacity-60 text-xl md:text-2xl"
                     >{pluralize("hour", hours)}</span
                 >
             </div>
             <div>
-                <span class="countdown text-3xl">
+                <span class="countdown text-2xl md:text-3xl">
                     <span class="text-accent font-extrabold" style={`--value:${minutes};`} />
                 </span>
-                <span class="text-base-content-100 opacity-60 text-2xl"
+                <span class="text-base-content-100 opacity-60 text-xl md:text-2xl"
                     >{pluralize("min", minutes)}</span
                 >
             </div>
             <div>
-                <span class="countdown text-3xl">
+                <span class="countdown text-2xl md:text-3xl">
                     <span class="text-accent font-extrabold" style={`--value:${seconds};`} />
                 </span>
-                <span class="text-base-content-100 opacity-60 text-2xl"
+                <span class="text-base-content-100 opacity-60 text-xl md:text-2xl"
                     >{pluralize("sec", seconds)}</span
                 >
             </div>
