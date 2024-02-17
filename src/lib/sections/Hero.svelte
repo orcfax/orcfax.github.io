@@ -18,9 +18,12 @@
     </h2>
     <div class="flex flex-col items-center pt-8 gap-5 sm:gap-8">
         <Countdown
-            headerText="Validator Reservation opens in:"
             targetDate={new Date("2024-02-17T19:00:00Z")}
+            activeMessage={"Validator license reservation opens in:"}
             endMessage={"Validator license reservation is open!"}
+            secondaryDate={new Date("2024-02-24T19:00:00Z")}
+            secondaryActiveMessage={"Validator license reservation closes in:"}
+            secondaryEndMessage={"Validator license reservation is closed."}
         />
         <a
             class="text-base font-bold underline text-center"

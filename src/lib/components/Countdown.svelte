@@ -9,8 +9,11 @@
     import { onMount, onDestroy } from "svelte";
 
     export let targetDate: Date;
-    export let headerText: string;
-    export let endMessage = "The countdown has ended!";
+    export let activeMessage: string;
+    export let endMessage: string;
+    export let secondaryDate: Date | undefined;
+    export let secondaryActiveMessage: string | undefined;
+    export let secondaryEndMessage: string | undefined;
 
     let hasDatePassed = false;
     let days = 0;
@@ -45,12 +48,18 @@
     });
 </script>
 
-{#if hasDatePassed}
+{#if hasDatePassed && secondaryDate}
+    <svelte:self
+        targetDate={secondaryDate}
+        activeMessage={secondaryActiveMessage}
+        endMessage={secondaryEndMessage}
+    />
+{:else if hasDatePassed}
     <div class="text-2xl text-primary">{endMessage}</div>
 {:else}
     <div class="flex flex-col gap-4 sm:gap-2 justify-center max-w-[16rem] md:max-w-full">
         <p class="text-2xl xs:text-2xl sm:text-2xl lg:text-3xl font-black text-center w-full">
-            {headerText}
+            {activeMessage}
         </p>
         <div class="flex gap-5 font-semibold">
             <div>
