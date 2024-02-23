@@ -1,6 +1,11 @@
 <script lang="ts">
     import Countdown from "$lib/components/Countdown.svelte";
     import Link from "$lib/components/Link.svelte";
+
+    let now = new Date();
+    let reservationStartDate = new Date("2024-02-17T19:00:00Z");
+    let reservationEndDate = new Date("2024-02-24T19:00:00Z");
+    let isAfterEndDate = now > reservationEndDate;
 </script>
 
 <section class="flex flex-col justify-center items-center pt-8 grow">
@@ -17,14 +22,20 @@
         Decentralized oracle feeds for Cardano smart contracts
     </h2>
     <div class="flex flex-col items-center pt-8 gap-5 sm:gap-8">
-        <Countdown
-            targetDate={new Date("2024-02-17T19:00:00Z")}
-            activeMessage={"Validator reservation opens in:"}
-            endMessage={"Validator reservation is open!"}
-            secondaryDate={new Date("2024-02-24T19:00:00Z")}
-            secondaryActiveMessage={"Validator reservation closes in:"}
-            secondaryEndMessage={"Validator reservation is closed."}
-        />
+        {#if !isAfterEndDate}
+            <Countdown
+                targetDate={reservationStartDate}
+                activeMessage={"Validator reservation opens in:"}
+                endMessage={"Validator reservation is open!"}
+                secondaryDate={reservationEndDate}
+                secondaryActiveMessage={"Validator reservation closes in:"}
+                secondaryEndMessage={"Validator reservation is closed."}
+            />
+        {:else}
+            <div class="text-2xl font-black text-center -mb-4">
+                Validator reservation is closed.
+            </div>
+        {/if}
         <a
             class="text-base font-bold underline text-center"
             href="https://medium.com/@orcfax/orcfax-validator-license-announcement-5da07ef1439c"

@@ -7,6 +7,7 @@
         differenceInSeconds,
     } from "date-fns";
     import { onMount, onDestroy } from "svelte";
+    import { blur } from "svelte/transition";
 
     export let targetDate: Date;
     export let activeMessage: string;
@@ -55,9 +56,12 @@
         endMessage={secondaryEndMessage}
     />
 {:else if hasDatePassed}
-    <div class="text-2xl text-primary">{endMessage}</div>
+    <div class="text-2xl font-black text-center -mb-8" transition:blur>{endMessage}</div>
 {:else}
-    <div class="flex flex-col gap-4 sm:gap-2 justify-center max-w-[16rem] md:max-w-full">
+    <div
+        class="flex flex-col gap-4 sm:gap-2 justify-center max-w-[16rem] md:max-w-full"
+        transition:blur
+    >
         <p class="text-2xl xs:text-2xl sm:text-2xl lg:text-3xl font-black text-center w-full">
             {activeMessage}
         </p>
