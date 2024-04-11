@@ -29,22 +29,20 @@
         {#if !isAfterWhitelistedEndDate}
             <Countdown
                 targetDate={whitelistedMintingStartDate}
-                activeMessage={"Whitelisted license minting opens in:"}
-                endMessage={"Whitelisted license minting is open!"}
+                activeMessage={"Whitelisted license mint opens in:"}
+                endMessage={"Whitelisted license mint is open!"}
                 secondaryDate={whitelistedMintingEndDate}
-                secondaryActiveMessage={"Whitelisted license minting closes in:"}
-                secondaryEndMessage={"Whitelisted license minting is closed!"}
+                secondaryActiveMessage={"Whitelisted license mint closes in:"}
+                secondaryEndMessage={"Whitelisted license mint is closed!"}
             />
         {:else if !isAfterFirstComeFirstServeStartDate}
             <Countdown
                 targetDate={firstComeFirstServeMintingStartDate}
-                activeMessage={"Unreserved license minting opens in:"}
-                endMessage={"Unreserved license minting is open!"}
+                activeMessage={"Unreserved license mint opens in:"}
+                endMessage={"Unreserved license mint is open!"}
             />
         {:else}
-            <div class="text-2xl text-center mb-4 font-black">
-                Validator license minting is open!
-            </div>
+            <div class="text-2xl text-center mb-4 font-black">Validator license mint is open!</div>
         {/if}
 
         <Link href="https://status.orcfax.io/validators" isNewTab isButton
