@@ -1,52 +1,28 @@
 <script lang="ts">
     import { pluralize } from "$lib";
+    import { time } from "$lib/stores";
     import {
         differenceInDays,
         differenceInHours,
         differenceInMinutes,
         differenceInSeconds,
     } from "date-fns";
-    import { onMount, onDestroy } from "svelte";
     import { blur } from "svelte/transition";
 
     export let targetDate: Date;
     export let activeMessage: string;
     export let endMessage: string;
-    export let secondaryDate: Date | undefined;
-    export let secondaryActiveMessage: string | undefined;
-    export let secondaryEndMessage: string | undefined;
+    export let secondaryDate: Date | undefined = undefined;
+    export let secondaryActiveMessage: string | undefined = undefined;
+    export let secondaryEndMessage: string | undefined = undefined;
 
-    let hasDatePassed = false;
-    let days = 0;
-    let hours = 0;
-    let minutes = 0;
-    let seconds = 0;
-
-    let intervalId: ReturnType<typeof setInterval>;
-
-    const updateCountdown = () => {
-        const now = new Date();
-        const totalSeconds = differenceInSeconds(targetDate, now);
-
-        if (totalSeconds <= 0) {
-            clearInterval(intervalId);
-            hasDatePassed = true;
-        } else {
-            days = differenceInDays(targetDate, now);
-            hours = differenceInHours(targetDate, now) % 24;
-            minutes = differenceInMinutes(targetDate, now) % 60;
-            seconds = totalSeconds % 60;
-        }
-    };
-
-    onMount(() => {
-        updateCountdown();
-        intervalId = setInterval(updateCountdown, 1000); // Update every second
-    });
-
-    onDestroy(() => {
-        clearInterval(intervalId);
-    });
+    $time;
+    $: totalSeconds = differenceInSeconds(targetDate, $time);
+    $: hasDatePassed = totalSeconds <= 0 ? true : false;
+    $: days = differenceInDays(targetDate, $time);
+    $: hours = differenceInHours(targetDate, $time) % 24;
+    $: minutes = differenceInMinutes(targetDate, $time) % 60;
+    $: seconds = totalSeconds % 60;
 </script>
 
 {#if hasDatePassed && secondaryDate}
@@ -56,10 +32,10 @@
         endMessage={secondaryEndMessage}
     />
 {:else if hasDatePassed}
-    <div class="text-2xl font-black text-center -mb-8" transition:blur>{endMessage}</div>
+    <div class="text-2xl font-black text-center" transition:blur>{endMessage}</div>
 {:else}
     <div
-        class="flex flex-col gap-4 sm:gap-2 justify-center max-w-[16rem] md:max-w-full"
+        class="flex flex-col gap-4 sm:gap-2 justify-center items-center max-w-[16rem] md:max-w-full"
         transition:blur
     >
         <p class="text-2xl xs:text-2xl sm:text-2xl lg:text-3xl font-black text-center w-full">

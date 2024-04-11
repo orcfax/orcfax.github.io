@@ -1,11 +1,15 @@
 <script lang="ts">
     import Countdown from "$lib/components/Countdown.svelte";
     import Link from "$lib/components/Link.svelte";
+    import { time } from "$lib/stores";
 
-    let now = new Date();
-    let reservationStartDate = new Date("2024-02-17T19:00:00Z");
-    let reservationEndDate = new Date("2024-02-24T19:00:00Z");
-    let isAfterEndDate = now > reservationEndDate;
+    $time;
+    $: whitelistedMintingStartDate = new Date("2024-04-15T18:00:00Z");
+    $: whitelistedMintingEndDate = new Date("2024-04-18T18:00:00Z");
+    $: isAfterWhitelistedEndDate = $time > whitelistedMintingEndDate;
+
+    $: firstComeFirstServeMintingStartDate = new Date("2024-04-19T18:00:00Z");
+    $: isAfterFirstComeFirstServeStartDate = $time > firstComeFirstServeMintingStartDate;
 </script>
 
 <section class="flex flex-col justify-center items-center pt-8 grow">
@@ -22,26 +26,29 @@
         Decentralized oracle feeds for Cardano smart contracts
     </h2>
     <div class="flex flex-col items-center pt-8 gap-5 sm:gap-8">
-        {#if !isAfterEndDate}
+        {#if !isAfterWhitelistedEndDate}
             <Countdown
-                targetDate={reservationStartDate}
-                activeMessage={"Validator reservation opens in:"}
-                endMessage={"Validator reservation is open!"}
-                secondaryDate={reservationEndDate}
-                secondaryActiveMessage={"Validator reservation closes in:"}
-                secondaryEndMessage={"Validator reservation is closed."}
+                targetDate={whitelistedMintingStartDate}
+                activeMessage={"Whitelisted license minting opens in:"}
+                endMessage={"Whitelisted license minting is open!"}
+                secondaryDate={whitelistedMintingEndDate}
+                secondaryActiveMessage={"Whitelisted license minting closes in:"}
+                secondaryEndMessage={"Whitelisted license minting is closed!"}
+            />
+        {:else if !isAfterFirstComeFirstServeStartDate}
+            <Countdown
+                targetDate={firstComeFirstServeMintingStartDate}
+                activeMessage={"Unreserved license minting opens in:"}
+                endMessage={"Unreserved license minting is open!"}
             />
         {:else}
-            <div class="text-2xl font-black text-center -mb-4">
-                Validator reservation is closed.
+            <div class="text-2xl text-center mb-4 font-black">
+                Validator license minting is open!
             </div>
         {/if}
-        <a
-            class="text-base font-bold underline text-center"
-            href="https://medium.com/@orcfax/orcfax-validator-license-announcement-5da07ef1439c"
-            target="_blank">Read Announcement and Rules →</a
-        >
 
-        <Link href="https://status.orcfax.io/validators" isNewTab isButton>View Leaderboard →</Link>
+        <Link href="https://status.orcfax.io/validators" isNewTab isButton
+            >View Validator Details →</Link
+        >
     </div>
 </section>
