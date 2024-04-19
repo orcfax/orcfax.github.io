@@ -26,24 +26,9 @@
         Decentralized oracle feeds for Cardano smart contracts
     </h2>
     <div class="flex flex-col items-center pt-8 gap-5 sm:gap-8">
-        {#if !isAfterWhitelistedEndDate}
-            <Countdown
-                targetDate={whitelistedMintingStartDate}
-                activeMessage={"Whitelisted license mint opens in:"}
-                endMessage={"Whitelisted license mint is open!"}
-                secondaryDate={whitelistedMintingEndDate}
-                secondaryActiveMessage={"Whitelisted license mint closes in:"}
-                secondaryEndMessage={"Whitelisted license mint is closed!"}
-            />
-        {:else if !isAfterFirstComeFirstServeStartDate}
-            <Countdown
-                targetDate={firstComeFirstServeMintingStartDate}
-                activeMessage={"Unreserved license mint opens in:"}
-                endMessage={"Unreserved license mint is open!"}
-            />
-        {:else}
-            <div class="text-2xl text-center mb-4 font-black">Validator license mint is open!</div>
-        {/if}
+        <div class="text-2xl text-center mb-4 font-black">
+            All Validator License NFTs have been claimed!
+        </div>
 
         <Link href="https://status.orcfax.io/validators" isNewTab isButton
             >View Validator Details →</Link
