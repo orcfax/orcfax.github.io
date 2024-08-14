@@ -1,9 +1,13 @@
 <script>
-	import '../app.pcss';
-	import Footer from '$lib/sections/Footer.svelte';
-	import Header from '$lib/sections/Header.svelte';
+    import "../app.pcss";
+    import Footer from "$lib/sections/Footer.svelte";
+    import Header from "$lib/sections/Header.svelte";
 </script>
 
-<Header />
-<slot />
-<Footer />
+<div class="flex flex-col min-h-screen">
+    <Header />
+    <main class="flex-grow bg-accent">
+        <slot />
+    </main>
+    <Footer />
+</div>
