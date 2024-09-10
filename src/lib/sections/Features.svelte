@@ -37,7 +37,7 @@
 		{
 			title: 'Cardano-Native eUTXO Design',
 			description:
-				'Orcfax created and implements the Cardano Open Oracle Protocol as an open standard designed to support and enhance eUTXO datum publication. A key objective of the COOP is leveraging the eUTXO design to reduce on-chain fees.',
+				'Orcfax created and implements the Oracle Protocol, which has been designed to support and enhance eUTXO datum publication. Key objectives of the protocol are to leverage the eUTXO design and to streamline the datum to reduce on-chain fees.',
 			image: `${base}/images/features/cardano-native-design.webp`,
 			altText:
 				'A black and white image showing an abstract representation of a network with interconnected nodes and lines, with several larger circles grouped in the center, forming the Cardano logo. The design suggests connectivity and complexity.'
