@@ -30,7 +30,7 @@
             Orcfax v1 is live on Mainnet!
         </div>
 
-        <Link href="https://status.orcfax.io/validators" isNewTab isButton
+        <Link href="https://explorer.orcfax.io/" isNewTab isButton
             >View new Explorer →</Link
         >
     </div>
