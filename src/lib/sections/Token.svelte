@@ -76,11 +76,11 @@
                     </div>
                     <div class="w-full flex pt-4">
                         <Link
-                            href="https://app.wingriders.com/pools/026a18d04a0c642759bb3d83b12e3344894e5c1c7b2aeb1a2113a5702b4e632bf755fe5e33309a47216aa396106641edd056423e2ef2a08ce30bb604"
+                            href="https://app.dexhunter.io/swap?tokenIdSell=&tokenIdBuy=a3931691f5c4e65d01c429e473d0dd24c51afdb6daf88e632a6c1e516f7263666178746f6b656e"
                             isNewTab
                             isButton
                         >
-                            Liquidity Pool →
+                            Trade $FACT →
                         </Link>
                     </div>
                 </div>
