@@ -27,11 +27,11 @@
     </h2>
     <div class="flex flex-col items-center pt-8 gap-5 sm:gap-8">
         <div class="text-2xl text-center mb-4 font-black">
-            All Validator License NFTs have been claimed!
+            Orcfax v1 is live on Mainnet!
         </div>
 
-        <Link href="https://status.orcfax.io/validators" isNewTab isButton
-            >View Validator Details →</Link
+        <Link href="https://explorer.orcfax.io/" isNewTab isButton
+            >View new Explorer →</Link
         >
     </div>
 </section>
