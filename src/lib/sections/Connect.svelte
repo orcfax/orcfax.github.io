@@ -47,7 +47,7 @@
         <h3 class="text-3xl text-center">Business and Collaborations</h3>
         <p class="max-w-4xl text-xl font-semibold text-center">
             If your project is interested in learning more about our services or integrating with
-            us, please contact us via email <Link
+            us, please contact us via <Link
                 class="underline text-xl"
                 href="mailto:info@orcfax.io"
                 isNewTab>email</Link
