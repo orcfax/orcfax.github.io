@@ -7,8 +7,8 @@
 	<div class="flex flex-col gap-6">
 		<h2>About Orcfax</h2>
 		<p class="font-bold italic">
-			Orcfax is a second-generation oracle service for the Cardano blockchain that publishes data
-			about real-world events into Cardano transaction datum.
+			Orcfax is an oracle service for the Cardano blockchain that publishes data about real-world
+			events into Cardano transaction datum.
 		</p>
 		<p>
 			These are made available as on-chain data inputs to smart contracts, scripts, and dApps that
@@ -16,8 +16,7 @@
 		</p>
 		<p>
 			Orcfax data is made available in Cardano's native eUTXO format using our <Link
-				href="https://docs.orcfax.io/solution-overview#cardano-open-oracle-protocol-coop"
-				isNewTab>Cardano Open Oracle Protocol (COOP)</Link
+				href="https://docs.orcfax.io/consume"isNewTab>Oracle Protocol</Link
 			>.
 		</p>
 	</div>
@@ -32,7 +31,7 @@
 			Orcfax provides full <b>audit logs</b> of its data collection and validation process for each
 			datum on a permisionless, decentralized storage network. This allows users to
 			<b>"trust but verify"</b>
-			the fact statements published by Orcfax.
+			the Fact Statements published by Orcfax.
 		</p>
 		<p>
 			Orcfax is finely-tuned to deliver <b>authentic</b> and <b>accurate</b> oracle data. This is a critical
