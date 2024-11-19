@@ -32,17 +32,17 @@
         endMessage={secondaryEndMessage}
     />
 {:else if hasDatePassed}
-    <div class="text-xl sm:text-2xl font-black text-center" transition:blur>{endMessage}</div>
+    <div class="text-xl sm:text-2xl font-bold text-center" transition:blur>{endMessage}</div>
 {:else}
     <div
-        class="flex flex-col gap-4 sm:gap-2 justify-center items-center max-w-[16rem] md:max-w-full"
+        class="flex flex-col gap-2 justify-center items-center max-w-[16rem] md:max-w-full"
         transition:blur
     >
-        <p class="text-xl sm:text-2xl font-black text-center w-full">
+        <p class="text-xl sm:text-2xl font-bold text-center w-full">
             {activeMessage}
         </p>
         <div class="flex gap-5 font-semibold">
-            <div>
+            <div class="flex flex-col">
                 <span class="countdown text-2xl md:text-3xl">
                     <span class="text-accent font-extrabold" style={`--value:${days};`} />
                 </span>
@@ -50,7 +50,7 @@
                     >{pluralize("day", days)}</span
                 >
             </div>
-            <div>
+            <div class="flex flex-col">
                 <span class="countdown text-2xl md:text-3xl">
                     <span class="text-accent font-extrabold" style={`--value:${hours};`} />
                 </span>
@@ -58,7 +58,7 @@
                     >{pluralize("hour", hours)}</span
                 >
             </div>
-            <div>
+            <div class="flex flex-col">
                 <span class="countdown text-2xl md:text-3xl">
                     <span class="text-accent font-extrabold" style={`--value:${minutes};`} />
                 </span>
@@ -66,7 +66,7 @@
                     >{pluralize("min", minutes)}</span
                 >
             </div>
-            <div>
+            <div class="flex flex-col">
                 <span class="countdown text-2xl md:text-3xl">
                     <span class="text-accent font-extrabold" style={`--value:${seconds};`} />
                 </span>

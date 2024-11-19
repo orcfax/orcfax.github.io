@@ -11,22 +11,22 @@
 <section class="flex flex-col justify-center items-center pt-8 grow">
     <Link
         href="#about"
-        class="text-[5rem] xs:text-[6.5rem] sm:text-[8rem] lg:text-[12rem] h-min leading-snug tracking-wide font-black hover:underline"
+        class="text-[5rem] xs:text-[6.5rem] sm:text-[8rem] lg:text-[8rem] h-min leading-snug tracking-wide font-black hover:underline"
     >
         Orcfax
     </Link>
 
     <h2
-        class="text-center max-w-xs xs:max-w-sm sm:max-w-md text-xl xs:text-2xl sm:text-3xl lg:text-4xl lg:max-w-lg font-bold"
+        class="text-center max-w-xs xs:max-w-sm sm:max-w-md text-xl xs:text-2xl sm:text-3xl lg:max-w-lg font-bold"
     >
         Decentralized oracle feeds for Cardano smart contracts
     </h2>
-    <div class="flex flex-col items-center pt-8 gap-8">
-        <div class="text-2xl sm:text-3xl text-center font-black px-2">
+    <div class="flex flex-col items-center pt-4 sm:pt-8 gap-5 sm:gap-8">
+        <div class="text-xl sm:text-2xl text-center font-black px-2">
             Orcfax v1 is live on Mainnet!
         </div>
 
-        <div class="flex flex-col justify-center items-center gap-4 mb-4">
+        <div class="flex flex-col justify-center items-center">
             {#if !isAfterItnPhase1StartDate}
                 <Countdown
                     targetDate={itnPhase1StartDate}
@@ -34,7 +34,7 @@
                     endMessage={"ITN Phase 1 is live!"}
                 />
             {:else}
-                <div class="text-2xl text-center mb-4 font-black">ITN Phase 1 is live!</div>
+                <div class="text-2xl text-center mb-4 font-bold">ITN Phase 1 is live!</div>
             {/if}
 
             <Link
