@@ -32,13 +32,13 @@
         endMessage={secondaryEndMessage}
     />
 {:else if hasDatePassed}
-    <div class="text-2xl font-black text-center" transition:blur>{endMessage}</div>
+    <div class="text-xl sm:text-2xl font-black text-center" transition:blur>{endMessage}</div>
 {:else}
     <div
         class="flex flex-col gap-4 sm:gap-2 justify-center items-center max-w-[16rem] md:max-w-full"
         transition:blur
     >
-        <p class="text-2xl xs:text-2xl sm:text-2xl lg:text-3xl font-black text-center w-full">
+        <p class="text-xl sm:text-2xl font-black text-center w-full">
             {activeMessage}
         </p>
         <div class="flex gap-5 font-semibold">

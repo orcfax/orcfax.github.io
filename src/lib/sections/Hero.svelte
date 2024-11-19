@@ -4,12 +4,8 @@
     import { time } from "$lib/stores";
 
     $time;
-    $: whitelistedMintingStartDate = new Date("2024-04-15T18:00:00Z");
-    $: whitelistedMintingEndDate = new Date("2024-04-18T18:00:00Z");
-    $: isAfterWhitelistedEndDate = $time > whitelistedMintingEndDate;
-
-    $: firstComeFirstServeMintingStartDate = new Date("2024-04-19T18:00:00Z");
-    $: isAfterFirstComeFirstServeStartDate = $time > firstComeFirstServeMintingStartDate;
+    $: itnPhase1StartDate = new Date("2024-12-02T00:00:00Z");
+    $: isAfterItnPhase1StartDate = $time > itnPhase1StartDate;
 </script>
 
 <section class="flex flex-col justify-center items-center pt-8 grow">
@@ -25,13 +21,30 @@
     >
         Decentralized oracle feeds for Cardano smart contracts
     </h2>
-    <div class="flex flex-col items-center pt-8 gap-5 sm:gap-8">
-        <div class="text-2xl text-center mb-4 font-black">
+    <div class="flex flex-col items-center pt-8 gap-8">
+        <div class="text-2xl sm:text-3xl text-center font-black px-2">
             Orcfax v1 is live on Mainnet!
         </div>
 
-        <Link href="https://explorer.orcfax.io/" isNewTab isButton
-            >View new Explorer →</Link
-        >
+        <div class="flex flex-col justify-center items-center gap-4 mb-4">
+            {#if !isAfterItnPhase1StartDate}
+                <Countdown
+                    targetDate={itnPhase1StartDate}
+                    activeMessage={"ITN Phase 1 starts in:"}
+                    endMessage={"ITN Phase 1 is live!"}
+                />
+            {:else}
+                <div class="text-2xl text-center mb-4 font-black">ITN Phase 1 is live!</div>
+            {/if}
+
+            <Link
+                href="https://medium.com/@orcfax/orcfax-itn-phase-1-a-guide-for-validators-5b35d81e189d"
+                isNewTab
+            >
+                ITN Phase 1 Guide →
+            </Link>
+        </div>
+
+        <Link href="https://explorer.orcfax.io/" isNewTab isButton>Launch Explorer →</Link>
     </div>
 </section>
