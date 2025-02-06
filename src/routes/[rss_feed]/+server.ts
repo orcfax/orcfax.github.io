@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { redirect } from "@sveltejs/kit";
 import type { RequestHandler } from "@sveltejs/kit";
+export const prerender = true;
 
 export const GET: RequestHandler = async ({ url, params }) => {
     const categoryFilter = url.searchParams.get("category");
