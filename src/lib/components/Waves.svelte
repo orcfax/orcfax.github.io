@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	let svgHeight = 0;
+	let svgHeight = $state(0);
 
 	onMount(() => {
 		const svg = document.querySelector('#waves') as SVGElement;

@@ -4,8 +4,8 @@
     import { time } from "$lib/stores";
 
     $time;
-    $: itnPhase1StartDate = new Date("2024-12-02T00:00:00Z");
-    $: isAfterItnPhase1StartDate = $time > itnPhase1StartDate;
+    let itnPhase1StartDate = $derived(new Date("2024-12-02T00:00:00Z"));
+    let isAfterItnPhase1StartDate = $derived($time > itnPhase1StartDate);
 </script>
 
 <section class="flex flex-col justify-center items-center pt-8 grow">

@@ -2,13 +2,17 @@
 	import Link from '$lib/components/Link.svelte';
 	import OpenLink from '$lib/components/icons/OpenLink.svelte';
 
-	export let socialCard: {
+	interface Props {
+		socialCard: {
 		title: string;
 		description: string;
 		image: string;
 		altText: string;
 		url: string;
 	};
+	}
+
+	let { socialCard }: Props = $props();
 </script>
 
 <Link class="" href={socialCard.url} isNewTab>

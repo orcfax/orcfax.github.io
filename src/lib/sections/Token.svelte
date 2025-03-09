@@ -1,11 +1,13 @@
 <script lang="ts">
+    import { preventDefault } from 'svelte/legacy';
+
     import Copy from "./../components/icons/Copy.svelte";
     import Copying from "./../components/icons/Copying.svelte";
     import Link from "$lib/components/Link.svelte";
     import FactToken from "$lib/components/FactToken.svelte";
     import PageSection from "$lib/components/PageSection.svelte";
 
-    let isCopying = false;
+    let isCopying = $state(false);
     function handleCopyToClipboard() {
         const policyID = "a3931691f5c4e65d01c429e473d0dd24c51afdb6daf88e632a6c1e51";
         navigator.clipboard.writeText(policyID);
@@ -65,7 +67,7 @@
                         >
                         <button
                             class="flex items-center justify-center relative group -mt-4 ml-2 h-9 w-9"
-                            on:click|preventDefault={handleCopyToClipboard}
+                            onclick={preventDefault(handleCopyToClipboard)}
                         >
                             {#if isCopying}
                                 <Copying />

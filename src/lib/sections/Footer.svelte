@@ -1,6 +1,8 @@
 <script lang="ts">
     import { base } from "$app/paths";
     import OpenLink from "$lib/components/icons/OpenLink.svelte";
+
+    $: year = new Date().getFullYear();
 </script>
 
 <footer
@@ -9,14 +11,9 @@
 >
     <div class="flex items-center gap-2">
         <a href="https://orcfax.io">
-            <img
-                class="w-16 md:w-20 bg-accent rounded-full"
-                src={`${base}/echo.svg`}
-                alt="Orcfax Logo"
-            />
+            <img class="w-14" src={`${base}/logo.svg`} alt="Orcfax Logo" />
         </a>
-
-        <p class="text-sm font-medium">Copyright © Orcfax Ltd. 2024</p>
+        <p class="mt-1 text-sm font-medium">Copyright © Orcfax Ltd. {year}</p>
     </div>
 
     <div class="flex flex-col xs:flex-row gap-4">
@@ -39,7 +36,7 @@
             </a>
         </div>
 
-        <div class="flex gap-4 pr-2">
+        <div class="grid grid-cols-4 gap-2">
             <a
                 class="flex items-center justify-center"
                 href="https://discord.com/invite/UbAeRuNzDu"
@@ -47,25 +44,29 @@
             >
                 <img
                     src={`${base}/images/social/discord.svg`}
-                    class="w-12 h-12"
+                    class="w-8 h-8"
                     alt="The discord logo in Orcfax green."
                 />
             </a>
-            <a class="flex items-center justify-center" href="https://x.com/orcfax" target="_blank">
+            <a
+                class="flex items-center justify-center w-full"
+                href="https://x.com/orcfax"
+                target="_blank"
+            >
                 <img
                     src={`${base}/images/social/x.svg`}
-                    class="w-10 h-10"
+                    class="w-max h-[1.7rem]"
                     alt="The x (formerly Twitter) logo in Orcfax green."
                 />
             </a>
             <a
-                class="flex items-center justify-center -mr-2 -ml-3"
+                class="flex items-center justify-center"
                 href="https://medium.com/@orcfax"
                 target="_blank"
             >
                 <img
                     src={`${base}/images/social/medium.svg`}
-                    class="w-14 h-14"
+                    class="w-9 h-9"
                     alt="The medium logo in Orcfax green."
                 />
             </a>
@@ -76,7 +77,7 @@
             >
                 <img
                     src={`${base}/images/social/github.svg`}
-                    class="w-10 h-10"
+                    class="w-6 h-6"
                     alt="The github logo in Orcfax green."
                 />
             </a>

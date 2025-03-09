@@ -1,8 +1,16 @@
+<script lang="ts">
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
+</script>
+
 <button class="pushable">
 	<span class="shadow"></span>
 	<span class="edge"></span>
 	<span class="front bg-accent text-primary text-lg sm:text-xl py-4 px-8">
-		<slot />
+		{@render children?.()}
 	</span>
 </button>
 

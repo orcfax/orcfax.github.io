@@ -32,13 +32,13 @@
         },
     ];
 
-    let menuOpen = false;
+    let menuOpen = $state(false);
 </script>
 
 <header class="absolute z-1 top-0 left-0 flex w-full justify-between">
     <a href="https://orcfax.io" class="transform hover:rotate-[-30]">
         <img
-            src={`${base}/echo.svg`}
+            src={`${base}/logo.svg`}
             class="w-[8wh] h-[8vh] mt-1 sm:w-[6rem] sm:h-[6rem] transform transition ease-in-out duration-300 delay-150 hover:-rotate-45"
             alt="The Orcfax Logo and Mascot, Echo, a black and white Orca."
         />
@@ -63,7 +63,7 @@
 
         <div class="flex md:hidden">
             <button
-                on:click={() => (menuOpen = !menuOpen)}
+                onclick={() => (menuOpen = !menuOpen)}
                 type="button"
                 class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent"
                 aria-controls="mobile-menu"
