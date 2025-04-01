@@ -1,3 +1,5 @@
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
+
 /** @type {import('tailwindcss').Config} */
 export default {
     darkMode: "class",
@@ -18,7 +20,42 @@ export default {
             screens: {
                 xs: "500px",
             },
+            animation: {
+                rippling: "rippling var(--duration) ease-out",
+                marquee: "marquee var(--duration) linear infinite",
+                "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+            },
+            keyframes: {
+                rippling: {
+                    "0%": {
+                        opacity: "1",
+                    },
+                    "100%": {
+                        transform: "scale(2)",
+                        opacity: "0",
+                    },
+                },
+                marquee: {
+                    from: { transform: "translateX(0)" },
+                    to: { transform: "translateX(calc(-100% - var(--gap)))" },
+                },
+                "marquee-vertical": {
+                    from: { transform: "translateY(0)" },
+                    to: { transform: "translateY(calc(-100% - var(--gap)))" },
+                },
+            },
         },
     },
-    plugins: [require("daisyui")],
+    plugins: [require("daisyui"), addVariablesForColors],
 };
+
+function addVariablesForColors({ addBase, theme }) {
+    let allColors = flattenColorPalette(theme("colors"));
+    let newVars = Object.fromEntries(
+        Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+    );
+
+    addBase({
+        ":root": newVars,
+    });
+}

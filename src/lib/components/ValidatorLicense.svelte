@@ -6,7 +6,7 @@
     // Remove the Spline logo from the viewer
     onMount(() => {
         intervalId = setInterval(() => {
-            const viewer = document.querySelector("#fact-token");
+            const viewer = document.querySelector("#validator-license");
             if (viewer && viewer.shadowRoot) {
                 const logo = viewer.shadowRoot.querySelector("#logo") as HTMLElement;
                 if (logo) {
@@ -21,9 +21,9 @@
     });
 </script>
 
-<div class="w-72 h-80 pointer-events-none sm:pointer-events-auto">
+<div class="w-72 h-96 pointer-events-none sm:pointer-events-auto">
     <spline-viewer
-        id="fact-token"
-        url="https://prod.spline.design/BzcpAy4Szd2x7KC9/scene.splinecode"
+        id="validator-license"
+        url="https://prod.spline.design/DCp6DqIckXRx9CBa/scene.splinecode"
     ></spline-viewer>
 </div>
