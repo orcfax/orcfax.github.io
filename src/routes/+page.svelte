@@ -11,6 +11,7 @@
     import ConnectWithUs from "$lib/components/ConnectWithUs.svelte";
     import SectionDivider from "$lib/components/SectionDivider.svelte";
     import OrcfaxWorkflow from "$lib/components/OrcfaxWorkflow.svelte";
+    import SocialProofMarquee from "$lib/components/SocialProofMarquee.svelte";
 </script>
 
 <div class="h-screen bg-gradient-to-b from-primary to-accentLight/70">
@@ -161,6 +162,11 @@
         <section id="products" class="pt-8">
             <Products />
         </section>
+
+        <div class="flex flex-col pt-12">
+            <h2 class="text-center text-2xl font-bold pb-8">Our Collaborators</h2>
+            <SocialProofMarquee />
+        </div>
 
         <section id="use-cases" class="pt-20">
             <UseCases />
