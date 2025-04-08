@@ -3,6 +3,8 @@
     import TokenDetails from "$lib/components/TokenDetails.svelte";
     import TokenDistributionChart from "$lib/components/TokenDistributionChart.svelte";
     import FactToken from "$lib/components/FactToken.svelte";
+    import SupportedDEXes from "$lib/components/DEXes.svelte";
+    import BlockExplorers from "$lib/components/BlockExplorers.svelte";
 </script>
 
 <div class="bg-primary">
@@ -37,24 +39,31 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col items-center">
-                    <div class="flex flex-col">
-                        <h2 class="text-2xl font-semibold font-mulish text-secondary">
-                            Utility & Usage
-                        </h2>
-                        <ol class="pl-8 text-gray-600 max-w-md">
-                            <li class="list-decimal">
-                                Payment for on-demand, oracle data publication
-                            </li>
-                            <li class="list-decimal">Staking by our data validator nodes</li>
-                            <li class="list-decimal">Reward payments to validators</li>
-                            <li class="list-decimal">
-                                Voting power in Orcfax DAO governance decisions
-                            </li>
-                        </ol>
+                <div class="flex flex-col gap-4">
+                    <div class="flex flex-col items-center">
+                        <div class="flex flex-col">
+                            <h2 class="text-2xl font-semibold font-mulish text-secondary">
+                                Utility & Usage
+                            </h2>
+                            <ol class="pl-8 text-gray-600 max-w-md">
+                                <li class="list-decimal">
+                                    Payment for on-demand, oracle data publication
+                                </li>
+                                <li class="list-decimal">Staking by our data validator nodes</li>
+                                <li class="list-decimal">Reward payments to validators</li>
+                                <li class="list-decimal">
+                                    Voting power in Orcfax DAO governance decisions
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <SupportedDEXes />
+                        <BlockExplorers />
                     </div>
                 </div>
             </div>
+
             <p class="text-lg">
                 You can read more about the <Link
                     href="https://docs.orcfax.io/utility-token"

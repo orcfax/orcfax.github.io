@@ -19,7 +19,7 @@
 
     // Token distribution data
     let data: ChartData<"doughnut"> = {
-        labels: ["Community & Ecosystem", "Team", "Treasury", "Advisors", "Private Sale"],
+        labels: ["Ecosystem", "Team", "Treasury", "Advisors", "Private Sale"],
         datasets: [
             {
                 data: [40, 20, 20, 10, 10], // Percentages based on the chart
