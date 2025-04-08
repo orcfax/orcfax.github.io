@@ -113,9 +113,9 @@
                                 >Tokenomics</a
                             >
                             <a
-                                href="#connect"
+                                href="#community"
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                                >Connect</a
+                                >Community</a
                             >
                         </div>
                         <div class="py-6">
