@@ -1,17 +1,15 @@
 <script lang="ts">
+    import Hero from "$lib/sections/Hero.svelte";
+    import Footer from "$lib/sections/Footer.svelte";
     import Waves from "$lib/components/Waves.svelte";
-    import LaunchExplorer from "$lib/components/LaunchExplorer.svelte";
-    import FeatureCard from "$lib/components/FeatureCard.svelte";
-    import PingStatus from "$lib/components/PingStatus.svelte";
     import NewTeam from "$lib/components/NewTeam.svelte";
-    import SocialProofMarquee from "$lib/components/SocialProofMarquee.svelte";
-    import Tokenomics from "$lib/components/Tokenomics.svelte";
-    import SectionDivider from "$lib/components/SectionDivider.svelte";
     import Products from "$lib/components/Products.svelte";
     import UseCases from "$lib/components/UseCases.svelte";
     import Separator from "$lib/components/Separator.svelte";
+    import Tokenomics from "$lib/components/Tokenomics.svelte";
+    import FeatureCard from "$lib/components/FeatureCard.svelte";
     import ConnectWithUs from "$lib/components/ConnectWithUs.svelte";
-    import Footer from "$lib/sections/Footer.svelte";
+    import SectionDivider from "$lib/components/SectionDivider.svelte";
     import OrcfaxWorkflow from "$lib/components/OrcfaxWorkflow.svelte";
 </script>
 
@@ -52,7 +50,7 @@
             <div class="hidden lg:flex lg:gap-x-12">
                 <a href="/" class="text-sm/6 font-semibold text-gray-900">Home</a>
                 <a href="#features" class="text-sm/6 font-semibold text-gray-900">Features</a>
-                <a href="#services" class="text-sm/6 font-semibold text-gray-900">Services</a>
+                <a href="#products" class="text-sm/6 font-semibold text-gray-900">Products</a>
                 <a href="#tokenomics" class="text-sm/6 font-semibold text-gray-900">Tokenomics</a>
                 <a href="#community" class="text-sm/6 font-semibold text-gray-900">Community</a>
             </div>
@@ -137,108 +135,66 @@
             </div>
         </div>
     </header>
-    <div class="relative isolate px-6 pt-14 lg:px-8">
-        <div class="ml-16 max-w-2xl py-16">
-            <div class="mt-24 mb-4 sm:mt-32 lg:mt-16">
-                <a
-                    href="https://medium.com/@orcfax/orcfax-update-9-b03f13ea438e"
-                    target="_blank"
-                    class="inline-flex space-x-3 justify-start"
-                >
-                    <span
-                        class="rounded-full bg-accent/10 px-3 py-1 text-sm font-semibold text-accent ring-1 ring-inset ring-accent/60"
-                    >
-                        What's New
-                    </span>
-                    <span
-                        class="inline-flex items-center space-x-2 text-sm font-medium text-secondary/60"
-                    >
-                        <span>Read Orcfax Update #9</span>
-                        <svg
-                            class="size-5 text-gray-500"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
-                            data-slot="icon"
-                        >
-                            <path
-                                fill-rule="evenodd"
-                                d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
-                                clip-rule="evenodd"
-                            />
-                        </svg>
-                    </span>
-                </a>
-            </div>
 
-            <div class="text-left">
-                <h1 class="text-6xl font-bold font-mulish text-gray-900">The Oracle of Record</h1>
-                <p class="mt-4 text-pretty font-mulish text-base font-medium text-gray-500">
-                    A decentralized oracle focused on <strong>independent verifiability</strong>,
-                    <strong>permanent archival integrity</strong>, and
-                    <strong>provable auditability</strong> raising the bar for trustworthy smart contract
-                    data.
-                </p>
-                <div class="mt-4 flex items-center gap-x-2 text-gray-900 font-bold">
-                    <span class="text-base">Built on</span>
-                    <img src="/cardano-horizontal-black.svg" alt="Cardano" class="h-5 w-auto" />
-                </div>
-                <div class="mt-6 flex items-center justify-start gap-x-6 pb-10">
-                    <LaunchExplorer />
-                    <a
-                        href="https://status.orcfax.io"
-                        class="group inline-flex items-center justify-center gap-x-2 text-sm/6 font-semibold text-gray-900"
-                    >
-                        <PingStatus color="green" size="sm" />
-                        <span class="underline">Network Status</span>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5"
-                        >
-                            <path d="M5 12h14" />
-                            <path d="m12 5 7 7-7 7" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <Hero />
     <Waves />
-    <div class="h-24 bg-gradient-to-b from-accent to-accentLight"></div>
-    <div id="features">
-        <FeatureCard />
+
+    <div class="flex flex-col bg-primary w-full">
+        <section id="features" class="pb-8">
+            <FeatureCard />
+        </section>
+
+        <SectionDivider fromColor="from-primary" toColor="to-secondary/10" height="h-24" />
+
+        <section id="workflow" class="pt-8 bg-secondary">
+            <OrcfaxWorkflow />
+        </section>
+
+        <svg
+            class="w-full bg-secondary"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 120"
+            preserveAspectRatio="none"
+            style=""
+        >
+            <path
+                class="fill-primary shadow-2xl"
+                d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
+            ></path>
+        </svg>
+
+        <section id="products" class="pt-8">
+            <Products />
+        </section>
+
+        <section id="use-cases" class="pt-20">
+            <UseCases />
+        </section>
+
+        <div
+            class="flex justify-center items-center w-full min-h-10 px-20 py-16 flex-col gap-10 bg-primary"
+        >
+            <Separator gradient={true} />
+        </div>
+
+        <section id="tokenomics">
+            <Tokenomics />
+        </section>
+
+        <div
+            class="flex justify-center items-center w-full min-h-10 px-20 py-20 flex-col gap-10 bg-primary"
+        >
+            <Separator gradient={true} />
+        </div>
+
+        <!-- <section id="team">
+            <NewTeam />
+        </section> -->
+
+        <section id="connect">
+            <ConnectWithUs />
+        </section>
     </div>
-    <SectionDivider fromColor="from-primary" toColor="to-secondary/10" height="h-24" />
-    <div id="workflow">
-        <OrcfaxWorkflow />
-    </div>
-    <!-- <SocialProofMarquee /> -->
-    <SectionDivider fromColor="from-secondary/10" toColor="to-primary" height="h-24" />
-    <div id="products">
-        <Products />
-    </div>
-    <div id="use-cases">
-        <UseCases />
-    </div>
-    <div id="tokenomics">
-        <Tokenomics />
-    </div>
-    <div class="flex justify-center items-center w-full min-h-10 px-20 flex-col gap-10 bg-primary">
-        <Separator gradient={true} />
-    </div>
-    <div id="team">
-        <NewTeam />
-    </div>
-    <div id="connect">
-        <ConnectWithUs />
-    </div>
+
     <Footer />
 </div>

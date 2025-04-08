@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { Rss, MessagesSquare, ScrollText, PackageSearch, SquarePlay } from "@lucide/svelte";
 </script>
 
 <div class="bg-primary pt-8 pb-20">
@@ -12,16 +13,12 @@
         <div class="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
             <div class="relative lg:col-span-3">
                 <div
-                    class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]"
+                    class="absolute inset-px rounded-lg bg-card max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]"
                 ></div>
                 <div
                     class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] lg:rounded-tl-[calc(2rem+1px)]"
                 >
-                    <img
-                        class="h-80 object-cover object-left"
-                        src="https://tailwindcss.com/plus-assets/img/component-images/bento-01-performance.png"
-                        alt=""
-                    />
+                    <Rss class="h-80 w-full object-cover stroke-secondary/90 pt-8" />
                     <div class="p-10 pt-4">
                         <h3 class="text-sm/4 font-semibold text-accent">Network Status</h3>
                         <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">
@@ -38,15 +35,11 @@
                 ></div>
             </div>
             <div class="relative lg:col-span-3">
-                <div class="absolute inset-px rounded-lg bg-white lg:rounded-tr-[2rem]"></div>
+                <div class="absolute inset-px rounded-lg bg-card lg:rounded-tr-[2rem]"></div>
                 <div
                     class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-tr-[calc(2rem+1px)]"
                 >
-                    <img
-                        class="h-80 object-cover object-left lg:object-right"
-                        src="https://tailwindcss.com/plus-assets/img/component-images/bento-01-releases.png"
-                        alt=""
-                    />
+                    <MessagesSquare class="h-80 w-full object-cover stroke-secondary/90 pt-8" />
                     <div class="p-10 pt-4">
                         <h3 class="text-sm/4 font-semibold text-accent">Community</h3>
                         <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">
@@ -63,19 +56,15 @@
                 ></div>
             </div>
             <div class="relative lg:col-span-2">
-                <div class="absolute inset-px rounded-lg bg-white lg:rounded-bl-[2rem]"></div>
+                <div class="absolute inset-px rounded-lg bg-card lg:rounded-bl-[2rem]"></div>
                 <div
                     class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-bl-[calc(2rem+1px)]"
                 >
-                    <img
-                        class="h-80 object-cover object-left"
-                        src="https://tailwindcss.com/plus-assets/img/component-images/bento-01-speed.png"
-                        alt=""
-                    />
+                    <ScrollText class="h-80 w-full object-cover stroke-secondary/90 pt-8" />
                     <div class="p-10 pt-4">
-                        <h3 class="text-sm/4 font-semibold text-accent">Learn More</h3>
+                        <h3 class="text-sm/4 font-semibold text-accent">Integrate</h3>
                         <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">
-                            Read Our Docs and Blog
+                            Read Our Docs
                         </p>
                         <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
                             Sed congue eros non finibus molestie. Vestibulum euismod augue.
@@ -87,19 +76,15 @@
                 ></div>
             </div>
             <div class="relative lg:col-span-2">
-                <div class="absolute inset-px rounded-lg bg-white"></div>
+                <div class="absolute inset-px rounded-lg bg-card"></div>
                 <div
                     class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]"
                 >
-                    <img
-                        class="h-80 object-cover"
-                        src="https://tailwindcss.com/plus-assets/img/component-images/bento-01-integrations.png"
-                        alt=""
-                    />
+                    <SquarePlay class="h-80 w-full object-cover stroke-secondary/90 pt-8" />
                     <div class="p-10 pt-4">
-                        <h3 class="text-sm/4 font-semibold text-accent">Socials</h3>
+                        <h3 class="text-sm/4 font-semibold text-accent">Learn More</h3>
                         <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">
-                            Follow Us On X
+                            Check Out Our Media Library
                         </p>
                         <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
                             Maecenas at augue sed elit dictum vulputate, in nisi aliquam maximus
@@ -113,16 +98,12 @@
             </div>
             <div class="relative lg:col-span-2">
                 <div
-                    class="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]"
+                    class="absolute inset-px rounded-lg bg-card max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]"
                 ></div>
                 <div
                     class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-br-[calc(2rem+1px)]"
                 >
-                    <img
-                        class="h-80 object-cover"
-                        src="https://tailwindcss.com/plus-assets/img/component-images/bento-01-network.png"
-                        alt=""
-                    />
+                    <PackageSearch class="h-80 w-full object-cover stroke-secondary/90 pt-8" />
                     <div class="p-10 pt-4">
                         <h3 class="text-sm/4 font-semibold text-accent">Discover More</h3>
                         <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">

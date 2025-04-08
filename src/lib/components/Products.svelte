@@ -1,17 +1,20 @@
 <script lang="ts">
+    import Link from "$lib/components/Link.svelte";
+    import Ripple from "./Ripple.svelte";
+    import Sonar from "./Sonar.svelte";
 </script>
 
-<div class="bg-primary pt-10">
+<div class="bg-primary">
     <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-        <h2 class="text-center text-base/7 font-semibold text-accent">Products</h2>
+        <h2 class="text-center text-base/7 font-semibold text-secondary font-mulish">Products</h2>
         <p
-            class="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl"
+            class="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold font-mulish tracking-tight text-secondary sm:text-5xl"
         >
             The data and proof you need, flexibly delivered.
         </p>
         <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
             <div class="relative lg:row-span-2">
-                <div class="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]"></div>
+                <div class="absolute inset-px rounded-lg bg-card lg:rounded-l-[2rem]"></div>
                 <div
                     class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]"
                 >
@@ -22,8 +25,11 @@
                             Data Feeds
                         </p>
                         <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
-                            cupidatat commodo.
+                            Check out our <a
+                                href="https://explorer.orcfax.io"
+                                class="text-accent underline text-sm/6">explorer</a
+                            >
+                            to see the current active data feeds.
                         </p>
                     </div>
                     <div
@@ -34,7 +40,7 @@
                         >
                             <img
                                 class="size-full object-cover object-top"
-                                src="https://tailwindcss.com/plus-assets/img/component-images/bento-03-mobile-friendly.png"
+                                src="./Explorer.png"
                                 alt=""
                             />
                         </div>
@@ -45,29 +51,26 @@
                 ></div>
             </div>
             <div class="relative max-lg:row-start-1">
-                <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]"></div>
+                <div class="absolute inset-px rounded-lg bg-card max-lg:rounded-t-[2rem]"></div>
                 <div
                     class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]"
                 >
-                    <div class="px-8 pt-8 sm:px-10 sm:pt-10">
+                    <div
+                        class="relative flex h-[200px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background"
+                    >
+                        <Ripple mainCircleSize={100} mainCircleOpacity={0.24} numCircles={8} />
+                    </div>
+                    <div class="px-8 sm:px-10 -mt-6 pb-8">
                         <p
                             class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center"
                         >
-                            Heartbeat Model
+                            Automatic Heartbeat
                         </p>
                         <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit maiores
-                            impedit.
+                            Choose your feed's <strong>frequency</strong> (e.g 1hr) and
+                            <strong>deviation</strong> (e.g 1% change) for automated on-chain publication.
+                            Perfect for systems that need oracle data on a regular basis.
                         </p>
-                    </div>
-                    <div
-                        class="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2"
-                    >
-                        <img
-                            class="w-full max-lg:max-w-xs"
-                            src="https://tailwindcss.com/plus-assets/img/component-images/bento-03-performance.png"
-                            alt=""
-                        />
                     </div>
                 </div>
                 <div
@@ -75,29 +78,31 @@
                 ></div>
             </div>
             <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
-                <div class="absolute inset-px rounded-lg bg-white"></div>
+                <div class="absolute inset-px rounded-lg bg-card"></div>
                 <div
                     class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]"
                 >
-                    <div class="px-8 pt-8 sm:px-10 sm:pt-10">
+                    <div
+                        class="relative flex h-[200px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background p-2 pt-8"
+                    >
+                        <div class="flex items-center justify-center w-full h-full">
+                            <Sonar />
+                        </div>
+                    </div>
+                    <div class="px-8 pt-3 sm:px-10">
                         <p
                             class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center"
                         >
-                            On-Demand Model
+                            On-Demand API <span
+                                class="rounded-full bg-accent/10 px-2 ml-1 py-[0.15rem] text-xs font-semibold text-accent ring-1 ring-inset ring-accent/60"
+                            >
+                                Beta
+                            </span>
                         </p>
                         <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                            Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse
-                            semper morbi.
+                            Query current price data and trigger on-chain publications on your
+                            schedule. Perfect for systems that need more manual control.
                         </p>
-                    </div>
-                    <div
-                        class="flex flex-1 items-center [container-type:inline-size] max-lg:py-6 lg:pb-2"
-                    >
-                        <img
-                            class="h-[min(152px,40cqw)] object-cover"
-                            src="https://tailwindcss.com/plus-assets/img/component-images/bento-03-security.png"
-                            alt=""
-                        />
                     </div>
                 </div>
                 <div
@@ -106,7 +111,7 @@
             </div>
             <div class="relative lg:row-span-2">
                 <div
-                    class="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"
+                    class="absolute inset-px rounded-lg bg-card max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"
                 ></div>
                 <div
                     class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]"
@@ -122,9 +127,9 @@
                             sodales gravida.
                         </p>
                     </div>
-                    <div class="relative min-h-[30rem] w-full grow">
+                    <div class="relative min-h-[30rem] w-full">
                         <div
-                            class="absolute bottom-0 left-10 right-0 top-10 overflow-hidden rounded-tl-xl bg-gray-900 shadow-2xl"
+                            class="absolute bottom-0 left-10 right-0 top-10 overflow-hidden rounded-tl-xl bg-secondary shadow-2xl"
                         >
                             <div class="flex bg-gray-800/40 ring-1 ring-white/5">
                                 <div class="-mb-px flex text-sm/6 font-medium text-gray-400">
@@ -138,23 +143,11 @@
                             <div class="px-6 pb-14 pt-6 text-primary">
                                 <code class="text-sm"> Code example here </code>
                             </div>
-                            <div
-                                class="absolute bottom-0 left-0 right-0 flex justify-center gap-4 p-4 bg-gray-800/80 backdrop-blur"
-                            >
-                                <a
-                                    href="https://docs.orcfax.io"
-                                    class="px-4 py-2 text-sm font-semibold text-white bg-accent hover:bg-accentDark rounded-lg transition-colors"
-                                >
-                                    Read the Docs
-                                </a>
-                                <a
-                                    href="https://discord.gg/orcfax"
-                                    class="px-4 py-2 text-sm font-semibold text-accent hover:text-white border border-accent hover:bg-accent rounded-lg transition-colors"
-                                >
-                                    Get Integration Help
-                                </a>
-                            </div>
                         </div>
+                    </div>
+                    <div class="flex justify-center gap-4 mt-2 bg-card">
+                        <Link href="https://docs.orcfax.io" isNewTab>Read Docs</Link>
+                        <Link href="https://discord.gg/orcfax" isNewTab>Get Help</Link>
                     </div>
                 </div>
                 <div

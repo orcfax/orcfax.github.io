@@ -10,7 +10,6 @@
         type ChartOptions,
         type ChartData,
     } from "chart.js";
-    import PageSection from "$lib/components/PageSection.svelte";
 
     // Register Chart.js components before using them
     Chart.register(DoughnutController, ArcElement, Legend, Title, Tooltip);
@@ -24,14 +23,8 @@
         datasets: [
             {
                 data: [40, 20, 20, 10, 10], // Percentages based on the chart
-                backgroundColor: [
-                    "#3498db", // Blue
-                    "#2ecc71", // Green
-                    "#f1c40f", // Yellow
-                    "#e74c3c", // Red
-                    "#9b59b6", // Purple
-                ],
-                borderWidth: 0,
+                backgroundColor: ["#66A29E", "#66A29E", "#66A29E", "#66A29E", "#66A29E"],
+                borderWidth: 4,
                 hoverOffset: 15,
             },
         ],
@@ -113,17 +106,4 @@
     });
 </script>
 
-<div class="flex flex-col w-full">
-    <p class="text-lg max-w-3xl">
-        Following the token generation event (TGE), the Orcfax team distributed all 1,000,000,000
-        $FACT to a series of ADA Handle wallets. Each of these adahandle wallets represents one of
-        the allocations as mentioned in the chart below.
-    </p>
-
-    <!-- Chart container -->
-    <div class="flex justify-center items-center w-full">
-        <div class="w-full max-w-[700px] h-[500px] relative">
-            <canvas bind:this={element}></canvas>
-        </div>
-    </div>
-</div>
+<canvas bind:this={element}></canvas>

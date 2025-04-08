@@ -21,17 +21,6 @@
                 d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
             ></path>
         </svg>
-
-        <!-- Subtle decorative elements -->
-        <!-- <div class="absolute inset-0 overflow-hidden opacity-10">
-            <div class="absolute top-1/2 left-1/4 w-24 h-24 rounded-full bg-white/20 blur-xl"></div>
-            <div
-                class="absolute top-1/3 right-1/3 w-32 h-32 rounded-full bg-white/20 blur-xl"
-            ></div>
-            <div
-                class="absolute bottom-1/4 right-1/4 w-20 h-20 rounded-full bg-white/20 blur-xl"
-            ></div>
-        </div> -->
     </div>
 </div>
 

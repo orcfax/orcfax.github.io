@@ -5,9 +5,9 @@
 <div class="bg-accent py-24 pt-16">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:text-center">
-            <h2 class="text-base/7 font-semibold text-primary">Features</h2>
+            <h2 class="text-base/7 font-semibold font-mulish text-primary">Features</h2>
             <p
-                class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-primary sm:text-5xl lg:text-balance"
+                class="mt-2 text-pretty text-4xl font-semibold font-mulish tracking-tight text-primary sm:text-5xl lg:text-balance"
             >
                 Not Just Data — Proof.
             </p>

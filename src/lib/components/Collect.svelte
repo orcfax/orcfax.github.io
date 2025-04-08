@@ -1,37 +1,25 @@
-<div>
+<script lang="ts">
+    import AnimatedBeamMultipleInput from "./CollectAnimation.svelte";
+</script>
+
+<div class="w-full flex flex-col items-center justify-center">
     <p class="text-primary font-normal mb-8">
-        Orcfax enforces a strict triangulation policy to ensure the authenticity and accuracy of its
-        oracle data. Each validator node queries a minimum of three independent sources, mitigating
-        single points of failure and protecting against compromised or anomalous data.
+        Every <a
+            href="https://docs.orcfax.io/verify"
+            target="_blank"
+            class="text-accentLight underline"
+        >
+            Fact Statement
+        </a>
+        that Orcfax publishes on-chain is sourced from a minimum of three independent sources to mitigate
+        single points of failure and protect against compromised or anomalous data. We call this the
+        <a
+            href="https://docs.orcfax.io/orcfax-vision#triangulation-of-data-points-vs-single-source-data-points"
+            target="_blank"
+            class="text-accentLight underline"
+        >
+            triangulation principle
+        </a>.
     </p>
-    <div class="grid grid-cols-2 gap-4">
-        <img
-            src="https://assets.aceternity.com/templates/startup-1.webp"
-            alt="startup template"
-            width={500}
-            height={500}
-            class="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-        />
-        <img
-            src="https://assets.aceternity.com/templates/startup-2.webp"
-            alt="startup template"
-            width={500}
-            height={500}
-            class="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-        />
-        <img
-            src="https://assets.aceternity.com/templates/startup-3.webp"
-            alt="startup template"
-            width={500}
-            height={500}
-            class="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-        />
-        <img
-            src="https://assets.aceternity.com/templates/startup-4.webp"
-            alt="startup template"
-            width={500}
-            height={500}
-            class="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-        />
-    </div>
+    <AnimatedBeamMultipleInput />
 </div>

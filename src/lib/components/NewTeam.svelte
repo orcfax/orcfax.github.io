@@ -1,10 +1,10 @@
-<div class="bg-primary py-24 sm:py-32">
+<div class="bg-primary">
     <div class="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-3">
         <div class="max-w-xl">
             <h2
                 class="text-pretty text-3xl font-semibold tracking-tight text-secondary sm:text-4xl font-mulish"
             >
-                Our Team
+                Team
             </h2>
             <p class="mt-6 text-lg/8 text-gray-600 font-mulish">
                 We're a dynamic group of individuals who are passionate about what we do and
