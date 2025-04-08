@@ -45,9 +45,22 @@
             body: "With @Orcfax, we’re building a trusted on-chain risk explorer—verified, and accessible to all.",
             img: "/integrators/xerberus.jpg",
         },
+        {
+            name: "Yamfore",
+            username: "@yamfore",
+            body: "We’re excited to announce our official partnership with @orcfax! 🐋🤝 Please feel free to read up more about the details in our blog post 🖋️👇 https://yamfore.medium.com/yamfore-partners-with-orcfax-5effae70b184",
+            img: "/integrators/yamfore.jpg",
+        },
+        {
+            name: "Liqwid",
+            username: "@liqwidfinance",
+            body: "🗳we are huge fans of orcas and oracle pools😅",
+            img: "/integrators/liqwid.png",
+        },
     ];
 
     let firstRow = reviews.slice(0, reviews.length / 2);
+    let secondRow = reviews.slice(reviews.length / 2, reviews.length);
 </script>
 
 <div
@@ -55,6 +68,11 @@
 >
     <Marquee pauseOnHover class="[--duration:20s]">
         {#each firstRow as item}
+            <SocialProofCard {...item} />
+        {/each}
+    </Marquee>
+    <Marquee reverse pauseOnHover class="[--duration:20s]">
+        {#each secondRow as item}
             <SocialProofCard {...item} />
         {/each}
     </Marquee>
