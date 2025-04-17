@@ -52,7 +52,6 @@
                 <a href="#features" class="text-sm/6 font-semibold text-gray-900">Features</a>
                 <a href="#products" class="text-sm/6 font-semibold text-gray-900">Products</a>
                 <a href="#tokenomics" class="text-sm/6 font-semibold text-gray-900">Tokenomics</a>
-                <a href="#community" class="text-sm/6 font-semibold text-gray-900">Community</a>
             </div>
         </nav>
         <!-- Mobile menu, show/hide based on menu open state. -->
@@ -111,11 +110,6 @@
                                 href="#tokenomics"
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                                 >Tokenomics</a
-                            >
-                            <a
-                                href="#community"
-                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                                >Community</a
                             >
                         </div>
                         <div class="py-6">
