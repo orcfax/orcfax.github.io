@@ -140,8 +140,13 @@
                     <p class="text-sm">© {year} Orcfax Ltd. All rights reserved.</p>
                 </div>
                 <div class="flex gap-4 text-sm">
-                    <a href="/privacy" class="hover:text-accent">Privacy Policy</a>
-                    <a href="/terms" class="hover:text-accent">Terms of Service</a>
+                    <a
+                        href="https://docs.orcfax.io/terms-of-service"
+                        class="hover:text-accent"
+                        target="_blank"
+                    >
+                        Terms of Service
+                    </a>
                 </div>
             </div>
         </div>
