@@ -2,13 +2,12 @@
     import Hero from "$lib/sections/Hero.svelte";
     import Footer from "$lib/sections/Footer.svelte";
     import Waves from "$lib/components/Waves.svelte";
-    import NewTeam from "$lib/components/NewTeam.svelte";
+    import About from "$lib/components/About.svelte";
     import Products from "$lib/components/Products.svelte";
     import UseCases from "$lib/components/UseCases.svelte";
     import Separator from "$lib/components/Separator.svelte";
     import Tokenomics from "$lib/components/Tokenomics.svelte";
     import FeatureCard from "$lib/components/FeatureCard.svelte";
-    import ConnectWithUs from "$lib/components/ConnectWithUs.svelte";
     import SectionDivider from "$lib/components/SectionDivider.svelte";
     import OrcfaxWorkflow from "$lib/components/OrcfaxWorkflow.svelte";
     import SocialProofMarquee from "$lib/components/SocialProofMarquee.svelte";
@@ -136,9 +135,15 @@
     <Waves />
 
     <div class="flex flex-col bg-primary w-full">
-        <section id="features" class="pb-8">
-            <FeatureCard />
-        </section>
+        <div class="bg-gradient-to-t from-primary to-accentLight">
+            <section id="about" class="pb-8">
+                <About />
+            </section>
+
+            <section id="features" class="pb-8 pt-10">
+                <FeatureCard />
+            </section>
+        </div>
 
         <SectionDivider fromColor="from-primary" toColor="to-secondary/10" height="h-24" />
 
@@ -187,14 +192,6 @@
         >
             <Separator gradient={true} />
         </div>
-
-        <!-- <section id="team">
-            <NewTeam />
-        </section> -->
-
-        <section id="community">
-            <ConnectWithUs />
-        </section>
     </div>
 
     <Footer />

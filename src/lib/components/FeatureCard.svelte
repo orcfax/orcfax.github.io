@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Database, Search, Coins, Github, ClipboardCheck, ShieldCheck } from "@lucide/svelte";
+    import { Database, Search, Coins, Globe, ClipboardCheck, ShieldCheck } from "@lucide/svelte";
 
     interface Feature {
         title: string;
@@ -9,43 +9,45 @@
 
     let features: Feature[] = [
         {
-            title: "Multiple Feed Types",
+            title: "Flexible & Extensible",
             description:
-                "Access various data feeds including price feeds, weather data, and more. Each feed is verified and secured on-chain.",
+                "Built to provide access to various types of data feeds supporting both automatic and on-demand publishing.",
             icon: Database,
         },
         {
-            title: "Independently Verifiable",
+            title: "Permanently Verifiable",
             description:
-                "Every piece of data is verifiable and traceable from source to on-chain storage, ensuring complete transparency.",
+                "Every step of the process is independently verifiable, traceable, and provable, ensuring complete transparency forever.",
             icon: Search,
         },
         {
-            title: "Cost-effective eUTXO Model",
+            title: "Cost-effective & Optimized",
             description:
-                "Built on Cardano's eUTXO model for efficient and predictable transaction costs while maintaining security.",
+                "Multiple feeds are bundled together and optimized using Cardano's eUTXO model for efficient and predictable transaction costs.",
             icon: Coins,
         },
         {
-            title: "Open-Source",
+            title: "Audited & Open-Source",
             description:
-                "Transparent and community-driven development with open-source code available for review and contribution.",
-            icon: Github,
-        },
-        {
-            title: "Audited",
-            description: "Audited by Blink Labs and TxPipe to ensure security and reliability.",
+                "Our off-chain and on-chain code is open-source and audited by Blink Labs and TxPipe to ensure security, transparency, and trust.",
             icon: ClipboardCheck,
         },
         {
             title: "Best-in-class Archival Standards",
-            description: "Archival standards for long-term storage and retrieval of data. ",
+            description:
+                "Built by archivists and digital preservation experts, we comply with archival standards for long-term storage and retrieval of data.",
             icon: ShieldCheck,
+        },
+        {
+            title: "Decentralized",
+            description:
+                "All network operations are executed by a network of validator nodes incentivized by $FACT rather than a single centralized entity.",
+            icon: Globe,
         },
     ];
 </script>
 
-<div class="bg-gradient-to-t from-primary to-accentLight">
+<div class="">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:text-center">
             <h2 class="text-base/7 font-semibold text-secondary font-mulish">Features</h2>

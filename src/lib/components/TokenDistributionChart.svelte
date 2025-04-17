@@ -36,6 +36,33 @@
         plugins: {
             legend: {
                 position: "right",
+                onClick: (e, legendItem, legend) => {},
+                onHover: (e, legendItem, legend) => {
+                    const index = legendItem.index;
+                    const chart = legend.chart;
+                    const dataset = chart.data.datasets[0];
+
+                    // Store original colors if not already stored
+                    if (!(chart as any).originalColors) {
+                        (chart as any).originalColors = [...(dataset.backgroundColor as string[])];
+                    }
+
+                    // Set all colors to faded except the hovered one
+                    dataset.backgroundColor = (chart as any).originalColors.map(
+                        (color: string, i: number) => (i === index ? color : color + "4D")
+                    );
+                    chart.update();
+                },
+                onLeave: (e, legendItem, legend) => {
+                    const chart = legend.chart;
+                    const dataset = chart.data.datasets[0];
+
+                    // Restore original colors
+                    if ((chart as any).originalColors) {
+                        dataset.backgroundColor = (chart as any).originalColors;
+                        chart.update();
+                    }
+                },
                 labels: {
                     font: {
                         size: 14,
@@ -82,6 +109,23 @@
                 bottom: 0,
                 left: 20,
             },
+        },
+        onHover: (event, elements, chart) => {
+            if (elements.length > 0) {
+                const index = elements[0].index;
+                const dataset = chart.data.datasets[0];
+
+                // Store original colors if not already stored
+                if (!(chart as any).originalColors) {
+                    (chart as any).originalColors = [...(dataset.backgroundColor as string[])];
+                }
+
+                // Set all colors to faded except the hovered one
+                dataset.backgroundColor = (chart as any).originalColors.map(
+                    (color: string, i: number) => (i === index ? color : color + "4D")
+                );
+                chart.update();
+            }
         },
     };
 

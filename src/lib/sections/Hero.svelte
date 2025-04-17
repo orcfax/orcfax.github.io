@@ -1,40 +1,13 @@
 <script lang="ts">
     import Link from "$lib/components/Link.svelte";
     import PingStatus from "$lib/components/PingStatus.svelte";
+    import LatestBlogPost from "$lib/components/LatestBlogPost.svelte";
 </script>
 
 <div class="relative isolate px-6 pt-14 lg:px-8">
     <div class="ml-16 max-w-2xl py-16">
         <div class="mt-24 mb-4 sm:mt-32 lg:mt-16">
-            <a
-                href="https://medium.com/@orcfax/orcfax-update-9-b03f13ea438e"
-                target="_blank"
-                class="inline-flex space-x-3 justify-start"
-            >
-                <span
-                    class="rounded-full bg-accent/10 px-3 py-1 text-sm font-semibold text-accent ring-1 ring-inset ring-accent/60"
-                >
-                    What's New
-                </span>
-                <span
-                    class="inline-flex items-center space-x-2 text-sm font-medium text-secondary/60"
-                >
-                    <span>Read Orcfax Update #9</span>
-                    <svg
-                        class="size-5 text-gray-500"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                        data-slot="icon"
-                    >
-                        <path
-                            fill-rule="evenodd"
-                            d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
-                            clip-rule="evenodd"
-                        />
-                    </svg>
-                </span>
-            </a>
+            <LatestBlogPost />
         </div>
 
         <div class="text-left">
