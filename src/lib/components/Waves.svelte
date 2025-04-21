@@ -48,7 +48,6 @@
         </g>
     </svg>
 </div>
-<div class="h-24 bg-gradient-to-b from-accent to-accentLight"></div>
 
 <style>
     .parallax > use {

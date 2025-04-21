@@ -38,7 +38,7 @@
     on:click={createRipple}
     {...$$restProps}
     class={cn(
-        "relative flex cursor-pointer items-center justify-center overflow-hidden rounded-lg border-2 border-secondary/50 bg-secondary px-4 py-2 text-center text-primary",
+        "relative flex cursor-pointer items-center justify-center overflow-hidden rounded-lg border-2 border-secondary/50 bg-secondary px-3 py-1 text-center text-primary",
         _class
     )}
 >

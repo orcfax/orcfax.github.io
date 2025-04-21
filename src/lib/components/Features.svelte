@@ -29,19 +29,19 @@
         {
             title: "Audited & Open-Source",
             description:
-                "Our off-chain and on-chain code is open-source and audited by Blink Labs and TxPipe to ensure security, transparency, and trust.",
+                "All off-chain and on-chain code is open-source and <a href='https://docs.orcfax.io/f12-audit' class='underline text-base/6' target='_blank'>audited</a> by Blink Labs and TxPipe to ensure security, and trust.",
             icon: ClipboardCheck,
         },
         {
-            title: "Best-in-class Archival Standards",
+            title: "Leading Archival Practices",
             description:
-                "Built by archivists and digital preservation experts, we comply with archival standards for long-term storage and retrieval of data.",
+                "Built by archivists and digital preservation experts, we comply with archival standards for a long-term recordkeeping system.",
             icon: ShieldCheck,
         },
         {
-            title: "Decentralized",
+            title: "Decentralized Architecture",
             description:
-                "All network operations are executed by a network of validator nodes incentivized by $FACT rather than a single centralized entity.",
+                "All network operations are executed by a network of validator nodes incentivized by $FACT rather than a centralized entity.",
             icon: Globe,
         },
     ];
@@ -50,31 +50,30 @@
 <div class="">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:text-center">
-            <h2 class="text-base/7 font-semibold text-secondary font-mulish">Features</h2>
-            <p
-                class="mt-2 text-pretty text-4xl font-semibold font-mulish tracking-tight text-secondary sm:text-5xl lg:text-balance"
-            >
+            <h2 class="mt-2 text-5xl font-bold font-mulish text-secondary">
                 Not Just Data — Proof.
-            </p>
+            </h2>
             <p class="mt-6 text-lg/8 text-secondary font-mulish">
                 We take Oracles seriously. Here's what makes us different.
             </p>
         </div>
-        <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-            <dl class="grid max-w-xl grid-cols-1 gap-x-10 gap-y-10 lg:max-w-none lg:grid-cols-2">
+        <div class="mx-auto mt-16">
+            <dl class="grid max-w-xl grid-cols-1 gap-x-10 gap-y-10 lg:max-w-none lg:grid-cols-3">
                 {#each features as feature}
                     <div
-                        class="relative pl-16 bg-primary/80 rounded-lg p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300"
+                        class="relative bg-card rounded-lg p-6 shadow-sm border border-slate-400 hover:shadow-2xl transition-shadow duration-300"
                     >
-                        <dt class="text-base/7 font-semibold text-secondary">
+                        <dt
+                            class="text-base font-bold text-secondary flex items-center justify-center gap-2"
+                        >
                             <svelte:component
                                 this={feature.icon}
-                                class="absolute left-6 top-7 flex items-center justify-center size-8 text-accentDark"
+                                class="flex items-center justify-center size-6 text-accentDark"
                             />
-                            {feature.title}
+                            <span>{feature.title}</span>
                         </dt>
-                        <dd class="mt-2 text-base/7 text-secondary">
-                            {feature.description}
+                        <dd class="mt-2 text-base/6 text-secondary text-center">
+                            {@html feature.description}
                         </dd>
                     </div>
                 {/each}

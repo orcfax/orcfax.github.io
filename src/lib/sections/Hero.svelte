@@ -2,27 +2,23 @@
     import Link from "$lib/components/Link.svelte";
     import PingStatus from "$lib/components/PingStatus.svelte";
     import LatestBlogPost from "$lib/components/LatestBlogPost.svelte";
+    import HighlightedText from "$lib/components/HighlightedText.svelte";
 </script>
 
-<div class="relative isolate px-6 pt-14 lg:px-8">
-    <div class="ml-16 max-w-2xl py-16">
-        <div class="mt-24 mb-4 sm:mt-32 lg:mt-16">
-            <LatestBlogPost />
-        </div>
-
-        <div class="text-left">
-            <h1 class="text-6xl font-bold font-mulish text-secondary">The Oracle of Record</h1>
-            <p class="mt-4 text-pretty font-mulish text-base font-medium text-gray-500">
-                A decentralized oracle focused on <strong>independent verifiability</strong>,
-                <strong>permanent archival integrity</strong>, and
-                <strong>provable auditability</strong> raising the bar for trustworthy smart contract
-                data.
+<div class="relative isolate pt-32 pb-20">
+    <div class="py-16">
+        <div class="text-center">
+            <h1 class="text-7xl font-extrabold font-mulish text-secondary">The Oracle of Record</h1>
+            <p class="mt-4 mx-auto max-w-3xl text-pretty font-mulish text-base font-medium">
+                A decentralized oracle focused on <HighlightedText
+                    >independent verifiability</HighlightedText
+                >,
+                <HighlightedText>permanent archival integrity</HighlightedText>, and
+                <HighlightedText>provable auditability</HighlightedText> raising the bar for trustworthy
+                smart contract data.
             </p>
-            <div class="mt-4 flex items-center gap-x-2 text-gray-900 font-bold">
-                <span class="text-base">Built on</span>
-                <img src="/cardano-horizontal-black.svg" alt="Cardano" class="h-5 w-auto" />
-            </div>
-            <div class="mt-6 flex items-center justify-start gap-x-6 pb-10">
+
+            <div class="mt-6 flex items-center justify-center gap-x-6 pb-3">
                 <Link href="https://explorer.orcfax.io" isButton isNewTab>Launch Explorer</Link>
                 <a
                     href="https://status.orcfax.io"
@@ -46,6 +42,13 @@
                         <path d="m12 5 7 7-7 7" />
                     </svg>
                 </a>
+            </div>
+            <!-- <div class="my-4">
+                <LatestBlogPost />
+            </div> -->
+            <div class="mt-4 flex items-center justify-center gap-x-2 text-gray-900 font-bold">
+                <span class="text-base">Built on</span>
+                <img src="/cardano-horizontal-black.svg" alt="Cardano" class="h-5 w-auto" />
             </div>
         </div>
     </div>

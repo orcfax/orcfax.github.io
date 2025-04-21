@@ -8,7 +8,9 @@
 </script>
 
 <figure
-    class={cn("relative w-64 cursor-pointer overflow-hidden rounded-2xl border p-4 bg-primary")}
+    class={cn(
+        "relative w-64 overflow-hidden bg-card rounded-lg p-6 shadow-lg border border-slate-400 hover:shadow-xl transition-shadow duration-300 h-fit"
+    )}
 >
     <div class="flex flex-row items-center gap-2">
         <img class="rounded-full" width="32" height="32" alt="" src={img} />

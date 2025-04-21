@@ -23,7 +23,7 @@
         {
             title: "Dispute Resolution",
             description:
-                "When the smart-contract isn't enough, Orcfax creates trust through the archival bond. Storing data from its processes on an L0 archive to enable dispute resolution on a long timeline.",
+                "When the smart-contract isn't enough, Orcfax creates trust through the archival bond. Storing data from its processes on an L0 archive to enable long-term dispute resolution.",
             icon: MessageCircleWarning,
         },
     ];
@@ -35,25 +35,26 @@
         <p
             class="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold font-mulish tracking-tight text-secondary sm:text-5xl"
         >
-            When Trust and Proof are non-negotiable.
+            When Trust and Proof are Non-Negotiable.
         </p>
 
         <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-            <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+            <dl class="grid max-w-xl grid-cols-1 gap-x-10 gap-y-10 lg:max-w-none lg:grid-cols-3">
                 {#each useCases as useCase}
-                    <div class="flex flex-col">
-                        <dt class="text-base/7 font-semibold text-gray-900">
-                            <div
-                                class="mb-6 flex size-10 items-center justify-center rounded-lg bg-accent"
-                            >
-                                <svelte:component this={useCase.icon} class="size-6 text-white" />
-                            </div>
-                            {useCase.title}
+                    <div
+                        class="relative bg-card rounded-lg p-6 shadow-sm border border-slate-400 hover:shadow-2xl transition-shadow duration-300"
+                    >
+                        <dt
+                            class="text-base font-bold text-secondary flex items-center justify-center gap-2"
+                        >
+                            <svelte:component
+                                this={useCase.icon}
+                                class="flex items-center justify-center size-6 text-accentDark"
+                            />
+                            <span>{useCase.title}</span>
                         </dt>
-                        <dd class="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
-                            <p class="flex-auto">
-                                {useCase.description}
-                            </p>
+                        <dd class="mt-2 text-base/6 text-secondary text-center">
+                            {useCase.description}
                         </dd>
                     </div>
                 {/each}

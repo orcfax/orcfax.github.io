@@ -7,13 +7,14 @@
     import UseCases from "$lib/components/UseCases.svelte";
     import Separator from "$lib/components/Separator.svelte";
     import Tokenomics from "$lib/components/Tokenomics.svelte";
-    import FeatureCard from "$lib/components/FeatureCard.svelte";
+    import Features from "$lib/components/Features.svelte";
     import SectionDivider from "$lib/components/SectionDivider.svelte";
     import OrcfaxWorkflow from "$lib/components/OrcfaxWorkflow.svelte";
     import SocialProofMarquee from "$lib/components/SocialProofMarquee.svelte";
+    import ValidatorNodeNFT from "$lib/components/ValidatorNodeNFT.svelte";
 </script>
 
-<div class="h-screen bg-gradient-to-b from-primary to-accentLight/70">
+<div class="h-screen bg-primary">
     <header class="absolute inset-x-0 top-0 z-50">
         <nav class="flex items-center justify-between p-6 pl-4 pt-4" aria-label="Global">
             <div class="flex lg:flex-1">
@@ -129,56 +130,69 @@
     <Waves />
 
     <div class="flex flex-col bg-primary w-full">
-        <div class="bg-gradient-to-t from-primary to-accentLight">
+        <div class="bg-gradient-to-b from-accent to-accentDark pb-12 pt-20">
             <section id="about" class="pb-8">
                 <About />
             </section>
 
-            <section id="features" class="pb-8 pt-10">
-                <FeatureCard />
+            <section id="features" class="pb-16 pt-24">
+                <Features />
             </section>
         </div>
 
-        <SectionDivider fromColor="from-primary" toColor="to-secondary/10" height="h-24" />
+        <div class="bg-accentDark w-full relative">
+            <svg
+                class="w-full block"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1440 120"
+                preserveAspectRatio="none"
+                style="margin-bottom: -1px;"
+            >
+                <path
+                    class="fill-secondary"
+                    d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
+                ></path>
+            </svg>
+        </div>
 
         <section id="workflow" class="pt-8 bg-secondary">
             <OrcfaxWorkflow />
         </section>
 
-        <svg
-            class="w-full bg-secondary"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1440 120"
-            preserveAspectRatio="none"
-            style=""
-        >
-            <path
-                class="fill-primary shadow-2xl"
-                d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
-            ></path>
-        </svg>
+        <div class="bg-secondary w-full relative">
+            <svg
+                class="w-full block"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1440 120"
+                preserveAspectRatio="none"
+                style="margin-bottom: -1px;"
+            >
+                <path
+                    class="fill-primary"
+                    d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
+                ></path>
+            </svg>
+        </div>
 
         <section id="products" class="pt-8">
             <Products />
         </section>
 
         <div class="flex flex-col pt-12">
-            <h2 class="text-center text-2xl font-bold pb-8">Our Collaborators</h2>
+            <h2 class="text-center text-2xl font-bold pb-2">Our Collaborators</h2>
             <SocialProofMarquee />
         </div>
 
-        <section id="use-cases" class="pt-20">
+        <section id="use-cases" class="pt-12">
             <UseCases />
         </section>
 
-        <div
-            class="flex justify-center items-center w-full min-h-10 px-20 py-16 flex-col gap-10 bg-primary"
-        >
-            <Separator gradient={true} />
-        </div>
-
-        <section id="tokenomics">
+        <section id="tokenomics" class="pt-12">
             <Tokenomics />
+        </section>
+
+        <section id="validators" class="pt-12">
+            <ValidatorNodeNFT />
         </section>
 
         <div

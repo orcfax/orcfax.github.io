@@ -48,39 +48,23 @@
         {
             name: "Yamfore",
             username: "@yamfore",
-            body: "We’re excited to announce our official partnership with @orcfax! 🐋🤝 Please feel free to read up more about the details in our blog post 🖋️👇 https://yamfore.medium.com/yamfore-partners-with-orcfax-5effae70b184",
+            body: "We’re excited to announce our official partnership with @orcfax! 🐋🤝",
             img: "/integrators/yamfore.jpg",
-        },
-        {
-            name: "Liqwid",
-            username: "@liqwidfinance",
-            body: "🗳we are huge fans of orcas and oracle pools😅",
-            img: "/integrators/liqwid.png",
         },
     ];
 
-    let firstRow = reviews.slice(0, reviews.length / 2);
-    let secondRow = reviews.slice(reviews.length / 2, reviews.length);
+    let firstRow = reviews.slice(0, reviews.length);
 </script>
 
 <div
-    class="relative flex h-64 w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl"
+    class="relative flex h-64 w-full flex-col items-center justify-center overflow-hidden rounded-lg"
 >
-    <Marquee pauseOnHover class="[--duration:20s]">
+    <Marquee class="[--duration:40s] justify-center items-center py-4">
         {#each firstRow as item}
             <SocialProofCard {...item} />
         {/each}
     </Marquee>
-    <Marquee reverse pauseOnHover class="[--duration:20s]">
-        {#each secondRow as item}
-            <SocialProofCard {...item} />
-        {/each}
-    </Marquee>
 
-    <div
-        class="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"
-    ></div>
-    <div
-        class="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"
-    ></div>
+    <div class="pointer-events-none absolute inset-y-0 left-0 w-1/3"></div>
+    <div class="pointer-events-none absolute inset-y-0 right-0 w-1/3"></div>
 </div>

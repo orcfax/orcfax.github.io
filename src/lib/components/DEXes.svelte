@@ -41,6 +41,6 @@
 </script>
 
 <div class="flex flex-col items-center justify-center gap-2">
-    <h2 class="text-lg font-semibold font-mulish text-secondary">Trade $FACT on</h2>
+    <h2 class="text-lg font-semibold font-mulish text-secondary">Buy/Trade $FACT on</h2>
     <AvatarGroup items={dexes} />
 </div>
