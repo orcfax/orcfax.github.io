@@ -47,12 +47,12 @@
     ];
 </script>
 
-<div class="">
+<div class="pt-16">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:text-center">
-            <h2 class="mt-2 text-5xl font-bold font-mulish text-secondary">
+            <h1 class="mt-2 text-6xl font-bold font-mulish text-secondary">
                 Not Just Data — Proof.
-            </h2>
+            </h1>
             <p class="mt-6 text-lg/8 text-secondary font-mulish">
                 We take Oracles seriously. Here's what makes us different.
             </p>
@@ -61,18 +61,20 @@
             <dl class="grid max-w-xl grid-cols-1 gap-x-10 gap-y-10 lg:max-w-none lg:grid-cols-3">
                 {#each features as feature}
                     <div
-                        class="relative bg-card rounded-lg p-6 shadow-sm border border-slate-400 hover:shadow-2xl transition-shadow duration-300"
+                        class="relative bg-card rounded-lg p-6 shadow-sm border border-slate-400 group hover:shadow-lg hover:bg-secondary transition-shadow duration-300"
                     >
                         <dt
-                            class="text-base font-bold text-secondary flex items-center justify-center gap-2"
+                            class="text-base font-bold text-secondary group-hover:text-primary flex items-center justify-center gap-2"
                         >
                             <svelte:component
                                 this={feature.icon}
-                                class="flex items-center justify-center size-6 text-accentDark"
+                                class="flex items-center justify-center size-6 text-accentDark group-hover:text-accent"
                             />
                             <span>{feature.title}</span>
                         </dt>
-                        <dd class="mt-2 text-base/6 text-secondary text-center">
+                        <dd
+                            class="mt-2 text-base/6 text-secondary group-hover:text-primary text-center"
+                        >
                             {@html feature.description}
                         </dd>
                     </div>

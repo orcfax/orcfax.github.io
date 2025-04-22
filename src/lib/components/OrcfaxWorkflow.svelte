@@ -43,12 +43,12 @@
 <div class="w-full h-fit bg-secondary font-sans md:px-10" bind:this={timelineRef}>
     <div class="max-w-7xl mx-auto pb-0 px-4 md:px-8 lg:px-10">
         <div class="mx-auto max-w-2xl lg:text-center">
-            <h2 class="mt-2 text-5xl font-bold font-mulish text-primary">The Orcfax Workflow</h2>
+            <h1 class="mt-2 text-6xl font-bold font-mulish text-primary">The Orcfax Workflow</h1>
             <p class="mt-6 text-lg/8 text-primary font-mulish">
                 Every <a
                     href="https://docs.orcfax.io/verify"
                     target="_blank"
-                    class="text-accentLight underline"
+                    class="text-accent underline"
                 >
                     Fact Statement
                 </a> has a life cycle. Here's how it goes.
@@ -99,7 +99,7 @@
 
 {#snippet TimelineStep(title: string, description: string)}
     <div class="flex justify-start relative z-10">
-        <div class="relative pl-20 md:pl-16 w-full">
+        <div class="relative pl-8 lg:pl-20 w-full">
             <div class="flex items-center mb-6">
                 <div
                     class="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center"

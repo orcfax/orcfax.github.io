@@ -8,8 +8,12 @@
 <div class="relative isolate pt-32 pb-20">
     <div class="py-16">
         <div class="text-center">
-            <h1 class="text-7xl font-extrabold font-mulish text-secondary">The Oracle of Record</h1>
-            <p class="mt-4 mx-auto max-w-3xl text-pretty font-mulish text-base font-medium">
+            <h1 class="text-4xl lg:text-7xl font-extrabold font-mulish text-secondary">
+                The Oracle of Record
+            </h1>
+            <p
+                class="mt-4 mx-auto max-w-sm lg:max-w-3xl text-pretty font-mulish text-sm lg:text-base font-medium"
+            >
                 A decentralized oracle focused on <HighlightedText
                     >independent verifiability</HighlightedText
                 >,
@@ -18,7 +22,7 @@
                 smart contract data.
             </p>
 
-            <div class="mt-6 flex items-center justify-center gap-x-6 pb-3">
+            <div class="mt-6 flex flex-col lg:flex-row items-center justify-center gap-x-6 pb-3">
                 <Link href="https://explorer.orcfax.io" isButton isNewTab>Launch Explorer</Link>
                 <a
                     href="https://status.orcfax.io"

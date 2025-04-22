@@ -11,7 +11,7 @@ export default {
                 secondary: "#1F2421",
                 accent: "#66A29E",
                 accentLight: "#A3C7C4",
-                accentDark: "#52817e",
+                accentDark: "#3d615e",
                 card: "#F5F9F9",
             },
             fontFamily: {

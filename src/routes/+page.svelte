@@ -8,13 +8,12 @@
     import Separator from "$lib/components/Separator.svelte";
     import Tokenomics from "$lib/components/Tokenomics.svelte";
     import Features from "$lib/components/Features.svelte";
-    import SectionDivider from "$lib/components/SectionDivider.svelte";
     import OrcfaxWorkflow from "$lib/components/OrcfaxWorkflow.svelte";
     import SocialProofMarquee from "$lib/components/SocialProofMarquee.svelte";
     import ValidatorNodeNFT from "$lib/components/ValidatorNodeNFT.svelte";
 </script>
 
-<div class="h-screen bg-primary">
+<div class="h-screen w-full bg-primary">
     <header class="absolute inset-x-0 top-0 z-50">
         <nav class="flex items-center justify-between p-6 pl-4 pt-4" aria-label="Global">
             <div class="flex lg:flex-1">
@@ -56,8 +55,7 @@
             </div>
         </nav>
         <!-- Mobile menu, show/hide based on menu open state. -->
-        <div class="lg:hidden" role="dialog" aria-modal="true">
-            <!-- Background backdrop, show/hide based on slide-over state. -->
+        <!-- <div class="lg:hidden" role="dialog" aria-modal="true">
             <div class="fixed inset-0 z-50"></div>
             <div
                 class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
@@ -123,24 +121,24 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </header>
 
     <Hero />
     <Waves />
 
     <div class="flex flex-col bg-primary w-full">
-        <div class="bg-gradient-to-b from-accent to-accentDark pb-12 pt-20">
+        <div class="bg-gradient-to-b from-accent to-accentDark pb-12 pt-32 min-h-screen">
             <section id="about" class="pb-8">
                 <About />
             </section>
-
-            <section id="features" class="pb-16 pt-24">
-                <Features />
-            </section>
         </div>
 
-        <div class="bg-accentDark w-full relative">
+        <section id="features" class="pb-16 pt-24 bg-primary min-h-screen">
+            <Features />
+        </section>
+
+        <div class="bg-primary w-full relative">
             <svg
                 class="w-full block"
                 xmlns="http://www.w3.org/2000/svg"

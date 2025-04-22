@@ -3,12 +3,12 @@
 </script>
 
 <div class="mx-auto max-w-7xl px-6 lg:px-8 lg:text-center">
-    <div class="flex flex-col items-center gap-x-2">
-        <DataSource fillColor="fill-secondary" height="50" width="50" />
-        <h2 class="mt-2 text-5xl font-bold font-mulish text-secondary">What is Orcfax?</h2>
+    <div class="flex flex-col items-center gap-y-4">
+        <DataSource fillColor="fill-primary" height="50" width="50" />
+        <h1 class="mt-2 text-6xl font-bold font-mulish text-primary">What is Orcfax?</h1>
     </div>
     <div class="mt-8">
-        <div class="space-y-6 text-lg/8 text-secondary font-mulish max-w-4xl mx-auto">
+        <div class="space-y-6 text-primary font-mulish max-w-3xl mx-auto">
             <p>
                 Orcfax is a decentralized blockchain oracle. A chain is only as strong as its
                 weakest link and the weakest link of blockchains is their connection to the

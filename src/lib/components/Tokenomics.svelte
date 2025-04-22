@@ -17,11 +17,13 @@
         </p>
 
         <div class="flex flex-col items-center justify-around gap-12 pt-20">
-            <div class="flex items-center gap-4 bg-secondary/95 rounded-lg p-8 border shadow-lg">
+            <div
+                class="flex flex-col lg:flex-row items-center gap-4 bg-secondary/95 rounded-lg p-8 border shadow-lg"
+            >
                 <FactToken />
                 <TokenDetails />
             </div>
-            <div class="flex justify-evenly gap-8">
+            <div class="flex flex-col lg:flex-row justify-evenly gap-8">
                 <div class="flex flex-col items-center">
                     <div class="flex flex-col">
                         <h2 class="text-2xl font-semibold font-mulish text-secondary">
