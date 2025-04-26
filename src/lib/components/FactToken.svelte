@@ -21,9 +21,9 @@
     });
 </script>
 
-<div class="w-72 h-80 pointer-events-none sm:pointer-events-auto">
+<div class="w-48 h-52 pointer-events-none sm:pointer-events-auto mt-8">
     <spline-viewer
         id="fact-token"
-        url="https://prod.spline.design/BzcpAy4Szd2x7KC9/scene.splinecode"
+        url="https://prod.spline.design/YkOetzPdSoEqtenO/scene.splinecode"
     ></spline-viewer>
 </div>

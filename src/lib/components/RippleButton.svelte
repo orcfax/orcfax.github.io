@@ -4,6 +4,7 @@
     export { _class as class };
     export let duration = "2000ms";
     export let rippleColor = "#fff";
+    export let theme: "dark" | "light" = "dark";
 
     let buttonRipples: Array<{
         x: number;
@@ -38,7 +39,10 @@
     on:click={createRipple}
     {...$$restProps}
     class={cn(
-        "relative flex cursor-pointer items-center justify-center overflow-hidden rounded-lg border-2 border-secondary/50 bg-secondary px-3 py-1 text-center text-primary",
+        "relative flex cursor-pointer items-center justify-center overflow-hidden rounded-lg border-2 px-3 py-1 text-center",
+        theme === "dark"
+            ? "border-secondary/50 bg-secondary text-primary"
+            : "border-primary/50 bg-primary text-secondary",
         _class
     )}
 >

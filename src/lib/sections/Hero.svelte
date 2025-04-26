@@ -26,7 +26,7 @@
                 <Link href="https://explorer.orcfax.io" isButton isNewTab>Launch Explorer</Link>
                 <a
                     href="https://status.orcfax.io"
-                    class="group inline-flex items-center justify-center gap-x-2 text-sm/6 font-semibold text-gray-900"
+                    class="group inline-flex items-center justify-center gap-x-2 font-semibold text-gray-900"
                 >
                     <PingStatus color="green" size="sm" />
                     <span class="underline">Network Status</span>

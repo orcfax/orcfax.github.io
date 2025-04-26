@@ -127,7 +127,7 @@
     </div>
 
     <!-- Publish Stage -->
-    <div class="flex flex-col lg:flex-row items-center gap-20">
+    <div class="flex flex-col lg:flex-row items-center gap-20 -mb-10">
         <Circle class="bg-secondary border-secondary p-0">
             <div class="w-10 h-10 bg-secondary rounded-full" bind:this={publish1Ref}>
                 <SendHorizontal class="w-10 h-10 stroke-primary stroke-[1.6]" />

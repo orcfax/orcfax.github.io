@@ -6,12 +6,15 @@
 
 <div class="bg-primary">
     <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-        <h2 class="text-center text-base/7 font-semibold text-secondary font-mulish">Products</h2>
-        <p
-            class="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold font-mulish tracking-tight text-secondary sm:text-5xl"
-        >
-            The data and proof you need, flexibly delivered.
-        </p>
+        <div class="mx-auto max-w-3xl lg:text-center">
+            <h1 class="mt-2 text-6xl font-bold font-mulish text-secondary">
+                Products and Integrations
+            </h1>
+            <p class="mt-6 text-lg/8 text-secondary font-mulish">
+                The data and proof you need, flexibly delivered.
+            </p>
+        </div>
+
         <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
             <div class="relative lg:row-span-2">
                 <div class="absolute inset-px rounded-lg bg-card lg:rounded-l-[2rem]"></div>

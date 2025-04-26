@@ -176,14 +176,15 @@
             <Products />
         </section>
 
-        <div class="flex flex-col pt-12">
-            <h2 class="text-center text-2xl font-bold pb-2">Our Collaborators</h2>
-            <SocialProofMarquee />
-        </div>
-
         <section id="use-cases" class="pt-12">
             <UseCases />
         </section>
+        <div class="flex flex-col pt-12">
+            <h2 class="text-center mt-6 text-lg/8 text-secondary font-mulish font-normal">
+                What Our Collaborators Are Saying:
+            </h2>
+            <SocialProofMarquee />
+        </div>
 
         <section id="tokenomics" class="pt-12">
             <Tokenomics />

@@ -8,6 +8,7 @@
         isNewTab?: boolean;
         isButton?: boolean;
         class?: string;
+        theme?: "dark" | "light";
     }
 
     let {
@@ -16,12 +17,13 @@
         isNewTab = false,
         isButton = false,
         class: className = "underline",
+        theme = "dark",
     }: Props = $props();
 </script>
 
 {#if isButton}
-    <a {href} target={isNewTab ? "_blank" : "_self"} class="m-2">
-        <RippleButton rippleColor="#66A29E" duration="1500ms">
+    <a {href} target={isNewTab ? "_blank" : "_self"}>
+        <RippleButton rippleColor="#66A29E" duration="1500ms" {theme}>
             <div
                 class="group inline-flex items-center justify-center px-1 py-1 transition ease-out hover:duration-300"
             >

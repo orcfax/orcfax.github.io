@@ -24,6 +24,6 @@
 <div class="w-72 h-96 pointer-events-none sm:pointer-events-auto">
     <spline-viewer
         id="validator-license"
-        url="https://prod.spline.design/DCp6DqIckXRx9CBa/scene.splinecode"
+        url="https://prod.spline.design/ySoGV5wrfODU4WK6/scene.splinecode"
     ></spline-viewer>
 </div>

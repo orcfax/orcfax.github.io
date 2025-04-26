@@ -56,7 +56,7 @@
         </div>
     </div>
 
-    <div class="relative max-w-4xl mx-auto pb-20 overflow-hidden pt-12">
+    <div class="relative max-w-3xl mx-auto pb-20 overflow-hidden pt-12">
         <div class="relative">
             <div
                 style="height: {height}px;"
@@ -70,22 +70,22 @@
             <div class="grid grid-cols-5">
                 <div class="flex flex-col col-span-3 gap-10">
                     {@render TimelineStep(
-                        "1. Collect",
+                        "Collect",
                         "First, data is collected from a minimum of 3 independent sources to mitigate single points of failure and protect against compromised or anomalous data."
                     )}
 
                     {@render TimelineStep(
-                        "2. Process",
+                        "Process",
                         "Then, each source's data is normalized into a common standards-compliant format that is both human and machine readable and calculated to a single value."
                     )}
 
                     {@render TimelineStep(
-                        "3. Validate",
+                        "Validate",
                         "Then, a network of validator nodes verify the integrity of the data's structure, timestamps, and hashes ensuring an authentic and accurate final value."
                     )}
 
                     {@render TimelineStep(
-                        "4. Publish",
+                        "Publish",
                         "Finally, the value is published on-chain for smart contracts to use along with a permanent link to its fact statement archive (stored on Arweave L0) containing the necessary supporting information needed to independently verify and prove the value of the fact statement in perpetuity."
                     )}
                 </div>
@@ -99,8 +99,8 @@
 
 {#snippet TimelineStep(title: string, description: string)}
     <div class="flex justify-start relative z-10">
-        <div class="relative pl-8 lg:pl-20 w-full">
-            <div class="flex items-center mb-6">
+        <div class="relative pl-10 w-full">
+            <div class="flex items-center mb-3">
                 <div
                     class="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center"
                 >
