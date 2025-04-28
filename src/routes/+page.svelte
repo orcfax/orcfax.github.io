@@ -128,10 +128,16 @@
     <Waves />
 
     <div class="flex flex-col bg-primary w-full">
-        <div class="bg-gradient-to-b from-accent to-accentDark pb-12 pt-32 min-h-screen">
+        <div class="bg-gradient-to-b from-accent to-accentDark pb-12 pt-28 min-h-screen">
             <section id="about" class="pb-8">
                 <About />
             </section>
+            <div class="flex flex-col pt-12">
+                <h2 class="text-center mt-6 text-3xl text-primary font-mulish font-bold">
+                    Trusted by Leaders in the Space:
+                </h2>
+                <SocialProofMarquee />
+            </div>
         </div>
 
         <section id="features" class="pb-16 pt-24 bg-primary min-h-screen">
@@ -176,15 +182,9 @@
             <Products />
         </section>
 
-        <section id="use-cases" class="pt-12">
+        <section id="use-cases" class="pt-20">
             <UseCases />
         </section>
-        <div class="flex flex-col pt-12">
-            <h2 class="text-center mt-6 text-lg/8 text-secondary font-mulish font-normal">
-                What Our Collaborators Are Saying:
-            </h2>
-            <SocialProofMarquee />
-        </div>
 
         <section id="tokenomics" class="pt-12">
             <Tokenomics />
