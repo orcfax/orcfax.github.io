@@ -7,18 +7,12 @@
                 Team
             </h2>
             <p class="mt-6 text-lg/8 text-gray-600 font-mulish">
-                We're a dynamic group of individuals who are passionate about what we do and
-                dedicated to delivering the best results for our clients.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
             </p>
         </div>
         <ul role="list" class="grid gap-y-12 sm:grid-cols-3 sm:gap-y-16 xl:col-span-2">
             <li>
                 <div class="flex items-center gap-x-6">
-                    <img
-                        class="size-16 rounded-full"
-                        src="https://i.pravatar.cc/300?u=peter_vg"
-                        alt=""
-                    />
                     <div>
                         <h3
                             class="text-base/7 font-semibold tracking-tight text-secondary font-mulish"
@@ -65,11 +59,6 @@
             </li>
             <li>
                 <div class="flex items-center gap-x-6">
-                    <img
-                        class="size-16 rounded-full"
-                        src="https://i.pravatar.cc/300?u=ross_s"
-                        alt=""
-                    />
                     <div>
                         <h3
                             class="text-base/7 font-semibold tracking-tight text-secondary font-mulish"
@@ -116,11 +105,6 @@
             </li>
             <li>
                 <div class="flex items-center gap-x-6">
-                    <img
-                        class="size-16 rounded-full"
-                        src="https://i.pravatar.cc/300?u=christian_k"
-                        alt=""
-                    />
                     <div>
                         <h3
                             class="text-base/7 font-semibold tracking-tight text-secondary font-mulish"
@@ -167,18 +151,13 @@
             </li>
             <li>
                 <div class="flex items-center gap-x-6">
-                    <img
-                        class="size-16 rounded-full"
-                        src="https://i.pravatar.cc/300?u=gabriel_c"
-                        alt=""
-                    />
                     <div>
                         <h3
                             class="text-base/7 font-semibold tracking-tight text-secondary font-mulish"
                         >
                             Gabriel C.
                         </h3>
-                        <p class="text-sm/6 font-semibold text-accent">XYZ</p>
+                        <p class="text-sm/6 font-semibold text-accent">Web Dev, Design</p>
                         <ul role="list" class="mt-2 flex gap-x-3">
                             <li>
                                 <a href="#" class="text-gray-400 hover:text-accent">
@@ -218,11 +197,6 @@
             </li>
             <li>
                 <div class="flex items-center gap-x-6">
-                    <img
-                        class="size-16 rounded-full"
-                        src="https://i.pravatar.cc/300?u=dom_w"
-                        alt=""
-                    />
                     <div>
                         <h3
                             class="text-base/7 font-semibold tracking-tight text-secondary font-mulish"
@@ -269,11 +243,6 @@
             </li>
             <li>
                 <div class="flex items-center gap-x-6">
-                    <img
-                        class="size-16 rounded-full"
-                        src="https://i.pravatar.cc/300?u=george_a"
-                        alt=""
-                    />
                     <div>
                         <h3
                             class="text-base/7 font-semibold tracking-tight text-secondary font-mulish"

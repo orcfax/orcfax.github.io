@@ -10,7 +10,8 @@
     import Features from "$lib/components/Features.svelte";
     import OrcfaxWorkflow from "$lib/components/OrcfaxWorkflow.svelte";
     import SocialProofMarquee from "$lib/components/SocialProofMarquee.svelte";
-    import ValidatorNodeNFT from "$lib/components/ValidatorNodeNFT.svelte";
+    import ValidatorNetwork from "$lib/components/ValidatorNetwork.svelte";
+    import OrcfaxTeam from "$lib/components/OrcfaxTeam.svelte";
 </script>
 
 <div class="h-screen w-full bg-primary">
@@ -48,10 +49,12 @@
                 </button>
             </div>
             <div class="hidden lg:flex lg:gap-x-12">
-                <a href="/" class="text-sm/6 font-semibold text-gray-900">Home</a>
+                <a href="#about" class="text-sm/6 font-semibold text-gray-900">About</a>
                 <a href="#features" class="text-sm/6 font-semibold text-gray-900">Features</a>
-                <a href="#products" class="text-sm/6 font-semibold text-gray-900">Products</a>
+                <a href="#workflow" class="text-sm/6 font-semibold text-gray-900">Workflow</a>
+                <a href="#solutions" class="text-sm/6 font-semibold text-gray-900">Solutions</a>
                 <a href="#tokenomics" class="text-sm/6 font-semibold text-gray-900">Tokenomics</a>
+                <a href="#validators" class="text-sm/6 font-semibold text-gray-900">Validators</a>
             </div>
         </nav>
         <!-- Mobile menu, show/hide based on menu open state. -->
@@ -178,7 +181,7 @@
             </svg>
         </div>
 
-        <section id="products" class="pt-8">
+        <section id="solutions" class="pt-8">
             <Products />
         </section>
 
@@ -186,12 +189,16 @@
             <UseCases />
         </section>
 
-        <section id="tokenomics" class="pt-12">
+        <section id="tokenomics" class="pt-20">
             <Tokenomics />
         </section>
 
-        <section id="validators" class="pt-12">
-            <ValidatorNodeNFT />
+        <section id="validators" class="pt-20">
+            <ValidatorNetwork />
+        </section>
+
+        <section id="team" class="pt-36">
+            <OrcfaxTeam />
         </section>
 
         <div

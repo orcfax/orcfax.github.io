@@ -1,10 +1,10 @@
 <script lang="ts">
     import { preventDefault } from "svelte/legacy";
 
-    import Copy from "./../components/icons/Copy.svelte";
-    import Copying from "./../components/icons/Copying.svelte";
+    import Copy from "./icons/Copy.svelte";
+    import Copying from "./icons/Copying.svelte";
     import Link from "$lib/components/Link.svelte";
-    import ValidatorLicense from "$lib/components/ValidatorLicense.svelte";
+    import ValidatorLicenseNFT from "$lib/components/ValidatorLicenseNFT.svelte";
 
     import TokenDistributionChart from "$lib/components/TokenDistributionChart.svelte";
     import LogoLinkGroup from "$lib/components/LogoLinkGroup.svelte";
@@ -33,7 +33,7 @@
 
         <div class="flex items-center justify-center w-full pt-10">
             <div class="flex flex-col items-center gap-4 bg-secondary rounded-lg border shadow-lg">
-                <ValidatorLicense />
+                <ValidatorLicenseNFT />
                 <div class="w-max sm:w-auto mx-auto -mt-16 flex-grow text-primary">
                     <div class="grid grid-cols-1 gap-4 p-8 pt-0">
                         <div class="flex flex-col">
@@ -133,35 +133,50 @@
                     <h1 class="mt-2 text-2xl font-bold font-mulish text-secondary">
                         Validator License NFT
                     </h1>
-                    <div class="flex flex-col">
+                    <div class="flex flex-col gap-4">
                         <p class="text-gray-600 max-w-xl">
-                            $FACT is the Cardano-native utility token for Orcfax's ecosystem. It has
-                            necessary function and utility and is used for oracle data publication,
-                            staking by our data validator nodes, validator network incentivization,
-                            and voting power in future DAO governance decisions.
+                            The Validator License is an NFT that grants holders the right to operate
+                            an Orcfax validator node in the Orcfax decentralized validator network.
+                        </p>
+                        <p class="text-gray-600 max-w-xl">
+                            Orcfax validators are software nodes run by a decentralized network of
+                            operators around the world. These nodes collect, validate, publish, and
+                            archive real-world data on-chain.
+                        </p>
+                        <p class="text-gray-600 max-w-xl">
+                            The Orcfax Validator License NFT <Link
+                                href="https://medium.com/@orcfax/orcfax-validator-license-mint-032c327135d4"
+                                isNewTab>mint</Link
+                            > was completed on 2025-04-18. However, licenses can be purchased on the
+                            secondary market.
                         </p>
                     </div>
-                </div>
-
-                <div class="flex flex-col gap-8">
-                    <p class="mt-2 text-gray-600 max-w-xl">
-                        The $FACT token was <Link
-                            href="https://medium.com/@orcfax/orcfax-token-launch-in-collaboration-with-wingriders-launchpad-39d63da2b379"
-                            isNewTab>made available</Link
-                        > on the open market via the Wingriders Launchpad on 2023-09-08 and was distributed
-                        as follows:
-                    </p>
-                    <div class="w-full max-w-[500px] h-[200px] relative">
-                        <TokenDistributionChart />
+                    <h1 class="mt-2 text-2xl font-bold font-mulish text-secondary">
+                        Incentivized Testnet (ITN)
+                    </h1>
+                    <div class="flex flex-col gap-4">
+                        <p class="text-gray-600 max-w-xl">
+                            Orcfax's ongoing Incentivized Testnet (ITN) is a major step in enhancing
+                            the decentralized oracle infrastructure on the Cardano blockchain.
+                        </p>
+                        <p class="text-gray-600 max-w-xl">
+                            Instead of having off-chain business deals and contracts with
+                            hand-picked validators, Orcfax is implementing a permissionless and
+                            decentralized Oracle pool model for its validator network.
+                        </p>
+                        <p class="text-gray-600 max-w-xl">
+                            This initiative is preparing the Orcfax network for a smooth transition
+                            from our current federated node model to a fully decentralized model.
+                        </p>
+                        <p class="text-gray-600 max-w-xl">
+                            For more information on the ITN, you can read the
+                            <Link href="https://docs.orcfax.io/itn-overview" isNewTab>ITN Docs</Link
+                            > or check out the <Link
+                                href="https://status.orcfax.io/validators"
+                                isNewTab>Validators Status Page</Link
+                            >.
+                        </p>
                     </div>
-                    <p class="text-gray-600 max-w-xl">
-                        You can read more about the <Link
-                            href="https://docs.orcfax.io/utility-token"
-                            isNewTab>utility token</Link
-                        >
-                        and <Link href="https://docs.orcfax.io/tokenomics" isNewTab>tokenomics</Link
-                        > in our docs.
-                    </p>
                 </div>
             </div>
         </div>
