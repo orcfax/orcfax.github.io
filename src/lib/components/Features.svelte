@@ -47,7 +47,7 @@
     ];
 </script>
 
-<div class="pt-16">
+<div class="pt-2">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:text-center">
             <h1 class="mt-2 text-6xl font-bold font-mulish text-secondary">
@@ -61,19 +61,19 @@
             <dl class="grid max-w-xl grid-cols-1 gap-x-10 gap-y-10 lg:max-w-none lg:grid-cols-3">
                 {#each features as feature}
                     <div
-                        class="relative bg-card rounded-lg p-6 shadow-sm border border-slate-400 group hover:shadow-lg hover:bg-secondary transition-shadow duration-300"
+                        class="card relative bg-card rounded-lg p-6 shadow-sm border border-slate-400 group hover:shadow-lg hover:bg-secondary"
                     >
                         <dt
                             class="text-base font-bold text-secondary group-hover:text-primary flex items-center justify-center gap-2"
                         >
                             <svelte:component
                                 this={feature.icon}
-                                class="flex items-center justify-center size-6 text-accentDark group-hover:text-accent"
+                                class="icon-transition flex items-center justify-center size-6 text-accentDark group-hover:text-accent"
                             />
-                            <span>{feature.title}</span>
+                            <span class="text-transition">{feature.title}</span>
                         </dt>
                         <dd
-                            class="mt-2 text-base/6 text-secondary group-hover:text-primary text-center"
+                            class="text-transition mt-2 text-base/6 text-secondary group-hover:text-primary text-center"
                         >
                             {@html feature.description}
                         </dd>
@@ -83,3 +83,17 @@
         </div>
     </div>
 </div>
+
+<style>
+    .card {
+        transition: all 0.1s ease-in-out;
+    }
+
+    .card:hover {
+        transform: translateY(-2px);
+    }
+
+    .text-transition {
+        transition: color 0.1s ease-in-out;
+    }
+</style>

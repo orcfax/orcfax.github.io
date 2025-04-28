@@ -56,7 +56,7 @@
         </div>
     </div>
 
-    <div class="relative max-w-3xl mx-auto pb-20 overflow-hidden pt-12">
+    <div class="relative max-w-3xl mx-auto pb-6 overflow-hidden pt-12">
         <div class="relative">
             <div
                 style="height: {height}px;"
