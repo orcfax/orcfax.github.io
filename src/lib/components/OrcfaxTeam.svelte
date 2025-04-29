@@ -17,7 +17,7 @@
                         <h3
                             class="text-base/7 font-semibold tracking-tight text-secondary font-mulish"
                         >
-                            Peter Van Garderen
+                            Peter VG.
                         </h3>
                         <p class="text-sm/6 font-semibold text-accent">Founder / CEO</p>
                         <ul role="list" class="mt-2 flex gap-x-3">
