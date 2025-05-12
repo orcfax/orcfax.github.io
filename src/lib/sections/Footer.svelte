@@ -110,10 +110,10 @@
 </script>
 
 <footer class="bg-primary text-gray-950">
-    <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+    <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8 w-fit flex flex-col items-center">
+        <div class="flex flex-col xs:flex-row gap-x-20 gap-y-10 justify-center w-fit">
             {#each footerSections as section}
-                <div>
+                <div class="w-fit">
                     <h3 class="text-sm font-semibold text-accent">{section.title}</h3>
                     <ul class="mt-4 space-y-2">
                         {#each section.links as link}
@@ -133,7 +133,7 @@
             {/each}
         </div>
 
-        <div class="mt-12 border-t border-gray-200 pt-8">
+        <div class="mt-12 pt-8 w-full">
             <div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
                 <div class="flex items-center gap-2">
                     <img class="h-8 w-8" src={`${base}/logo.svg`} alt="Orcfax Logo" />

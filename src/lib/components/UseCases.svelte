@@ -127,23 +127,22 @@
 </script>
 
 <div class="bg-primary">
-    <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-        <div class="mx-auto max-w-3xl lg:text-center">
-            <h1 class="mt-2 text-6xl font-bold font-mulish text-secondary">Use Cases</h1>
-            <p class="mt-6 text-lg/8 text-secondary font-mulish">
+    <div class="mx-auto">
+        <div class="mx-auto px-6 max-w-3xl lg:text-center">
+            <h1 class="mt-2 text-5xl lg:text-6xl font-bold font-mulish text-secondary text-center">
+                Use Cases
+            </h1>
+            <p class="mt-6 text-lg/8 text-secondary font-mulish text-center">
                 When Trust and Proof are Non-Negotiable.
             </p>
         </div>
 
-        <div class="mx-auto mt-8 max-w-2xl lg:max-w-none relative">
-            <div class="carousel w-full overflow-x-auto" bind:this={carousel}>
+        <div class="mx-auto mt-8 relative overflow-hidden">
+            <div class="carousel w-full overflow-x-auto relative z-0" bind:this={carousel}>
                 {#each useCases as useCase, i}
-                    <div
-                        id={`item${i}`}
-                        class="carousel-item w-full md:w-1/2 lg:w-1/3 justify-center"
-                    >
+                    <div id={`item${i}`} class="carousel-item w-fit justify-center">
                         <div
-                            class="card relative bg-card rounded-lg p-6 shadow-sm border border-slate-400 group hover:shadow-lg hover:bg-secondary max-w-md mx-4"
+                            class="card relative bg-card rounded-lg p-6 shadow-sm border border-slate-400 group hover:shadow-lg hover:bg-secondary max-w-sm mx-4"
                         >
                             <dt
                                 class="text-base font-bold text-secondary group-hover:text-primary flex items-center justify-center gap-2"
@@ -163,26 +162,28 @@
                     </div>
                 {/each}
             </div>
-            {#if currentIndex > 0}
-                <div class="absolute -left-14 top-1/2 -translate-y-1/2">
-                    <button
-                        on:click={(e) => handleClick(e, "left")}
-                        class="btn rounded-lg bg-secondary h-36"
-                    >
-                        <svelte:component this={ChevronLeft} class="size-6 text-primary" />
-                    </button>
-                </div>
-            {/if}
-            {#if currentIndex < useCases.length - itemsPerView}
-                <div class="absolute -right-14 top-1/2 -translate-y-1/2 h-36">
-                    <button
-                        on:click={(e) => handleClick(e, "right")}
-                        class="btn rounded-lg bg-secondary h-36"
-                    >
-                        <svelte:component this={ChevronRight} class="size-6 text-primary" />
-                    </button>
-                </div>
-            {/if}
+            <div class="absolute inset-0 pointer-events-none">
+                {#if currentIndex > 0}
+                    <div class="absolute left-0 top-1/2 -translate-y-1/2 h-10 pointer-events-auto">
+                        <button
+                            on:click={(e) => handleClick(e, "left")}
+                            class="btn rounded-lg bg-secondary h-10 -ml-2 px-2"
+                        >
+                            <svelte:component this={ChevronLeft} class="size-6 text-primary" />
+                        </button>
+                    </div>
+                {/if}
+                {#if currentIndex < useCases.length - itemsPerView}
+                    <div class="absolute right-0 top-1/2 -translate-y-1/2 h-10 pointer-events-auto">
+                        <button
+                            on:click={(e) => handleClick(e, "right")}
+                            class="btn rounded-lg bg-secondary h-10 -mr-2 px-2"
+                        >
+                            <svelte:component this={ChevronRight} class="size-6 text-primary" />
+                        </button>
+                    </div>
+                {/if}
+            </div>
         </div>
     </div>
 </div>

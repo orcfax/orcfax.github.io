@@ -1,17 +1,17 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.ico" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		%sveltekit.head%
-	</head>
-	<body
-		data-sveltekit-preload-data="hover"
-		class="h-full bg-primary font-mulish text-secondary overflow-x-hidden"
-	>
-		<div style="display: contents" class="h-full">%sveltekit.body%</div>
-	</body>
+<html lang="en" class="scroll-smooth min-w-screen">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="%sveltekit.assets%/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        %sveltekit.head%
+    </head>
+    <body
+        data-sveltekit-preload-data="hover"
+        class="h-full min-w-screen bg-primary font-mulish text-secondary overflow-x-hidden"
+    >
+        <div style="display: contents" class="h-full min-w-screen">%sveltekit.body%</div>
+    </body>
 </html>
 
 <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>

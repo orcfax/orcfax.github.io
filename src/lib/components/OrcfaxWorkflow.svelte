@@ -43,8 +43,10 @@
 <div class="w-full h-fit bg-secondary font-sans md:px-10" bind:this={timelineRef}>
     <div class="max-w-7xl mx-auto pb-0 px-4 md:px-8 lg:px-10">
         <div class="mx-auto max-w-2xl lg:text-center">
-            <h1 class="mt-2 text-6xl font-bold font-mulish text-primary">The Orcfax Workflow</h1>
-            <p class="mt-6 text-lg/8 text-primary font-mulish">
+            <h1 class="mt-2 text-5xl lg:text-6xl font-bold font-mulish text-primary text-center">
+                The Orcfax Workflow
+            </h1>
+            <p class="mt-6 text-lg/8 text-primary font-mulish text-center">
                 Every <a
                     href="https://docs.orcfax.io/verify"
                     target="_blank"
@@ -108,11 +110,11 @@
                         class="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2"
                     ></div>
                 </div>
-                <h3 class="pl-8 text-2xl md:text-4xl font-bold text-primary">
+                <h3 class="pl-6 text-2xl md:text-4xl font-bold text-primary">
                     {title}
                 </h3>
             </div>
-            <div class="pl-8 flex">
+            <div class="pl-4 flex">
                 <div class="w-full flex items-center justify-center">
                     <p class="text-primary font-normal">
                         {description}

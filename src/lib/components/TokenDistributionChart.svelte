@@ -16,6 +16,12 @@
 
     let element: HTMLCanvasElement | null = $state(null);
     let chart: Chart | null = $state(null);
+    let innerWidth = $state(0);
+
+    let size = $derived.by(() => {
+        if (innerWidth <= 768) return "sm";
+        return "lg";
+    });
 
     // Token distribution data
     let data: ChartData<"doughnut"> = {
@@ -30,12 +36,12 @@
         ],
     };
 
-    let options: ChartOptions<"doughnut"> = {
+    let options: ChartOptions<"doughnut"> = $derived.by(() => ({
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
             legend: {
-                position: "right",
+                position: size === "sm" ? "bottom" : "right",
                 onClick: (e, legendItem, legend) => {},
                 onHover: (e, legendItem, legend) => {
                     const index = legendItem.index;
@@ -127,7 +133,7 @@
                 chart.update();
             }
         },
-    };
+    }));
 
     onMount(() => {
         if (element === null) {
@@ -150,4 +156,6 @@
     });
 </script>
 
-<canvas bind:this={element}></canvas>
+<svelte:window bind:innerWidth />
+
+<canvas class="w-full h-full" bind:this={element}></canvas>

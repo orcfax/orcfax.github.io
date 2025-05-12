@@ -46,7 +46,7 @@
             <div class="flex items-center gap-2">
                 <TruncatedText
                     text="a3931691f5c4e65d01c429e473d0dd24c51afdb6daf88e632a6c1e51"
-                    maxLength={20}
+                    maxLength={15}
                 />
                 <button
                     class="flex items-center justify-center relative group h-9 w-9 -mt-4 -ml-1"

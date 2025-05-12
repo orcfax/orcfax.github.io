@@ -49,16 +49,18 @@
 
 <div class="pt-2">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl lg:text-center">
-            <h1 class="mt-2 text-6xl font-bold font-mulish text-secondary">
+        <div class="mx-auto max-w-2xl">
+            <h1 class="mt-2 text-5xl lg:text-6xl font-bold font-mulish text-secondary text-center">
                 Not Just Data — Proof.
             </h1>
-            <p class="mt-6 text-lg/8 text-secondary font-mulish">
+            <p class="mt-6 text-lg/8 text-secondary font-mulish text-center">
                 We take Oracles seriously. Here's what makes us different.
             </p>
         </div>
         <div class="mx-auto mt-16">
-            <dl class="grid max-w-xl grid-cols-1 gap-x-10 gap-y-10 lg:max-w-none lg:grid-cols-3">
+            <dl
+                class="grid max-w-2xl mx-auto grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10 lg:max-w-none lg:grid-cols-3"
+            >
                 {#each features as feature}
                     <div
                         class="card relative bg-card rounded-lg p-6 shadow-sm border border-slate-400 group hover:shadow-lg hover:bg-secondary"

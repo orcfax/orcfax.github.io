@@ -5,14 +5,16 @@
     import HighlightedText from "$lib/components/HighlightedText.svelte";
 </script>
 
-<div class="relative isolate pt-32 pb-20">
-    <div class="py-16">
+<div class="relative isolate pt-32 pb-2 lg:pb-20">
+    <div class="py-16 px-4">
         <div class="text-center">
-            <h1 class="text-4xl lg:text-7xl font-extrabold font-mulish text-secondary">
+            <h1
+                class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold font-mulish text-secondary"
+            >
                 The Oracle of Record
             </h1>
             <p
-                class="mt-4 mx-auto max-w-sm lg:max-w-3xl text-pretty font-mulish text-sm lg:text-base font-medium"
+                class="mt-4 mx-auto px-4 max-w-sm md:max-w-3xl text-pretty font-mulish text-sm lg:text-base font-medium"
             >
                 A decentralized oracle focused on <HighlightedText
                     >independent verifiability</HighlightedText
@@ -22,14 +24,16 @@
                 smart contract data.
             </p>
 
-            <div class="mt-6 flex flex-col lg:flex-row items-center justify-center gap-x-6 pb-3">
+            <div
+                class="mt-6 flex gap-y-3 flex-col lg:flex-row items-center justify-center gap-x-6 pb-3"
+            >
                 <Link href="https://explorer.orcfax.io" isButton isNewTab>Launch Explorer</Link>
                 <a
                     href="https://status.orcfax.io"
                     class="group inline-flex items-center justify-center gap-x-2 font-semibold text-gray-900"
                 >
                     <PingStatus color="green" size="sm" />
-                    <span class="underline">Network Status</span>
+                    <span class="underline text-sm">Network Status</span>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"

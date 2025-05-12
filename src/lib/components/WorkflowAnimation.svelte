@@ -42,7 +42,16 @@
     let validate1Duration = $state(4);
     let validateToPublishDuration = $state(4);
     let publish1Duration = $state(4);
+
+    let innerWidth = $state(0);
+    let innerHeight = $state(0);
+
+    let size = $derived.by(() => {
+        if (innerWidth <= 640) return "xs";
+    });
 </script>
+
+<svelte:window bind:innerWidth bind:innerHeight />
 
 <div
     bind:this={containerRef}
@@ -51,8 +60,8 @@
     )}
 >
     <!-- Collect Stage -->
-    <div class="flex flex-col lg:flex-row items-center gap-20">
-        <div class="flex flex-row lg:flex-col justify-center gap-2 relative z-20">
+    <div class="flex flex-col sm:flex-row items-center gap-20">
+        <div class="flex flex-row sm:flex-col justify-center gap-0 sm:gap-2 relative z-20">
             <Circle class="p-0 h-10 w-10">
                 <div bind:this={collect1Ref} data-tip={"Coinbase"} class="tooltip tooltip-right">
                     <img src="/sources/coinbase.jpg" alt="Coinbase Logo" class="rounded-full" />
@@ -83,7 +92,7 @@
     </div>
 
     <!-- Process Stage -->
-    <div class="flex flex-col lg:flex-row items-center gap-20">
+    <div class="flex flex-col sm:flex-row items-center gap-20">
         <Circle class="bg-secondary border-secondary p-0">
             <div
                 class="w-10 h-10 bg-secondary rounded-full"
@@ -105,7 +114,7 @@
     </div>
 
     <!-- Validate Stage -->
-    <div class="flex flex-col lg:flex-row items-center gap-20">
+    <div class="flex flex-col sm:flex-row items-center gap-20">
         <Circle class="bg-secondary border-secondary p-0">
             <div
                 class="w-10 h-10 bg-secondary rounded-full"
@@ -127,13 +136,13 @@
     </div>
 
     <!-- Publish Stage -->
-    <div class="flex flex-col lg:flex-row items-center gap-20 -mb-10">
+    <div class="flex flex-col sm:flex-row items-center gap-20 -mb-10">
         <Circle class="bg-secondary border-secondary p-0">
             <div class="w-10 h-10 bg-secondary rounded-full" bind:this={publish1Ref}>
                 <SendHorizontal class="w-10 h-10 stroke-primary stroke-[1.6]" />
             </div>
         </Circle>
-        <div class="flex flex-row lg:flex-col justify-center gap-8">
+        <div class="flex flex-row sm:flex-col justify-center gap-2 sm:gap-8">
             <Circle class="p-0 h-10 w-10 bg-blue-600">
                 <div bind:this={publish2Ref} class="tooltip tooltip-left" data-tip={"Cardano"}>
                     <CardanoLogo />
@@ -158,12 +167,14 @@
         bind:fromRef={collect2Ref}
         bind:toRef={collect4Ref}
         duration={collect2Duration}
+        reverse={size === "xs" ? true : false}
     />
     <AnimatedBeam
         bind:containerRef
         bind:fromRef={collect3Ref}
         bind:toRef={collect4Ref}
         duration={collect3Duration}
+        reverse={size === "xs" ? true : false}
     />
 
     <AnimatedBeam
@@ -173,7 +184,7 @@
         delay={0.5}
         duration={collectToProcessDuration}
         startYOffset={0}
-        startXOffset={20}
+        startXOffset={size === "xs" ? 0 : 20}
         reverse={true}
     />
 
@@ -215,6 +226,7 @@
         bind:toRef={publish2Ref}
         duration={publish1Duration}
         delay={4.5}
+        reverse={size === "xs" ? true : false}
     />
     <AnimatedBeam
         bind:containerRef

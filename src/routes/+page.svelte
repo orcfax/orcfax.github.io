@@ -14,7 +14,7 @@
     import OrcfaxTeam from "$lib/components/OrcfaxTeam.svelte";
 </script>
 
-<div class="h-screen w-full bg-primary">
+<div class="h-screen min-w-screen bg-primary">
     <header class="absolute inset-x-0 top-0 z-50">
         <nav class="flex items-center justify-between p-6 pl-4 pt-4" aria-label="Global">
             <div class="flex lg:flex-1">
@@ -136,8 +136,8 @@
                 <About />
             </section>
             <div class="flex flex-col pt-12">
-                <h2 class="text-center mt-6 text-3xl text-primary font-mulish font-bold">
-                    Trusted by Leaders in the Space:
+                <h2 class="text-center mt-6 mx-8 text-2xl text-primary font-mulish font-bold">
+                    Trusted by Cardano Leaders:
                 </h2>
                 <SocialProofMarquee />
             </div>
@@ -197,12 +197,12 @@
             <ValidatorNetwork />
         </section>
 
-        <section id="team" class="pt-36">
+        <section id="team" class="pt-20">
             <OrcfaxTeam />
         </section>
 
         <div
-            class="flex justify-center items-center w-full min-h-10 px-20 py-20 flex-col gap-10 bg-primary"
+            class="flex justify-center items-center w-full min-h-10 px-20 py-10 pt-20 flex-col gap-10 bg-primary"
         >
             <Separator gradient={true} />
         </div>
