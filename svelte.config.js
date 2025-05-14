@@ -8,7 +8,10 @@ const config = {
     kit: {
         adapter: adapter(),
         paths: {
-            base: process.env.NODE_ENV === "production" ? process.env.BASE_PATH : "",
+            base: process.env.BASE_PATH || "",
+        },
+        prerender: {
+            handleHttpError: "warn", // optional: to avoid failing build on 404s
         },
     },
 };

@@ -13,7 +13,7 @@
 <header class="absolute inset-x-0 top-0 z-50">
     <nav class="flex items-center justify-between p-6 pl-4 pt-4" aria-label="Global">
         <div class="flex lg:flex-1">
-            <a href="/" class="-m-1.5 p-1.5 flex items-center">
+            <a href={`${base}/`} class="-m-1.5 p-1.5 flex items-center">
                 <img
                     class="h-14 w-auto transform transition ease-in-out duration-300 delay-150 hover:-rotate-45"
                     src="/logo.svg"
@@ -48,12 +48,20 @@
             </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-            <a href="#about" class="text-sm/6 font-semibold text-secondary">About</a>
-            <a href="#features" class="text-sm/6 font-semibold text-secondary">Features</a>
-            <a href="#workflow" class="text-sm/6 font-semibold text-secondary">Workflow</a>
-            <a href="#solutions" class="text-sm/6 font-semibold text-secondary">Solutions</a>
-            <a href="#tokenomics" class="text-sm/6 font-semibold text-secondary">Tokenomics</a>
-            <a href="#validators" class="text-sm/6 font-semibold text-secondary">Validators</a>
+            <a href={`${base}/#about`} class="text-sm/6 font-semibold text-secondary">About</a>
+            <a href={`${base}/#features`} class="text-sm/6 font-semibold text-secondary">Features</a
+            >
+            <a href={`${base}/#workflow`} class="text-sm/6 font-semibold text-secondary">Workflow</a
+            >
+            <a href={`${base}/#solutions`} class="text-sm/6 font-semibold text-secondary"
+                >Solutions</a
+            >
+            <a href={`${base}/#tokenomics`} class="text-sm/6 font-semibold text-secondary"
+                >Tokenomics</a
+            >
+            <a href={`${base}/#validators`} class="text-sm/6 font-semibold text-secondary"
+                >Validators</a
+            >
         </div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->
@@ -65,7 +73,7 @@
             >
                 <div class="flex items-center justify-between">
                     <div class="flex lg:flex-1">
-                        <a href="/" class="-m-1.5 p-1.5 flex items-center">
+                        <a href={`${base}/`} class="-m-1.5 p-1.5 flex items-center">
                             <img
                                 class="h-14 w-auto transform transition ease-in-out duration-300 delay-150 hover:-rotate-45"
                                 src="/logo.svg"
@@ -103,32 +111,32 @@
                     <div class="-my-6 divide-y divide-secondary/20">
                         <div class="space-y-2 py-6">
                             <a
-                                href="#about"
+                                href={`${base}/#about`}
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-secondary hover:bg-gray-50"
                                 >About</a
                             >
                             <a
-                                href="#features"
+                                href={`${base}/#features`}
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-secondary hover:bg-gray-50"
                                 >Features</a
                             >
                             <a
-                                href="#workflow"
+                                href={`${base}/#workflow`}
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-secondary hover:bg-gray-50"
                                 >Workflow</a
                             >
                             <a
-                                href="#solutions"
+                                href={`${base}/#solutions`}
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-secondary hover:bg-gray-50"
                                 >Solutions</a
                             >
                             <a
-                                href="#tokenomics"
+                                href={`${base}/#tokenomics`}
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-secondary hover:bg-gray-50"
                                 >Tokenomics</a
                             >
                             <a
-                                href="#validators"
+                                href={`${base}/#validators`}
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-secondary hover:bg-gray-50"
                                 >Validators</a
                             >
