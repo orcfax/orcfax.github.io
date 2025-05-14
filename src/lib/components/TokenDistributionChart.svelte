@@ -29,7 +29,7 @@
         datasets: [
             {
                 data: [40, 20, 20, 10, 10], // Percentages based on the chart
-                backgroundColor: ["#66A29E", "#66A29E", "#66A29E", "#66A29E", "#66A29E"],
+                backgroundColor: ["#3d615e", "#5a8a86", "#77b3ae", "#8fbcb8", "#A3C7C4"],
                 borderWidth: 4,
                 hoverOffset: 15,
             },
