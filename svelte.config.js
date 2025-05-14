@@ -6,9 +6,25 @@ const config = {
     preprocess: vitePreprocess(),
 
     kit: {
-        adapter: adapter(),
+        adapter: adapter({
+            pages: "build",
+            assets: "build",
+            fallback: "index.html",
+            precompress: false,
+            strict: true,
+        }),
         paths: {
-            base: process.env.NODE_ENV === "production" ? process.env.BASE_PATH : "",
+            base: process.env.BASE_PATH || "",
+        },
+        prerender: {
+            handleHttpError: ({ path, referrer, message }) => {
+                // ignore missing links
+                if (message.includes("does not begin with `base`")) {
+                    return;
+                }
+                // fail on other errors
+                throw new Error(message);
+            },
         },
     },
 };
