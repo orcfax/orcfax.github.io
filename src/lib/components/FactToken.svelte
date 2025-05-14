@@ -14,29 +14,41 @@
                     if (logo) logo.remove();
 
                     const canvas = viewer.shadowRoot.querySelector("canvas");
-                    if (canvas) isLoading = false;
+                    if (canvas) {
+                        isLoading = false;
+                        observer?.disconnect(); // Disconnect observer once canvas is found
+                    }
                 }
             };
 
+            // Initial attempt
             tryHideLogo();
 
+            // Set up observer with a more comprehensive configuration
             observer = new MutationObserver((mutations) => {
-                if (
-                    mutations.some(
-                        (m) => m.type === "childList" || (m.target as HTMLElement).id === "logo"
-                    )
-                ) {
-                    tryHideLogo();
-                }
+                mutations.forEach((mutation) => {
+                    if (mutation.type === "childList") {
+                        tryHideLogo();
+                    }
+                });
             });
 
+            // Observe with more comprehensive options
             if (viewer.shadowRoot) {
                 observer.observe(viewer.shadowRoot, {
                     childList: true,
                     subtree: true,
                     attributes: true,
+                    characterData: true,
                 });
             }
+
+            // Fallback: if after 5 seconds we still haven't found the canvas, force loading to false
+            setTimeout(() => {
+                if (isLoading) {
+                    isLoading = false;
+                }
+            }, 5000);
         }
 
         const intersectionObserver = new IntersectionObserver(
