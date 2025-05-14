@@ -1,18 +1,17 @@
 <script lang="ts">
-    import Hero from "$lib/sections/Hero.svelte";
-    import Footer from "$lib/sections/Footer.svelte";
+    import Hero from "$lib/components/Hero.svelte";
+    import Footer from "$lib/components/Footer.svelte";
     import Waves from "$lib/components/Waves.svelte";
     import About from "$lib/components/About.svelte";
-    import Products from "$lib/components/Products.svelte";
+    import Solutions from "$lib/components/Solutions.svelte";
     import UseCases from "$lib/components/UseCases.svelte";
-    import Separator from "$lib/components/Separator.svelte";
     import Tokenomics from "$lib/components/Tokenomics.svelte";
     import Features from "$lib/components/Features.svelte";
     import OrcfaxWorkflow from "$lib/components/OrcfaxWorkflow.svelte";
     import SocialProofMarquee from "$lib/components/SocialProofMarquee.svelte";
     import ValidatorNetwork from "$lib/components/ValidatorNetwork.svelte";
     import OrcfaxTeam from "$lib/components/OrcfaxTeam.svelte";
-    import Header from "$lib/sections/Header.svelte";
+    import Header from "$lib/components/Header.svelte";
 </script>
 
 <div class="h-screen min-w-screen bg-primary">
@@ -26,18 +25,14 @@
             <section id="about" class="pb-8">
                 <About />
             </section>
-            <div class="flex flex-col pt-12">
-                <h2 class="text-center mt-6 mx-8 text-2xl text-primary font-mulish font-bold">
-                    Trusted by Cardano Leaders:
-                </h2>
-                <SocialProofMarquee />
-            </div>
+            <SocialProofMarquee />
         </div>
 
         <section id="features" class="pb-16 pt-24 bg-primary min-h-screen">
             <Features />
         </section>
 
+        <!-- Top Wave Divider -->
         <div class="bg-primary w-full relative">
             <svg
                 class="w-full block"
@@ -57,6 +52,7 @@
             <OrcfaxWorkflow />
         </section>
 
+        <!-- Bottom Wave Divider -->
         <div class="bg-secondary w-full relative">
             <svg
                 class="w-full block"
@@ -73,7 +69,7 @@
         </div>
 
         <section id="solutions" class="pt-8">
-            <Products />
+            <Solutions />
         </section>
 
         <section id="use-cases" class="pt-20">
@@ -91,12 +87,6 @@
         <section id="team" class="pt-20">
             <OrcfaxTeam />
         </section>
-
-        <div
-            class="flex justify-center items-center w-full min-h-10 px-20 py-10 pt-20 flex-col gap-10 bg-primary"
-        >
-            <Separator gradient={true} />
-        </div>
     </div>
 
     <Footer />

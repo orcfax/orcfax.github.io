@@ -1,16 +1,14 @@
 <script lang="ts">
     import { base } from "$app/paths";
-    import OpenLink from "$lib/components/icons/OpenLink.svelte";
+    import Separator from "$lib/components/Separator.svelte";
     import {
         Rss,
-        BookOpen,
         Activity,
         MessageSquare,
         Youtube,
         Twitter,
         NotebookPen,
         Github,
-        ExternalLink,
         BookA,
         BookOpenText,
         Telescope,
@@ -110,6 +108,11 @@
 </script>
 
 <footer class="bg-primary text-gray-950">
+    <div
+        class="flex justify-center items-center w-full min-h-10 px-20 py-10 pt-20 flex-col gap-10 bg-primary"
+    >
+        <Separator gradient={true} />
+    </div>
     <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8 w-fit flex flex-col items-center">
         <div class="flex flex-col xs:flex-row gap-x-20 gap-y-10 justify-center w-fit">
             {#each footerSections as section}

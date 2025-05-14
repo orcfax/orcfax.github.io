@@ -56,15 +56,20 @@
     let firstRow = reviews.slice(0, reviews.length);
 </script>
 
-<div
-    class="relative flex h-64 w-full flex-col items-center justify-center overflow-hidden rounded-lg"
->
-    <Marquee class="[--duration:40s] justify-center items-center py-4">
-        {#each firstRow as item}
-            <SocialProofCard {...item} />
-        {/each}
-    </Marquee>
+<div class="flex flex-col pt-12">
+    <h2 class="text-center mt-6 mx-8 text-2xl text-primary font-mulish font-bold">
+        Trusted by Cardano Leaders:
+    </h2>
+    <div
+        class="relative flex h-64 w-full flex-col items-center justify-center overflow-hidden rounded-lg"
+    >
+        <Marquee class="[--duration:40s] justify-center items-center py-4">
+            {#each firstRow as item}
+                <SocialProofCard {...item} />
+            {/each}
+        </Marquee>
 
-    <div class="pointer-events-none absolute inset-y-0 left-0 w-1/3"></div>
-    <div class="pointer-events-none absolute inset-y-0 right-0 w-1/3"></div>
+        <div class="pointer-events-none absolute inset-y-0 left-0 w-1/3"></div>
+        <div class="pointer-events-none absolute inset-y-0 right-0 w-1/3"></div>
+    </div>
 </div>
