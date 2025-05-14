@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
     push:
-        branches: [main]
+        branches: "main"
 
 jobs:
     build_site:
@@ -27,7 +27,7 @@ jobs:
 
             - name: build
               env:
-                  BASE_PATH: "/orcfax.github.io"
+                  BASE_PATH: "/orcfax.io"
               run: |
                   pnpm run build
 

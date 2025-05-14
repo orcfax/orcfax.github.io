@@ -6,22 +6,10 @@ const config = {
     preprocess: vitePreprocess(),
 
     kit: {
-        adapter: adapter({
-            fallback: "404.html",
-        }),
+        adapter: adapter(),
         paths: {
-            base: "orcfax.github.io",
+            base: process.env.NODE_ENV === "production" ? process.env.BASE_PATH : "",
         },
-        // prerender: {
-        //     handleHttpError: ({ path, referrer, message }) => {
-        //         // ignore missing links
-        //         if (message.includes("does not begin with `base`")) {
-        //             return;
-        //         }
-        //         // fail on other errors
-        //         throw new Error(message);
-        //     },
-        // },
     },
 };
 
