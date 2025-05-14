@@ -86,7 +86,10 @@
                 preservation, and blockchain tech.
             </p>
         </div>
-        <ul role="list" class="grid gap-y-12 grid-cols-1 sm:grid-cols-3 sm:gap-y-16 xl:col-span-2">
+        <ul
+            role="list"
+            class="grid gap-y-12 grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 sm:gap-y-16 xl:col-span-2"
+        >
             {#each teamMembers as member}
                 {@render teamMemberCard(member)}
             {/each}
