@@ -10,7 +10,7 @@
 
     // Function to hide the Spline logo
     const hideSplineLogo = () => {
-        const viewer = document.querySelector("#fact-token");
+        const viewer = document.querySelector("#validator-license");
         if (!viewer?.shadowRoot) return;
 
         // Try to find and remove the logo
@@ -40,7 +40,7 @@
 
     // Function to ensure we have access to the shadow root
     const ensureShadowRootAccess = () => {
-        const viewer = document.querySelector("#fact-token");
+        const viewer = document.querySelector("#validator-license");
         if (!viewer?.shadowRoot) return false;
 
         // Set up the observer if we haven't already
@@ -93,7 +93,7 @@
             { threshold: 0.1 }
         );
 
-        const container = document.querySelector("#fact-token-container");
+        const container = document.querySelector("#validator-license-container");
         if (container) {
             intersectionObserver.observe(container);
         }
@@ -111,8 +111,8 @@
 </script>
 
 <div
-    id="fact-token-container"
-    class="w-48 h-52 pointer-events-none sm:pointer-events-auto mt-8 relative"
+    id="validator-license-container"
+    class="z-0 w-60 h-96 pointer-events-none sm:pointer-events-auto relative"
 >
     {#if isLoading}
         <div class="absolute inset-0 flex items-center justify-center bg-secondary rounded-lg">
@@ -120,8 +120,8 @@
         </div>
     {/if}
     <spline-viewer
-        id="fact-token"
-        url="https://prod.spline.design/YkOetzPdSoEqtenO/scene.splinecode"
+        id="validator-license"
+        url="https://prod.spline.design/ySoGV5wrfODU4WK6/scene.splinecode"
         style="opacity: {isVisible ? 1 : 0}; transition: opacity 0.3s ease-in-out;"
     ></spline-viewer>
 </div>
