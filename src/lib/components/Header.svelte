@@ -113,32 +113,32 @@
                             <a
                                 href={`${base}/#about`}
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-secondary hover:bg-gray-50"
-                                >About</a
+                                onclick={toggleMenu}>About</a
                             >
                             <a
                                 href={`${base}/#features`}
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-secondary hover:bg-gray-50"
-                                >Features</a
+                                onclick={toggleMenu}>Features</a
                             >
                             <a
                                 href={`${base}/#workflow`}
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-secondary hover:bg-gray-50"
-                                >Workflow</a
+                                onclick={toggleMenu}>Workflow</a
                             >
                             <a
                                 href={`${base}/#solutions`}
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-secondary hover:bg-gray-50"
-                                >Solutions</a
+                                onclick={toggleMenu}>Solutions</a
                             >
                             <a
                                 href={`${base}/#tokenomics`}
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-secondary hover:bg-gray-50"
-                                >Tokenomics</a
+                                onclick={toggleMenu}>Tokenomics</a
                             >
                             <a
                                 href={`${base}/#validators`}
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-secondary hover:bg-gray-50"
-                                >Validators</a
+                                onclick={toggleMenu}>Validators</a
                             >
                         </div>
                         <div class="py-6">
