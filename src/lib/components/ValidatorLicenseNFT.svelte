@@ -1,44 +1,91 @@
 <script lang="ts">
     import { onMount, onDestroy } from "svelte";
 
-    let observer = $state<MutationObserver | null>(null);
-    let isVisible = $state(false);
     let isLoading = $state(true);
+    let isVisible = $state(false);
+    let observer: MutationObserver | null = null;
+    let checkInterval: number | null = null;
+    let checkCount = 0;
+    const MAX_CHECKS = 50; // 5 seconds at 100ms intervals
 
-    onMount(() => {
+    // Function to hide the Spline logo
+    const hideSplineLogo = () => {
         const viewer = document.querySelector("#validator-license");
-        if (viewer) {
-            const tryHideLogo = () => {
-                if (viewer.shadowRoot) {
-                    const logo = viewer.shadowRoot.querySelector("a#logo");
-                    if (logo) logo.remove();
+        if (!viewer?.shadowRoot) return;
 
-                    const canvas = viewer.shadowRoot.querySelector("canvas");
-                    if (canvas) isLoading = false;
-                }
-            };
+        // Try to find and remove the logo
+        const logo = viewer.shadowRoot.querySelector("a#logo");
+        if (logo) {
+            // Apply all styles at once to minimize reflows
+            (logo as HTMLElement).style.cssText =
+                "display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;";
+            logo.remove();
+        }
 
-            tryHideLogo();
+        // Check if canvas exists to determine if model is loaded
+        const canvas = viewer.shadowRoot.querySelector("canvas");
+        if (canvas) {
+            isLoading = false;
+            // Once we have the canvas, we can stop checking
+            if (checkInterval) {
+                clearInterval(checkInterval);
+                checkInterval = null;
+            }
+            if (observer) {
+                observer.disconnect();
+                observer = null;
+            }
+        }
+    };
 
+    // Function to ensure we have access to the shadow root
+    const ensureShadowRootAccess = () => {
+        const viewer = document.querySelector("#validator-license");
+        if (!viewer?.shadowRoot) return false;
+
+        // Set up the observer if we haven't already
+        if (!observer) {
             observer = new MutationObserver((mutations) => {
-                if (
-                    mutations.some(
-                        (m) => m.type === "childList" || (m.target as HTMLElement).id === "logo"
-                    )
-                ) {
-                    tryHideLogo();
+                // Only process mutations if we're still loading
+                if (isLoading) {
+                    hideSplineLogo();
                 }
             });
 
-            if (viewer.shadowRoot) {
-                observer.observe(viewer.shadowRoot, {
-                    childList: true,
-                    subtree: true,
-                    attributes: true,
-                });
-            }
+            // Only observe childList changes in the shadow root
+            observer.observe(viewer.shadowRoot, {
+                childList: true,
+                subtree: true,
+            });
         }
 
+        return true;
+    };
+
+    onMount(() => {
+        // Initial attempt to hide the logo
+        hideSplineLogo();
+
+        // Set up an interval to continuously check for and hide the logo
+        checkInterval = window.setInterval(() => {
+            checkCount++;
+
+            // Stop checking after MAX_CHECKS to prevent infinite checking
+            if (checkCount >= MAX_CHECKS) {
+                if (checkInterval) {
+                    clearInterval(checkInterval);
+                    checkInterval = null;
+                }
+                isLoading = false;
+                return;
+            }
+
+            if (ensureShadowRootAccess()) {
+                hideSplineLogo();
+            }
+        }, 100);
+
+        // Set up intersection observer for visibility
         const intersectionObserver = new IntersectionObserver(
             (entries) => {
                 isVisible = entries[0].isIntersecting;
@@ -46,13 +93,21 @@
             { threshold: 0.1 }
         );
 
-        const element = document.querySelector("#validator-license-container");
-        if (element) intersectionObserver.observe(element);
+        const container = document.querySelector("#validator-license-container");
+        if (container) {
+            intersectionObserver.observe(container);
+        }
 
-        return () => intersectionObserver.disconnect();
+        return () => {
+            if (observer) {
+                observer.disconnect();
+            }
+            if (checkInterval) {
+                clearInterval(checkInterval);
+            }
+            intersectionObserver.disconnect();
+        };
     });
-
-    onDestroy(() => observer?.disconnect());
 </script>
 
 <div

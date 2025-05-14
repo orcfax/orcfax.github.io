@@ -3,14 +3,22 @@
 
     let isLoading = $state(true);
     let isVisible = $state(false);
+    let observer: MutationObserver | null = null;
+    let checkInterval: number | null = null;
+    let checkCount = 0;
+    const MAX_CHECKS = 50; // 5 seconds at 100ms intervals
 
     // Function to hide the Spline logo
     const hideSplineLogo = () => {
         const viewer = document.querySelector("#fact-token");
         if (!viewer?.shadowRoot) return;
 
+        // Try to find and remove the logo
         const logo = viewer.shadowRoot.querySelector("a#logo");
         if (logo) {
+            // Apply all styles at once to minimize reflows
+            (logo as HTMLElement).style.cssText =
+                "display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;";
             logo.remove();
         }
 
@@ -18,38 +26,64 @@
         const canvas = viewer.shadowRoot.querySelector("canvas");
         if (canvas) {
             isLoading = false;
+            // Once we have the canvas, we can stop checking
+            if (checkInterval) {
+                clearInterval(checkInterval);
+                checkInterval = null;
+            }
+            if (observer) {
+                observer.disconnect();
+                observer = null;
+            }
         }
     };
 
-    onMount(() => {
-        // Immediately try to hide the logo
-        hideSplineLogo();
+    // Function to ensure we have access to the shadow root
+    const ensureShadowRootAccess = () => {
+        const viewer = document.querySelector("#fact-token");
+        if (!viewer?.shadowRoot) return false;
 
-        // Set up a MutationObserver to watch for the logo
-        const observer = new MutationObserver((mutations) => {
-            mutations.forEach((mutation) => {
-                if (mutation.type === "childList") {
+        // Set up the observer if we haven't already
+        if (!observer) {
+            observer = new MutationObserver((mutations) => {
+                // Only process mutations if we're still loading
+                if (isLoading) {
                     hideSplineLogo();
                 }
             });
-        });
 
-        // Start observing the shadow root as soon as it's available
-        const startObserving = () => {
-            const viewer = document.querySelector("#fact-token");
-            if (viewer?.shadowRoot) {
-                observer.observe(viewer.shadowRoot, {
-                    childList: true,
-                    subtree: true,
-                    attributes: true,
-                });
-            } else {
-                // If shadow root isn't available yet, try again in a short while
-                requestAnimationFrame(startObserving);
+            // Only observe childList changes in the shadow root
+            observer.observe(viewer.shadowRoot, {
+                childList: true,
+                subtree: true,
+            });
+        }
+
+        return true;
+    };
+
+    onMount(() => {
+        // Initial attempt to hide the logo
+        hideSplineLogo();
+
+        // Set up an interval to continuously check for and hide the logo
+        checkInterval = window.setInterval(() => {
+            checkCount++;
+
+            // Stop checking after MAX_CHECKS to prevent infinite checking
+            if (checkCount >= MAX_CHECKS) {
+                if (checkInterval) {
+                    clearInterval(checkInterval);
+                    checkInterval = null;
+                }
+                isLoading = false;
+                return;
             }
-        };
 
-        startObserving();
+            if (ensureShadowRootAccess()) {
+                hideSplineLogo();
+            }
+        }, 100);
 
         // Set up intersection observer for visibility
         const intersectionObserver = new IntersectionObserver(
@@ -64,15 +98,14 @@
             intersectionObserver.observe(container);
         }
 
-        // Fallback to ensure loading state is eventually cleared
-        const loadingTimeout = setTimeout(() => {
-            isLoading = false;
-        }, 5000);
-
         return () => {
-            observer.disconnect();
+            if (observer) {
+                observer.disconnect();
+            }
+            if (checkInterval) {
+                clearInterval(checkInterval);
+            }
             intersectionObserver.disconnect();
-            clearTimeout(loadingTimeout);
         };
     });
 </script>
