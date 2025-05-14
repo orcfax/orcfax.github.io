@@ -8,56 +8,51 @@
     onMount(() => {
         const viewer = document.querySelector("#validator-license");
         if (viewer) {
-            // Function to hide the logo if it exists
             const tryHideLogo = () => {
                 if (viewer.shadowRoot) {
-                    const logo = viewer.shadowRoot.querySelector("#logo") as HTMLElement;
-                    if (logo) {
-                        logo.style.display = "none";
-                        logo.style.visibility = "hidden";
-                        logo.style.opacity = "0";
-                    }
-                    // Check if the viewer has loaded its content
+                    const logo = viewer.shadowRoot.querySelector("a#logo");
+                    if (logo) logo.remove();
+
                     const canvas = viewer.shadowRoot.querySelector("canvas");
-                    if (canvas) {
-                        isLoading = false;
-                    }
+                    if (canvas) isLoading = false;
                 }
             };
 
-            // Try immediately in case it's already there
             tryHideLogo();
 
-            // Observe for changes in the shadowRoot to catch when the logo is added
-            observer = new MutationObserver(tryHideLogo);
+            observer = new MutationObserver((mutations) => {
+                if (
+                    mutations.some(
+                        (m) => m.type === "childList" || (m.target as HTMLElement).id === "logo"
+                    )
+                ) {
+                    tryHideLogo();
+                }
+            });
+
             if (viewer.shadowRoot) {
-                observer.observe(viewer.shadowRoot, { childList: true, subtree: true });
+                observer.observe(viewer.shadowRoot, {
+                    childList: true,
+                    subtree: true,
+                    attributes: true,
+                });
             }
         }
 
-        // Create an Intersection Observer to detect when the component is visible
         const intersectionObserver = new IntersectionObserver(
             (entries) => {
-                entries.forEach((entry) => {
-                    isVisible = entry.isIntersecting;
-                });
+                isVisible = entries[0].isIntersecting;
             },
             { threshold: 0.1 }
         );
 
         const element = document.querySelector("#validator-license-container");
-        if (element) {
-            intersectionObserver.observe(element);
-        }
+        if (element) intersectionObserver.observe(element);
 
-        return () => {
-            intersectionObserver.disconnect();
-        };
+        return () => intersectionObserver.disconnect();
     });
 
-    onDestroy(() => {
-        if (observer) observer.disconnect();
-    });
+    onDestroy(() => observer?.disconnect());
 </script>
 
 <div
