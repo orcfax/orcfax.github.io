@@ -7,26 +7,21 @@ const config = {
 
     kit: {
         adapter: adapter({
-            pages: "build",
-            assets: "build",
-            fallback: "index.html",
-            precompress: false,
-            strict: true,
+            fallback: "404.html",
         }),
         paths: {
-            base: process.env.BASE_PATH || "",
-            relative: false,
+            base: "orcfax.github.io",
         },
-        prerender: {
-            handleHttpError: ({ path, referrer, message }) => {
-                // ignore missing links
-                if (message.includes("does not begin with `base`")) {
-                    return;
-                }
-                // fail on other errors
-                throw new Error(message);
-            },
-        },
+        // prerender: {
+        //     handleHttpError: ({ path, referrer, message }) => {
+        //         // ignore missing links
+        //         if (message.includes("does not begin with `base`")) {
+        //             return;
+        //         }
+        //         // fail on other errors
+        //         throw new Error(message);
+        //     },
+        // },
     },
 };
 
