@@ -150,7 +150,7 @@
                         The Orcfax Validator License NFT <Link
                             href="https://medium.com/@orcfax/orcfax-validator-license-mint-032c327135d4"
                             isNewTab>mint</Link
-                        > was completed on 2025-04-18. However, licenses can be purchased on the secondary
+                        > was completed on 2024-04-18. However, licenses can be purchased on the secondary
                         market.
                     </p>
                 </div>
