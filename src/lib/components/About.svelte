@@ -13,14 +13,13 @@
         <div class="space-y-6 text-primary font-mulish max-w-2xl mx-auto text-center">
             <p>Orcfax is a decentralized blockchain oracle.</p>
             <p>
-                A chain is only as strong as its weakest link and the weakest link, and for
-                blockchains, and for blockchains, that link is their connection to the off-chain
-                world.
+                A chain is only as strong as its weakest link. For blockchains, that link is their
+                connection to the off-chain world. Oracles bridge this gap by bringing external data
+                on-chain.
             </p>
             <p>
-                Oracles bridge this gap by bringing external data on-chain. But that’s only part of
-                the solution; the data must also be trustworthy, verifiably accurate, authentic, and
-                factual. This challenge is known as the <a
+                But that’s only part of the solution; the data must also be trustworthy, verifiably
+                accurate, authentic, and factual. This challenge is known as the <a
                     href="https://docs.orcfax.io/oracle-basics#what-is-the-oracle-problem"
                     target="_blank"
                     class="underline"

@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from "svelte";
 
-    let svgHeight = $state(0);
+    let svgHeight = $state(150);
 
     onMount(() => {
         const svg = document.querySelector("#waves") as SVGElement;
@@ -12,7 +12,7 @@
 <div class="relative bottom-0 left-0 w-screen h-40 place-self-end overflow-x-hidden">
     <svg
         id="waves"
-        class="relative w-full h-full"
+        class="w-full h-full absolute bottom-0"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
         viewBox="0 24 150 84"
@@ -47,6 +47,7 @@
             <use xlink:href="#gentle-wave" x="48" y={svgHeight - 135} class="fill-accent" />
         </g>
     </svg>
+    <div class="w-full h-10 absolute bottom-0 bg-accent"></div>
 </div>
 
 <style>

@@ -35,10 +35,10 @@
     <div class="flex flex-col xs:flex-row items-start xs:items-center justify-center pt-10 gap-0">
         <div class="w-full xs:w-fit xs:sticky xs:top-0 xs:self-start">
             <div
-                class="flex flex-col items-center gap-4 bg-secondary rounded-lg rounded-b-none border border-b-0 border-secondary border-x-0 shadow-lg w-full xs:w-[250px] xs:rounded-r-none xs:rounded-bl-lg md:rounded-lg"
+                class="flex flex-col items-center relative gap-4 bg-secondary rounded-lg rounded-b-none border border-b-0 border-secondary border-x-0 shadow-lg w-full xs:w-[250px] xs:rounded-r-none xs:rounded-bl-lg md:rounded-lg"
             >
                 <ValidatorLicenseNFT />
-                <div class="w-max sm:w-auto mx-auto -mt-16 flex-grow text-primary">
+                <div class="z-10 w-max sm:w-auto mx-auto -mt-16 flex-grow text-primary">
                     <div class="grid grid-cols-1 gap-4 p-4 pt-0 w-full">
                         <div class="flex flex-col">
                             <span class="text-sm">Name</span>
@@ -137,16 +137,16 @@
             <div class="flex flex-col gap-4">
                 <h1 class="text-2xl font-bold font-mulish text-secondary">Validator License NFT</h1>
                 <div class="flex flex-col gap-4">
-                    <p class="text-gray-600 max-w-xl">
+                    <p class="text-secondary max-w-xl">
                         The Validator License is an NFT that grants holders the right to operate an
                         Orcfax validator node in the Orcfax decentralized validator network.
                     </p>
-                    <p class="text-gray-600 max-w-xl">
+                    <p class="text-secondary max-w-xl">
                         Orcfax validators are software nodes run by a decentralized network of
                         operators around the world. These nodes collect, validate, publish, and
                         archive real-world data on-chain.
                     </p>
-                    <p class="text-gray-600 max-w-xl">
+                    <p class="text-secondary max-w-xl">
                         The Orcfax Validator License NFT <Link
                             href="https://medium.com/@orcfax/orcfax-validator-license-mint-032c327135d4"
                             isNewTab>mint</Link
@@ -158,20 +158,20 @@
                     Incentivized Testnet (ITN)
                 </h1>
                 <div class="flex flex-col gap-4">
-                    <p class="text-gray-600 max-w-xl">
+                    <p class="text-secondary max-w-xl">
                         Orcfax's ongoing Incentivized Testnet (ITN) is a major step in enhancing the
                         decentralized oracle infrastructure on the Cardano blockchain.
                     </p>
-                    <p class="text-gray-600 max-w-xl">
+                    <p class="text-secondary max-w-xl">
                         Instead of having off-chain business deals and contracts with hand-picked
                         validators, Orcfax is implementing a permissionless and decentralized Oracle
                         pool model for its validator network.
                     </p>
-                    <p class="text-gray-600 max-w-xl">
+                    <p class="text-secondary max-w-xl">
                         This initiative is preparing the Orcfax network for a smooth transition from
                         our current federated node model to a fully decentralized model.
                     </p>
-                    <p class="text-gray-600 max-w-xl">
+                    <p class="text-secondary max-w-xl">
                         For more information on the ITN, you can read the
                         <Link href="https://docs.orcfax.io/itn-overview" isNewTab>ITN Docs</Link> or
                         check out the <Link href="https://status.orcfax.io/validators" isNewTab

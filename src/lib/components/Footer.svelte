@@ -107,7 +107,7 @@
     ];
 </script>
 
-<footer class="bg-primary text-gray-950">
+<footer class="bg-primary text-secondary">
     <div
         class="flex justify-center items-center w-full min-h-10 px-20 py-10 pt-20 flex-col gap-10 bg-primary"
     >

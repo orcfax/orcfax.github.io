@@ -81,7 +81,7 @@
             >
                 Team
             </h2>
-            <p class="mt-6 text-lg/8 text-gray-600 font-mulish text-center">
+            <p class="mt-6 text-lg/8 text-secondary font-mulish text-center">
                 We are a lean and dedicated team with deep expertise in archival science, digital
                 preservation, and blockchain tech.
             </p>
@@ -115,7 +115,7 @@
 
 {#snippet socialLink(link: { type: string; url: string })}
     <li>
-        <a href={link.url} target="_blank" class="text-gray-400 hover:text-accent">
+        <a href={link.url} target="_blank" class="text-secondary hover:text-accent">
             <span class="sr-only">{link.type}</span>
             {#if link.type === "x"}
                 <svg class="size-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">

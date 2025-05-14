@@ -27,7 +27,7 @@
                         <p class="mt-2 text-lg font-semibold tracking-tight text-secondary">
                             Oracle Data Feeds
                         </p>
-                        <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
+                        <p class="mt-2 max-w-lg text-sm/6 text-secondary">
                             To learn more about the available feeds, feed types, and feed support
                             models, refer to our <a
                                 href="https://docs.orcfax.io/feed-overview"
@@ -35,7 +35,7 @@
                                 class="text-accent underline text-sm/6">docs</a
                             >.
                         </p>
-                        <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
+                        <p class="mt-2 max-w-lg text-sm/6 text-secondary">
                             You can also view the current active data feeds on our
                             <a
                                 href="https://explorer.orcfax.io"
@@ -76,7 +76,7 @@
                         <p class="mt-2 text-lg font-semibold tracking-tight text-secondary">
                             Automatic Heartbeat
                         </p>
-                        <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
+                        <p class="mt-2 max-w-lg text-sm/6 text-secondary">
                             Choose your feed's <strong>frequency</strong> (e.g 1hr) and
                             <strong>deviation</strong> (e.g 1% change) for automated on-chain publication.
                             Perfect for systems that need oracle data on a regular basis.
@@ -107,7 +107,7 @@
                                 Beta
                             </span>
                         </p>
-                        <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
+                        <p class="mt-2 max-w-lg text-sm/6 text-secondary">
                             Query current price data and trigger on-chain publications on your
                             schedule. Perfect for systems that need more manual control.
                         </p>

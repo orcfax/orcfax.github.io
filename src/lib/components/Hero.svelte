@@ -30,7 +30,7 @@
                 <Link href="https://explorer.orcfax.io" isButton isNewTab>Launch Explorer</Link>
                 <a
                     href="https://status.orcfax.io"
-                    class="group inline-flex items-center justify-center gap-x-2 font-semibold text-gray-900"
+                    class="group inline-flex items-center justify-center gap-x-2 font-semibold text-secondary"
                 >
                     <PingStatus color="green" size="sm" />
                     <span class="underline text-sm">Network Status</span>
@@ -54,7 +54,7 @@
             <!-- <div class="my-4">
                 <LatestBlogPost />
             </div> -->
-            <div class="mt-4 flex items-center justify-center gap-x-2 text-gray-900 font-bold">
+            <div class="mt-4 flex items-center justify-center gap-x-2 text-secondary font-bold">
                 <span class="text-base">Built on</span>
                 <img src="/cardano-horizontal-black.svg" alt="Cardano" class="h-5 w-auto" />
             </div>

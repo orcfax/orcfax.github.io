@@ -19,13 +19,14 @@
                     src="/logo.svg"
                     alt=""
                 />
-                <span class="font-mulish font-black text-4xl ml-1 -mb-4 text-gray-900">Orcfax</span>
+                <span class="font-mulish font-black text-4xl ml-1 -mb-4 text-secondary">Orcfax</span
+                >
             </a>
         </div>
         <div class="flex lg:hidden">
             <button
                 type="button"
-                class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-secondary"
                 onclick={toggleMenu}
             >
                 <span class="sr-only">Open main menu</span>
@@ -47,12 +48,12 @@
             </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-            <a href="#about" class="text-sm/6 font-semibold text-gray-900">About</a>
-            <a href="#features" class="text-sm/6 font-semibold text-gray-900">Features</a>
-            <a href="#workflow" class="text-sm/6 font-semibold text-gray-900">Workflow</a>
-            <a href="#solutions" class="text-sm/6 font-semibold text-gray-900">Solutions</a>
-            <a href="#tokenomics" class="text-sm/6 font-semibold text-gray-900">Tokenomics</a>
-            <a href="#validators" class="text-sm/6 font-semibold text-gray-900">Validators</a>
+            <a href="#about" class="text-sm/6 font-semibold text-secondary">About</a>
+            <a href="#features" class="text-sm/6 font-semibold text-secondary">Features</a>
+            <a href="#workflow" class="text-sm/6 font-semibold text-secondary">Workflow</a>
+            <a href="#solutions" class="text-sm/6 font-semibold text-secondary">Solutions</a>
+            <a href="#tokenomics" class="text-sm/6 font-semibold text-secondary">Tokenomics</a>
+            <a href="#validators" class="text-sm/6 font-semibold text-secondary">Validators</a>
         </div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->
@@ -70,14 +71,14 @@
                                 src="/logo.svg"
                                 alt=""
                             />
-                            <span class="font-mulish font-black text-4xl ml-1 -mb-4 text-gray-900"
+                            <span class="font-mulish font-black text-4xl ml-1 -mb-4 text-secondary"
                                 >Orcfax</span
                             >
                         </a>
                     </div>
                     <button
                         type="button"
-                        class="-m-2.5 rounded-md p-2.5 text-gray-700"
+                        class="-m-2.5 rounded-md p-2.5 text-secondary"
                         onclick={toggleMenu}
                     >
                         <span class="sr-only">Close menu</span>
@@ -103,32 +104,32 @@
                         <div class="space-y-2 py-6">
                             <a
                                 href="#about"
-                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-secondary hover:bg-gray-50"
                                 >About</a
                             >
                             <a
                                 href="#features"
-                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-secondary hover:bg-gray-50"
                                 >Features</a
                             >
                             <a
                                 href="#workflow"
-                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-secondary hover:bg-gray-50"
                                 >Workflow</a
                             >
                             <a
                                 href="#solutions"
-                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-secondary hover:bg-gray-50"
                                 >Solutions</a
                             >
                             <a
                                 href="#tokenomics"
-                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-secondary hover:bg-gray-50"
                                 >Tokenomics</a
                             >
                             <a
                                 href="#validators"
-                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-secondary hover:bg-gray-50"
                                 >Validators</a
                             >
                         </div>
@@ -136,19 +137,19 @@
                             <a
                                 href="https://explorer.orcfax.io"
                                 target="_blank"
-                                class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                                class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-secondary hover:bg-gray-50"
                                 ><Telescope class="inline-block h-4 w-4 mr-2" />Explorer</a
                             >
                             <a
                                 href="https://status.orcfax.io"
                                 target="_blank"
-                                class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                                class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-secondary hover:bg-gray-50"
                                 ><Activity class="inline-block h-4 w-4 mr-2" />Network Status</a
                             >
                             <a
                                 href="https://docs.orcfax.io"
                                 target="_blank"
-                                class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                                class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-secondary hover:bg-gray-50"
                                 ><BookOpenText class="inline-block h-4 w-4 mr-2" />Docs</a
                             >
                         </div>

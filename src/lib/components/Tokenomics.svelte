@@ -30,7 +30,7 @@
             <div class="flex flex-col gap-4">
                 <h1 class="text-2xl font-bold font-mulish text-secondary">$FACT Token</h1>
                 <div class="flex flex-col gap-4">
-                    <p class="text-gray-600 max-w-xl">
+                    <p class="text-secondary max-w-xl">
                         $FACT is the Cardano-native utility token for Orcfax's ecosystem. It has
                         necessary function and utility and is used for oracle data publication,
                         staking by our data validator nodes, validator network incentivization, and
@@ -40,7 +40,7 @@
             </div>
 
             <div class="flex flex-col gap-4">
-                <p class="text-gray-600 max-w-xl">
+                <p class="text-secondary max-w-xl">
                     The $FACT token was <Link
                         href="https://medium.com/@orcfax/orcfax-token-launch-in-collaboration-with-wingriders-launchpad-39d63da2b379"
                         isNewTab>made available</Link
@@ -52,7 +52,7 @@
                 >
                     <TokenDistributionChart />
                 </div>
-                <p class="text-gray-600 max-w-xl">
+                <p class="text-secondary max-w-xl">
                     You can read more about the <Link
                         href="https://docs.orcfax.io/utility-token"
                         isNewTab>utility token</Link
