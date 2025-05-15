@@ -1,12 +1,8 @@
 <script lang="ts">
-    import { preventDefault } from "svelte/legacy";
-
     import Copy from "./icons/Copy.svelte";
     import Copying from "./icons/Copying.svelte";
     import Link from "$lib/components/Link.svelte";
     import ValidatorLicenseNFT from "$lib/components/ValidatorLicenseNFT.svelte";
-
-    import TokenDistributionChart from "$lib/components/TokenDistributionChart.svelte";
     import LogoLinkGroup from "$lib/components/LogoLinkGroup.svelte";
     import TruncatedText from "$lib/components/TruncatedText.svelte";
 
@@ -22,7 +18,7 @@
     }
 </script>
 
-<div class="bg-primary w-full px-6 lg:max-w-7xl lg:px-8 flex flex-col items-center">
+<div class="bg-primary w-full mx-auto px-6 lg:max-w-7xl lg:px-8 flex flex-col items-center">
     <div class="mx-auto max-w-3xl lg:text-center">
         <h1 class="mt-2 text-5xl lg:text-6xl font-bold font-mulish text-secondary text-center">
             Validator Network

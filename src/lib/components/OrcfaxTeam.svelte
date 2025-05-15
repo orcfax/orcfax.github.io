@@ -73,7 +73,7 @@
     ];
 </script>
 
-<div class="bg-primary w-full px-6 lg:max-w-7xl lg:px-8 flex flex-col items-center">
+<div class="bg-primary w-full mx-auto px-6 lg:max-w-7xl lg:px-8 flex flex-col items-center">
     <div class="mx-auto flex flex-col items-center max-w-7xl gap-10 xl:grid-cols-3">
         <div class="max-w-xl">
             <h2

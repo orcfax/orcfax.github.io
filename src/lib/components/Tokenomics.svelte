@@ -5,7 +5,7 @@
     import FactToken from "$lib/components/FactToken.svelte";
 </script>
 
-<div class="bg-primary w-full px-6 lg:max-w-7xl lg:px-8 flex flex-col items-center">
+<div class="bg-primary w-full mx-auto px-6 lg:max-w-7xl lg:px-8 flex flex-col items-center">
     <div class="mx-auto max-w-3xl lg:text-center">
         <h1 class="mt-2 text-5xl lg:text-6xl font-bold font-mulish text-secondary text-center">
             Tokenomics
