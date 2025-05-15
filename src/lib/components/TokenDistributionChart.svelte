@@ -25,11 +25,31 @@
 
     // Token distribution data
     let data: ChartData<"doughnut"> = {
-        labels: ["Ecosystem", "Team", "Treasury", "Advisors", "Private Sale"],
+        labels: [
+            "Validator Rewards",
+            "Team",
+            "Launchpad",
+            "ISPO",
+            "Ecosystem",
+            "Foundation",
+            "Yield Farm APY",
+            "Promo Airdrop",
+            "Advisors",
+        ],
         datasets: [
             {
-                data: [40, 20, 20, 10, 10], // Percentages based on the chart
-                backgroundColor: ["#3d615e", "#5a8a86", "#77b3ae", "#8fbcb8", "#A3C7C4"],
+                data: [50, 15, 11, 10, 5, 5, 2, 1, 1], // Percentages based on the chart
+                backgroundColor: [
+                    "#3d615e",
+                    "#4a726f",
+                    "#578380",
+                    "#649491",
+                    "#71a5a2",
+                    "#7eb6b3",
+                    "#8bc7c4",
+                    "#98d8d5",
+                    "#A3C7C4",
+                ],
                 borderWidth: 4,
                 hoverOffset: 15,
             },
@@ -39,9 +59,11 @@
     let options: ChartOptions<"doughnut"> = $derived.by(() => ({
         responsive: true,
         maintainAspectRatio: false,
+
         plugins: {
             legend: {
                 position: size === "sm" ? "bottom" : "right",
+                align: "center",
                 onClick: (e, legendItem, legend) => {},
                 onHover: (e, legendItem, legend) => {
                     const index = legendItem.index;
@@ -74,7 +96,9 @@
                         size: 14,
                     },
                     color: "#EFF5F5",
-                    padding: 20,
+                    padding: 10,
+                    boxWidth: 12,
+                    boxHeight: 12,
                     generateLabels: (chart) => {
                         const data = chart.data;
                         if (data.labels && data.datasets.length) {
@@ -111,9 +135,9 @@
         layout: {
             padding: {
                 top: 0,
-                right: 20,
+                right: 0,
                 bottom: 0,
-                left: 20,
+                left: 0,
             },
         },
         onHover: (event, elements, chart) => {

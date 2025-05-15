@@ -48,7 +48,7 @@
                     as follows:
                 </p>
                 <div
-                    class="max-w-[200px] h-[400px] xs:h-[400px] xs:w-[200px] sm:max-w-none sm:w-[300px] sm:h-[500px] md:w-[450px] md:h-[300px] relative self-center"
+                    class="max-w-[200px] h-[450px] max-h-[450px] xs:h-[450px] xs:w-[200px] sm:max-w-none sm:w-[300px] sm:h-[500px] md:w-[400px] md:h-[300px] lg:w-[450px] relative self-center"
                 >
                     <TokenDistributionChart />
                 </div>
