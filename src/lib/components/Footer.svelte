@@ -123,7 +123,7 @@
                             <li>
                                 <a
                                     href={link.href}
-                                    class="flex items-center gap-2 hover:text-accent"
+                                    class="flex items-center w-fit gap-2 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-secondary after:transition-all after:duration-200 hover:after:w-full"
                                     target={link.external ? "_blank" : undefined}
                                 >
                                     <svelte:component this={link.icon} class="h-4 w-4" />
@@ -145,7 +145,7 @@
                 <div class="flex gap-4 text-sm">
                     <a
                         href="https://docs.orcfax.io/terms-of-service"
-                        class="hover:text-accent"
+                        class="relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-secondary after:transition-all after:duration-200 hover:after:w-full"
                         target="_blank"
                     >
                         Terms of Service
