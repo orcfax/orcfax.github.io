@@ -1,6 +1,8 @@
 <script lang="ts">
     import { Telescope, Activity, BookOpenText } from "@lucide/svelte";
     import { base } from "$app/paths";
+    import { slide } from "svelte/transition";
+    import { fade } from "svelte/transition";
     let isOpen = $state(false);
 
     function toggleMenu() {
@@ -78,7 +80,7 @@
                 class="text-sm/6 font-semibold text-secondary relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-secondary after:transition-all after:duration-200 hover:after:w-full"
                 >Validators</a
             >
-            <div class="h-4 w-px bg-secondary/20 -mx-2"></div>
+            <div class="h-6 w-px bg-secondary/20 -mx-2"></div>
             <a
                 href="https://explorer.orcfax.io"
                 target="_blank"
@@ -102,9 +104,13 @@
     <!-- Mobile menu, show/hide based on menu open state. -->
     {#if isOpen}
         <div class="xl:hidden" role="dialog" aria-modal="true">
-            <div class="fixed inset-0 z-50"></div>
+            <div
+                class="fixed inset-0 z-50 bg-black/20 backdrop-blur-sm"
+                transition:fade={{ duration: 400 }}
+            ></div>
             <div
                 class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+                transition:slide={{ duration: 400, axis: "x" }}
             >
                 <div class="flex items-center justify-between">
                     <div class="flex xl:flex-1">
