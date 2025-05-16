@@ -14,6 +14,13 @@
     import CardanoLogo from "./icons/CardanoLogo.svelte";
     import { motion } from "$lib/actions/motion.svelte";
 
+    let innerWidth = $state(0);
+    let innerHeight = $state(0);
+
+    let size = $derived.by(() => {
+        if (innerWidth <= 640) return "xs";
+    });
+
     // Refs for all circles
     let containerRef = $state<HTMLElement | SVGElement>();
     // Collect stage
@@ -33,22 +40,15 @@
     let publish2Ref = $state<HTMLElement | SVGElement>();
     let publish3Ref = $state<HTMLElement | SVGElement>();
 
-    let collect1Duration = $state(4);
-    let collect2Duration = $state(4);
-    let collect3Duration = $state(4);
-    let collectToProcessDuration = $state(4);
-    let process1Duration = $state(4);
-    let processToValidateDuration = $state(4);
-    let validate1Duration = $state(4);
-    let validateToPublishDuration = $state(4);
-    let publish1Duration = $state(4);
-
-    let innerWidth = $state(0);
-    let innerHeight = $state(0);
-
-    let size = $derived.by(() => {
-        if (innerWidth <= 640) return "xs";
-    });
+    let collect1Duration = $derived(size === "xs" ? 8 : 4);
+    let collect2Duration = $derived(size === "xs" ? 8 : 4);
+    let collect3Duration = $derived(size === "xs" ? 8 : 4);
+    let collectToProcessDuration = $derived(size === "xs" ? 8 : 4);
+    let process1Duration = $derived(size === "xs" ? 8 : 4);
+    let processToValidateDuration = $derived(size === "xs" ? 8 : 4);
+    let validate1Duration = $derived(size === "xs" ? 8 : 4);
+    let validateToPublishDuration = $derived(size === "xs" ? 8 : 4);
+    let publish1Duration = $derived(size === "xs" ? 8 : 4);
 </script>
 
 <svelte:window bind:innerWidth bind:innerHeight />
