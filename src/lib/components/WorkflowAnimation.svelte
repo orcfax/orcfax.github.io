@@ -19,6 +19,7 @@
 
     let size = $derived.by(() => {
         if (innerWidth <= 640) return "xs";
+        else return "lg";
     });
 
     // Refs for all circles
@@ -37,8 +38,8 @@
     let validate3Ref = $state<HTMLElement | SVGElement>();
     // Publish stage
     let publish1Ref = $state<HTMLElement | SVGElement>();
-    let publish2Ref = $state<HTMLElement | SVGElement>();
-    let publish3Ref = $state<HTMLElement | SVGElement>();
+    let publishCardanoRef = $state<HTMLElement | SVGElement>();
+    let publishArweaveRef = $state<HTMLElement | SVGElement>();
 
     let collect1Duration = $derived(size === "xs" ? 8 : 4);
     let collect2Duration = $derived(size === "xs" ? 8 : 4);
@@ -144,12 +145,20 @@
         </Circle>
         <div class="flex flex-row sm:flex-col justify-center gap-2 sm:gap-8">
             <Circle class="p-0 h-10 w-10 bg-blue-600">
-                <div bind:this={publish2Ref} class="tooltip tooltip-left" data-tip={"Cardano"}>
+                <div
+                    bind:this={publishCardanoRef}
+                    class="tooltip tooltip-left"
+                    data-tip={"Cardano"}
+                >
                     <CardanoLogo />
                 </div>
             </Circle>
             <Circle class="p-0 h-10 w-10 bg-white">
-                <div bind:this={publish3Ref} class="tooltip tooltip-left" data-tip={"Arweave"}>
+                <div
+                    bind:this={publishArweaveRef}
+                    class="tooltip tooltip-left"
+                    data-tip={"Arweave"}
+                >
                     <ArweaveLogo />
                 </div>
             </Circle>
@@ -223,7 +232,7 @@
     <AnimatedBeam
         bind:containerRef
         bind:fromRef={publish1Ref}
-        bind:toRef={publish2Ref}
+        bind:toRef={publishCardanoRef}
         duration={publish1Duration}
         delay={4.5}
         reverse={size === "xs" ? true : false}
@@ -231,7 +240,7 @@
     <AnimatedBeam
         bind:containerRef
         bind:fromRef={publish1Ref}
-        bind:toRef={publish3Ref}
+        bind:toRef={publishArweaveRef}
         duration={publish1Duration}
         delay={4.5}
     />
