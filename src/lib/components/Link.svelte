@@ -22,7 +22,12 @@
 </script>
 
 {#if isButton}
-    <a {href} target={isNewTab ? "_blank" : "_self"}>
+    <a
+        {href}
+        target={isNewTab ? "_blank" : "_self"}
+        data-umami-event={isNewTab ? "outbound-link-click" : undefined}
+        data-umami-event-url={isNewTab ? href : undefined}
+    >
         <RippleButton rippleColor="#66A29E" duration="1500ms" {theme}>
             <div
                 class="group inline-flex items-center justify-center px-1 py-1 transition ease-out hover:duration-300"
