@@ -7,10 +7,9 @@
 <!-- Setup Privacy-preserving Umami Analytics -->
 <svelte:head>
     <script
-        async
         defer
-        data-website-id="2d656c7d-b41a-4e19-934c-d7c9d91d784d"
-        src="https://analytics.server.orcfax.io/umami.js"
+        src="https://analytics.server.orcfax.io/script.js"
+        data-website-id="a01a1f2c-6d4f-4091-98ba-dec260fdc2c3"
     ></script>
 </svelte:head>
 
