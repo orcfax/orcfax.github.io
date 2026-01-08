@@ -54,7 +54,7 @@
                 Not Just Data — Proof.
             </h1>
             <p class="mt-6 text-lg/8 text-secondary font-mulish text-center">
-                We take Oracles seriously. Here's what makes us different.
+                We take blockchain oracles seriously. Here's what makes us different.
             </p>
         </div>
         <div class="mx-auto mt-16">

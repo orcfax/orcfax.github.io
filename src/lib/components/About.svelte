@@ -14,12 +14,12 @@
             <p>Orcfax is a decentralized blockchain oracle.</p>
             <p>
                 A chain is only as strong as its weakest link. For blockchains, that link is their
-                connection to the off-chain world. Oracles bridge this gap by bringing external data
-                on-chain.
+                connection to the off-chain world. Blockchain oracles bridge this gap by bringing
+                external data on-chain.
             </p>
             <p>
                 But that’s only part of the solution; the data must also be trustworthy, verifiably
-                accurate, authentic, and factual. This challenge is known as the <a
+                accurate, authentic, and factual. This challenge is known as the blockchain <a
                     href="https://docs.orcfax.io/oracle-basics#what-is-the-oracle-problem"
                     target="_blank"
                     class="underline"
@@ -27,7 +27,7 @@
                     oracle problem
                 </a>.
             </p>
-            <p>Orcfax is more than just an oracle.</p>
+            <p>Orcfax is more than just a blockchain oracle.</p>
             <p class="font-bold">
                 It's a decentralized truth machine for verifiable, auditable, and permanent
                 statements of fact.

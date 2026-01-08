@@ -24,7 +24,7 @@
         {
             name: "Big BLYMP",
             username: "@bigblymp",
-            body: "Decentralised Oracles do exist in DeFi. It's why we're partnering with @orcfax",
+            body: "Decentralised oracles do exist in DeFi. It's why we're partnering with @orcfax",
             img: "/integrators/bigblymp.jpg",
         },
         {

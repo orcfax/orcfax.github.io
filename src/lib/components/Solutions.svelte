@@ -8,7 +8,7 @@
     <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
         <div class="mx-auto max-w-3xl lg:text-center">
             <h1 class="mt-2 text-5xl lg:text-6xl font-bold font-mulish text-secondary text-center">
-                Oracle Solutions
+                Data Feed Solutions
             </h1>
             <p class="mt-6 text-lg/8 text-secondary font-mulish text-center">
                 The data and proof you need for your smart contracts.
@@ -25,7 +25,7 @@
                 >
                     <div class="px-8 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
                         <p class="mt-2 text-lg font-semibold tracking-tight text-secondary">
-                            Oracle Data Feeds
+                            Orcfax oracle data feeds
                         </p>
                         <p class="mt-2 max-w-lg text-sm/6 text-secondary">
                             To learn more about the available feeds, feed types, and feed support
@@ -74,7 +74,7 @@
                     </div>
                     <div class="px-8 sm:px-10 -mt-6 pb-8">
                         <p class="mt-2 text-lg font-semibold tracking-tight text-secondary">
-                            Automatic Heartbeat
+                            Automatic heartbeat
                         </p>
                         <p class="mt-2 max-w-lg text-sm/6 text-secondary">
                             Choose your feed's <strong>frequency</strong> (e.g 1hr) and
@@ -101,7 +101,7 @@
                     </div>
                     <div class="px-8 pb-8 py-3 sm:px-10">
                         <p class="mt-2 text-lg font-semibold tracking-tight text-secondary">
-                            On-Demand API <span
+                            On-demand API <span
                                 class="rounded-full bg-accent/10 px-2 ml-1 py-[0.15rem] text-xs font-semibold text-accent ring-1 ring-inset ring-accent/60"
                             >
                                 Beta
@@ -127,7 +127,7 @@
                     <div class="flex flex-col gap-2 px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
                         <div>
                             <p class="mt-2 text-lg font-semibold tracking-tight text-secondary">
-                                Integrate With Your Smart Contracts
+                                Integrate with your smart contracts
                             </p>
                             <p class="mt-2 max-w-lg text-sm/6 text-secondary">
                                 Read our <a
@@ -146,7 +146,7 @@
                         </div>
                         <div>
                             <p class="mt-6 text-lg font-semibold tracking-tight text-secondary">
-                                Build With Orcfax
+                                Build with Orcfax
                             </p>
                             <p class="mt-2 max-w-lg text-sm/6 text-secondary">
                                 We are open to exploring custom oracle solutions for interested and
@@ -161,7 +161,7 @@
                         </div>
                         <div class="pb-8">
                             <p class="my-4 text-lg font-semibold tracking-tight text-secondary">
-                                For Help & Support
+                                For help & support
                             </p>
                             <div class="flex flex-col justify-center gap-4 mt-2 bg-card">
                                 <Link href="https://discord.gg/orcfax" isNewTab isButton

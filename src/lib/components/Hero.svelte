@@ -11,7 +11,7 @@
             <h1
                 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold font-mulish text-secondary"
             >
-                The Oracle of Record
+                The Blockchain Oracle of Record
             </h1>
             <p
                 class="mt-4 mx-auto px-4 max-w-sm md:max-w-3xl text-pretty font-mulish text-sm lg:text-base font-medium"
